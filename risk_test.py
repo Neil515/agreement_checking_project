@@ -1,17 +1,15 @@
-import openai
 import os
+from openai import OpenAI
 from dotenv import load_dotenv
+import json
 
-# 載入 .env 檔案中的 API 金鑰
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
 
-openai.api_key = api_key
+client = OpenAI(api_key=api_key)
 
-# 測試條款句子
 clause = "使用者上傳之內容，本公司有權永久保存並用於商業用途。"
 
-# Prompt 模板
 prompt = f"""請判斷以下條款是否存在使用者風險，若有請標示風險等級（高、中），說明理由與風險類型；
 若無風險，請說明為何屬於一般正常條款，並標示為「無風險」。
 
@@ -26,8 +24,7 @@ prompt = f"""請判斷以下條款是否存在使用者風險，若有請標示�
   "language": "zh"
 }}"""
 
-# 呼叫 GPT
-response = openai.ChatCompletion.create(
+response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": "你是一個合約條款風險判讀工具"},
