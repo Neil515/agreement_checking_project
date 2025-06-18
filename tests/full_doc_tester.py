@@ -1,12 +1,13 @@
 import sys
 import os
+import json
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'core')))
 
 from clean_text import clean_text
 from lang_detect import detect_language
 from split_text import split_sentences
 from risk_analyzer import analyze_clause
-import json
 
 def load_test_clause(file_path: str) -> str:
     with open(file_path, "r", encoding="utf-8") as f:
@@ -24,9 +25,15 @@ def analyze_document(text: str) -> list:
             results.append(result)
     return results
 
+def save_json(results: list, output_path: str):
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+    print(f"✅ 分析結果已儲存到：{output_path}")
+
 if __name__ == "__main__":
-    # 範例：讀一個條款文字檔（你可改成實際檔案路徑）
     sample_path = "tests/sample_clause.txt"
+    output_path = "outputs/sample_analysis.json"
     
     if not os.path.exists(sample_path):
         print(f"⚠️ 找不到測試檔案：{sample_path}")
@@ -34,5 +41,6 @@ if __name__ == "__main__":
 
     input_text = load_test_clause(sample_path)
     analysis_result = analyze_document(input_text)
-
+    
     print(json.dumps(analysis_result, indent=2, ensure_ascii=False))
+    save_json(analysis_result, output_path)
