@@ -39,6 +39,12 @@
       border-top: 2px solid #ccc;
       display: none;
     }
+    .filter-buttons {
+      margin-top: 1rem;
+    }
+    .filter-buttons label {
+      margin-right: 1rem;
+    }
     @media screen and (min-width: 768px) {
       #toggleSummary {
         display: inline-block;
@@ -49,6 +55,13 @@
 </head>
 <body>
   <h1>條款風險報告</h1>
+
+  <div class="filter-buttons">
+    <label><input type="checkbox" id="filterHigh" checked> 高風險</label>
+    <label><input type="checkbox" id="filterMid" checked> 中風險</label>
+    <label><input type="checkbox" id="filterNone" checked> 無風險</label>
+  </div>
+
   <div id="clauses"></div>
 
   <button id="toggleSummary">🔎 顯示風險摘要</button>
@@ -58,42 +71,65 @@
   </div>
 
   <script>
+    let allClauses = [];
+
     fetch('./outputs/sample_analysis.json')
       .then(res => {
         if (!res.ok) throw new Error('無法載入 sample_analysis.json');
         return res.json();
       })
       .then(data => {
-        const clausesDiv = document.getElementById('clauses');
-        const summaryList = document.getElementById('summaryList');
-
-        data.forEach((item, index) => {
-          const level = (item.risk_level || '').toLowerCase();
-          const levelClass = level === '高' ? 'high' : level === '中' ? 'mid' : 'none';
-
-          const clause = document.createElement('span');
-          clause.className = `clause risk-${levelClass}`;
-          clause.id = `clause_${index + 1}`;
-          clause.title = `類型：${item.type}\n原因：${item.reason}`;
-          clause.innerHTML = `${item.clause} <span class="label">⚠️ ${item.risk_level}｜${item.type}</span>`;
-          clausesDiv.appendChild(clause);
-
-          if (level !== '無') {
-            const summaryItem = document.createElement('li');
-            summaryItem.innerHTML = `<a href="#clause_${index + 1}">第 ${index + 1} 條｜${item.risk_level}｜${item.type}</a>`;
-            summaryList.appendChild(summaryItem);
-          }
-        });
+        allClauses = data;
+        renderClauses();
       })
       .catch(err => {
         const clausesDiv = document.getElementById('clauses');
         clausesDiv.innerHTML = `<p style="color:red;">⚠️ 錯誤：${err.message}</p>`;
       });
 
+    function renderClauses() {
+      const showHigh = document.getElementById('filterHigh').checked;
+      const showMid = document.getElementById('filterMid').checked;
+      const showNone = document.getElementById('filterNone').checked;
+
+      const clausesDiv = document.getElementById('clauses');
+      const summaryList = document.getElementById('summaryList');
+      clausesDiv.innerHTML = '';
+      summaryList.innerHTML = '';
+
+      allClauses.forEach((item, index) => {
+        const level = (item.risk_level || '').toLowerCase();
+        const levelClass = level === '高' ? 'high' : level === '中' ? 'mid' : 'none';
+
+        if ((level === '高' && !showHigh) ||
+            (level === '中' && !showMid) ||
+            (level === '無' && !showNone)) {
+          return;
+        }
+
+        const clause = document.createElement('span');
+        clause.className = `clause risk-${levelClass}`;
+        clause.id = `clause_${index + 1}`;
+        clause.title = `類型：${item.type}\n原因：${item.reason}`;
+        clause.innerHTML = `${item.clause} <span class="label">⚠️ ${item.risk_level}｜${item.type}</span>`;
+        clausesDiv.appendChild(clause);
+
+        if (level !== '無') {
+          const summaryItem = document.createElement('li');
+          summaryItem.innerHTML = `<a href="#clause_${index + 1}">第 ${index + 1} 條｜${item.risk_level}｜${item.type}</a>`;
+          summaryList.appendChild(summaryItem);
+        }
+      });
+    }
+
     document.getElementById('toggleSummary').addEventListener('click', () => {
       const panel = document.getElementById('riskSummary');
       panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
     });
+
+    document.getElementById('filterHigh').addEventListener('change', renderClauses);
+    document.getElementById('filterMid').addEventListener('change', renderClauses);
+    document.getElementById('filterNone').addEventListener('change', renderClauses);
   </script>
 </body>
 </html>
