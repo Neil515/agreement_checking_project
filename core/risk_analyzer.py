@@ -1,34 +1,57 @@
+# risk_analyzer.py（整合 GPT 分析）
 import os
+import json
+import openai
+from dotenv import load_dotenv
 
-def load_prompt_template(path="prompts/prompt_template_zh.txt") -> str:
-    """
-    讀取提示語模板檔案。
-    """
-    if not os.path.exists(path):
-        raise FileNotFoundError(f"找不到提示語模板：{path}")
-    
-    with open(path, "r", encoding="utf-8") as f:
+# 載入 .env 環境變數
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# 提示語讀取（中英文）
+def load_prompt(lang):
+    prompt_path = f"prompts/prompt_template_{lang}.txt"
+    with open(prompt_path, "r", encoding="utf-8") as f:
         return f.read()
 
-def analyze_clause(text: str, lang: str = "zh") -> dict:
-    """
-    接收一段條款文字，套用提示語模板並模擬 GPT 回傳結果。
-    """
-    prompt_template = load_prompt_template("prompts/prompt_template_zh.txt")
-    prompt = prompt_template.replace("{{clause}}", text)
+# 呼叫 OpenAI 分析條文
+def gpt_analyze(clause, lang):
+    prompt = load_prompt(lang)
+    full_prompt = f"{prompt}\n\n條文：{clause}"
 
-    # 這裡可以加入 GPT 呼叫，現在先用 mock 回傳資料
-    print("[DEBUG] 套用提示語如下：\n", prompt)
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": "你是一位條款風險分析助手"},
+                {"role": "user", "content": full_prompt}
+            ],
+            temperature=0.3,
+            timeout=10
+        )
+        text = response['choices'][0]['message']['content']
+        print("📥 GPT 回傳內容：", text)  # 除錯用
+        result = json.loads(text)
+        result["clause"] = clause  # 確保原文保留
+        return result
+    except Exception as e:
+        print(f"⚠️ GPT API 分析失敗，使用模擬模式：{e}")
+        return mock_analyze(clause, lang)
 
+# 模擬模式（備用）
+def mock_analyze(clause, lang):
     return {
-        "clause": text,
+        "clause": clause,
         "risk_level": "中",
-        "reason": "有可能潛在的已同意權條款",
-        "type": "已同意權"
+        "type": "已同意權",
+        "reason": "模擬風險結果（未連接 GPT）"
     }
 
-# 單獨執行本檔案時，進行簡單測試
-if __name__ == "__main__":
-    test_clause = "使用者同意本公司得擷取其聯絡資訊以提供更個人化的服務。"
-    result = analyze_clause(test_clause)
-    print("[模擬回傳結果]", result)
+# 對外函式
+
+def analyze_clause(clause, lang):
+    api_key = os.getenv("OPENAI_API_KEY")
+    if api_key:
+        return gpt_analyze(clause, lang)
+    else:
+        return mock_analyze(clause, lang)
