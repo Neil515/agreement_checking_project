@@ -56,6 +56,12 @@
 <body>
   <h1>條款風險報告</h1>
 
+  <label for="jsonSelector">選擇分析檔案：</label>
+  <select id="jsonSelector">
+    <option value="./outputs/sample_analysis.json">sample_analysis.json</option>
+    <option value="./outputs/full_agreement_analysis.json">full_agreement_analysis.json</option>
+  </select>
+
   <div class="filter-buttons">
     <label><input type="checkbox" id="filterHigh" checked> 高風險</label>
     <label><input type="checkbox" id="filterMid" checked> 中風險</label>
@@ -73,19 +79,21 @@
   <script>
     let allClauses = [];
 
-    fetch('./outputs/sample_analysis.json')
-      .then(res => {
-        if (!res.ok) throw new Error('無法載入 sample_analysis.json');
-        return res.json();
-      })
-      .then(data => {
-        allClauses = data;
-        renderClauses();
-      })
-      .catch(err => {
-        const clausesDiv = document.getElementById('clauses');
-        clausesDiv.innerHTML = `<p style="color:red;">⚠️ 錯誤：${err.message}</p>`;
-      });
+    function loadAndRender(filePath) {
+      fetch(filePath)
+        .then(res => {
+          if (!res.ok) throw new Error(`無法載入 ${filePath}`);
+          return res.json();
+        })
+        .then(data => {
+          allClauses = data;
+          renderClauses();
+        })
+        .catch(err => {
+          const clausesDiv = document.getElementById('clauses');
+          clausesDiv.innerHTML = `<p style="color:red;">⚠️ 錯誤：${err.message}</p>`;
+        });
+    }
 
     function renderClauses() {
       const showHigh = document.getElementById('filterHigh').checked;
@@ -130,6 +138,12 @@
     document.getElementById('filterHigh').addEventListener('change', renderClauses);
     document.getElementById('filterMid').addEventListener('change', renderClauses);
     document.getElementById('filterNone').addEventListener('change', renderClauses);
+
+    document.getElementById('jsonSelector').addEventListener('change', (e) => {
+      loadAndRender(e.target.value);
+    });
+
+    loadAndRender(document.getElementById('jsonSelector').value);
   </script>
 </body>
 </html>
