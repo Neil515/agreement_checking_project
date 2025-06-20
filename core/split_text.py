@@ -3,18 +3,50 @@
 import re
 
 def split_sentences(text, lang):
-    # 移除前後空白與多行縮排
     text = text.strip()
-    
+
     if lang == "zh":
         # 中文依據 。！？ 分句
         sentences = re.split(r'(?<=[。！？])\s*', text)
     elif lang == "en":
-        # 英文依據 .!? 和換行分句
-        sentences = re.split(r'(?<=[.!?])\s*|\n+', text)
+        # 改進英文分句：避免切在網址、括號中、小數點、數字後
+        # 改用更安全的判斷方式（避免使用變長 lookbehind）
+        sentence_endings = re.compile(r'(\b(?:Mr|Mrs|Dr|Inc|Ltd|Jr|Sr|vs|St|Ave|CA|NY|TX|U\.S|e\.g|i\.e)\.)|(?<=\.)\s+(?=[A-Z])|(?<=[!?])\s+|\n+')
+        parts = sentence_endings.split(text)
+
+        # 合併句段
+        sentences = []
+        buffer = ""
+        for part in parts:
+            if not part:
+                continue
+            part = part.strip()
+            if buffer:
+                buffer += " " + part
+            else:
+                buffer = part
+            if re.match(r'.*[.!?]$', part):
+                sentences.append(buffer.strip())
+                buffer = ""
+        if buffer:
+            sentences.append(buffer.strip())
+
+        # 合併太短句段（如地址）
+        merged = []
+        buffer = ""
+        for s in sentences:
+            if len(s) < 20:
+                buffer += " " + s
+            else:
+                if buffer:
+                    merged.append((buffer + " " + s).strip())
+                    buffer = ""
+                else:
+                    merged.append(s)
+        if buffer:
+            merged.append(buffer.strip())
+        sentences = merged
     else:
-        # 若語言不明，就整段回傳
         return [text]
-    
-    # 清理：去除空句與過短句（1~2 字）
+
     return [s.strip() for s in sentences if len(s.strip()) > 2]
