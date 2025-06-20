@@ -1,6 +1,7 @@
 import sys
 import os
 import json
+import argparse
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'core')))
 
@@ -17,7 +18,7 @@ def analyze_document(text: str) -> list:
     cleaned = clean_text(text)
     lang = detect_language(cleaned)
     sentences = split_sentences(cleaned, lang)
-    
+
     results = []
     for sentence in sentences:
         if sentence.strip():  # 忽略空句
@@ -32,15 +33,17 @@ def save_json(results: list, output_path: str):
     print(f"✅ 分析結果已儲存到：{output_path}")
 
 if __name__ == "__main__":
-    sample_path = "tests/sample_clause.txt"
-    output_path = "outputs/sample_analysis.json"
-    
-    if not os.path.exists(sample_path):
-        print(f"⚠️ 找不到測試檔案：{sample_path}")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("input", nargs="?", default="tests/sample_clause.txt", help="輸入條款檔案路徑")
+    parser.add_argument("--output", default="outputs/sample_analysis.json", help="輸出 JSON 路徑")
+    args = parser.parse_args()
+
+    if not os.path.exists(args.input):
+        print(f"⚠️ 找不到檔案：{args.input}")
         sys.exit(1)
 
-    input_text = load_test_clause(sample_path)
+    input_text = load_test_clause(args.input)
     analysis_result = analyze_document(input_text)
-    
+
     print(json.dumps(analysis_result, indent=2, ensure_ascii=False))
-    save_json(analysis_result, output_path)
+    save_json(analysis_result, args.output)
