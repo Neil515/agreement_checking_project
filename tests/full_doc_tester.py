@@ -18,6 +18,8 @@ def analyze_document(text: str) -> list:
     cleaned = clean_text(text)
     lang = detect_language(cleaned)
     sentences = split_sentences(cleaned, lang)
+    #sentences = sentences[:10]  # 暫時只處理前 10 句
+
 
     results = []
     for sentence in sentences:
