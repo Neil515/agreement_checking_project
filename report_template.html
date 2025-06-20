@@ -56,10 +56,10 @@
 <body>
   <h1>條款風險報告</h1>
 
-  <label for="jsonSelector">選擇分析檔案：</label>
-  <select id="jsonSelector">
-    <option value="./outputs/sample_analysis.json">sample_analysis.json</option>
-    <option value="./outputs/full_agreement_analysis.json">full_agreement_analysis.json</option>
+  <label for="fileSelector">選擇分析檔案：</label>
+  <select id="fileSelector">
+    <option value="sample_analysis.json">sample_analysis.json</option>
+    <option value="full_agreement_analysis.json" selected>full_agreement_analysis.json</option>
   </select>
 
   <div class="filter-buttons">
@@ -79,10 +79,10 @@
   <script>
     let allClauses = [];
 
-    function loadAndRender(filePath) {
-      fetch(filePath)
+    function fetchAndRender(filename) {
+      fetch('./outputs/' + filename)
         .then(res => {
-          if (!res.ok) throw new Error(`無法載入 ${filePath}`);
+          if (!res.ok) throw new Error('無法載入 ' + filename);
           return res.json();
         })
         .then(data => {
@@ -107,11 +107,12 @@
 
       allClauses.forEach((item, index) => {
         const level = (item.risk_level || '').toLowerCase();
-        const levelClass = level === '高' ? 'high' : level === '中' ? 'mid' : 'none';
+        const levelClass = level === '高' || level === 'high' ? 'high' :
+                           level === '中' || level === 'medium' ? 'mid' : 'none';
 
-        if ((level === '高' && !showHigh) ||
-            (level === '中' && !showMid) ||
-            (level === '無' && !showNone)) {
+        if ((levelClass === 'high' && !showHigh) ||
+            (levelClass === 'mid' && !showMid) ||
+            (levelClass === 'none' && !showNone)) {
           return;
         }
 
@@ -119,16 +120,20 @@
         clause.className = `clause risk-${levelClass}`;
         clause.id = `clause_${index + 1}`;
         clause.title = `類型：${item.type}\n原因：${item.reason}`;
-        clause.innerHTML = `${item.clause} <span class="label">⚠️ ${item.risk_level}｜${item.type}</span>`;
+        clause.innerHTML = `${item.clause} <span class="label">⚠️ ${item.risk_level} | ${item.type}</span>`;
         clausesDiv.appendChild(clause);
 
-        if (level !== '無') {
+        if (levelClass !== 'none') {
           const summaryItem = document.createElement('li');
           summaryItem.innerHTML = `<a href="#clause_${index + 1}">第 ${index + 1} 條｜${item.risk_level}｜${item.type}</a>`;
           summaryList.appendChild(summaryItem);
         }
       });
     }
+
+    document.getElementById('fileSelector').addEventListener('change', (e) => {
+      fetchAndRender(e.target.value);
+    });
 
     document.getElementById('toggleSummary').addEventListener('click', () => {
       const panel = document.getElementById('riskSummary');
@@ -139,11 +144,8 @@
     document.getElementById('filterMid').addEventListener('change', renderClauses);
     document.getElementById('filterNone').addEventListener('change', renderClauses);
 
-    document.getElementById('jsonSelector').addEventListener('change', (e) => {
-      loadAndRender(e.target.value);
-    });
-
-    loadAndRender(document.getElementById('jsonSelector').value);
+    // 初次載入
+    fetchAndRender(document.getElementById('fileSelector').value);
   </script>
 </body>
 </html>
