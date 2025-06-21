@@ -1,124 +1,113 @@
-# AI 合約風險條款分析工具
+# AI 合約條款風險分析工具
 
-本專案目的是開發一個具備風險辨識能力的合約條款分析工具，能自動對使用者提供的合約或使用者協議進行分句、清理與風險分類，並以可視化方式呈現風險結果，支援繁中與英文條款分析。
+這是一個使用 GPT 模型的條款風險分析工具，幫助使用者自動檢測合約內容中可能須注意的條款。本工具支援中文與英文條文的判斷，並提供簡潔的 JSON 輸出與視覺化報告。
 
 ---
 
-## 📦 專案結構
+## 🔧 專案架構
 
 ```
-agreement_checking_project/
-├── core/                # 核心模組（分析主邏輯）
-│   ├── clean_text.py
-│   ├── lang_detect.py
-│   ├── risk_analyzer.py
-│   ├── split_text.py
-│   └── prompts/         # 風險分析提示詞模板
-│       ├── prompt_template_zh.txt
-│       └── prompt_template_en.txt
-├── tests/               # 測試與工具程式
-│   ├── sample_clause.txt
-│   ├── full_doc_tester.py
-│   └── test_openai.py
-├── outputs/             # 分析結果儲存位置（.json）
-├── frontend/            # 前端（HTML + JS）
-│   └── report_template.html
-├── .env                 # API 金鑰與環境變數
-├── start_server.bat     # 快速啟動伺服器的批次檔
-└── README.md
+├── core/                  # 核心功能模組
+│   ├── clean_text.py         # 條文清理
+│   ├── lang_detect.py        # 自動語言偵測
+│   ├── split_text.py         # 條文分句
+│   └── risk_analyzer.py      # GPT 風險分析主模組
+│
+├── prompts/              # GPT 提示語（中英文）
+│   ├── prompt_template_zh.txt
+│   └── prompt_template_en.txt
+│
+├── tests/                # 測試資料與指令
+│   ├── full_doc_tester.py    # 全檔分析指令
+│   ├── test_risk_analyzer.py # 單句分析測試
+│   └── zh_sample_test.txt    # 範例測試條文
+│
+├── outputs/              # 分析結果儲存位置
+│   └── zh_sample_test_output.json
+│
+├── report_template.html  # 條款風險視覺化 HTML 報告
+│
+├── .env                  # 儲存 OpenAI API 金鑰
+├── start_server.bat      # Windows 一鍵啟動 HTML 報告（需裝簡易伺服器）
+└── README.md             # 使用說明
 ```
 
 ---
 
-## 🔧 功能模組說明
+## ✅ 功能說明
 
-### 1. 條文前處理
+### 條款分類邏輯（最新版本）
 
-* `clean_text.py`：統一格式、去除空白雜訊
-* `lang_detect.py`：自動辨識語言（中 / 英）
-* `split_text.py`：將條款依語言切分成單句（已優化英文句點誤切問題）
+目前採用「二元分類」：
 
-### 2. GPT 分析模組
+* `須注意`：條文可能存在不公平條件、過度義務、權利限制、責任移轉、資訊授權等
+* `一般資訊`：不構成風險的常見條款，如背景描述、雙方約定、聯絡資訊等
 
-* `risk_analyzer.py`：根據 prompt 分析條文風險，回傳風險等級、類型與理由
-* 支援 GPT 模擬模式與真實 API 模式（由 `.env` 中 `OPENAI_API_KEY` 控制）
+每條結果會附上類型（如：責任限制、授權條款等）與簡要說明。
 
-### 3. 可視化前端
+### 中文與英文支援
 
-* `report_template.html`：讀取分析結果並視覺化條文
-* 支援高 / 中 / 無風險條文切換、摘要跳轉、語言切換（實作中）
+系統會自動判斷條文語言，並套用對應的提示語與關鍵字規則。
 
 ---
 
-## 🧪 如何執行測試
+## 🔍 使用方法
 
-### ✅ 測試一份條款：
+### （1）安裝套件
 
-```bash
-python tests/full_doc_tester.py tests/full_agreement.txt --output outputs/full_agreement_analysis.json
+```
+pip install -r requirements.txt
 ```
 
-### ✅ 啟動前端伺服器：
+### （2）設定 API 金鑰
 
-```bash
-start_server.bat
+在 `.env` 中設定 OpenAI 金鑰：
+
+```
+OPENAI_API_KEY=sk-xxx
 ```
 
-（或手動執行 `python -m http.server 8000`）
+### （3）進行測試分析
 
----
-
-## ✅ 目前進展（截至 2025/06/21）
-
-### 🧠 分析引擎：
-
-* ✅ 已串接 GPT-4 API，能回傳風險等級、類別與理由
-* ✅ 英文 prompt 已優化，降低誤判常見描述句為風險
-* ⏳ 中文 prompt 模板仍為初版，待進一步優化
-
-### 📈 表現觀察：
-
-* 初期誤判偏高（地址/標題誤列中風險）
-* 已改善英文切句策略（re 模式修正）
-* 正在開發：上下文/段落結構輔助判斷機制
-
-### 🌍 多語系支援：
-
-* 分析支援中英文
-* 前端語系切換（en/zh）機制已設計，尚待實作
-
----
-
-## 🔜 待辦與未來規劃
-
-1. 批次 API 請求（提升分析效率）
-2. 段落等級風險再加權（上下文判斷）
-3. 可自訂風險規則 / 關鍵字（進階）
-4. 用戶上傳檔案介面（前端）
-5. 可導出 PDF 報告格式（後續）
-
----
-
-## 🤖 測試使用條款說明
-
-目前測試所用條款內容以 Gowalla 的使用者協議為基礎，此為過去實際存在的網路服務條款，但目前多用作 GPT 訓練或模型驗證示範，條文內容涵蓋完整但未刻意堆疊風險語句。
-
----
-
-## 🙋 常見錯誤處理
-
-* ❌ `openai.ChatCompletion` 錯誤 → 表示使用的是新版本 openai 套件，請降版：
-
-```bash
-pip install openai==0.28.0
+```
+python tests/full_doc_tester.py tests/zh_sample_test.txt --output outputs/zh_sample_test_output.json
 ```
 
-* ❌ `prompt_template_xx.txt` 找不到 → 確保 `core/prompts` 目錄下有中英文 prompt 檔
+### （4）開啟視覺化報告
 
-* ❌ 無法連 GPT API → 檢查 .env 中 `OPENAI_API_KEY` 是否正確設定
+打開 `report_template.html`，可看到彩色條款分析報告。
+如需自架伺服器，可使用：
+
+```
+python -m http.server
+```
 
 ---
 
-## 📩 聯絡 / 貢獻
+## 🧠 模型與提示語
 
-如有建議改進或想協助開發，可透過 GitHub Issues 回報或直接提 PR，感謝！
+* 採用 GPT-4（或 GPT-4o）進行條文理解與分類
+* 分析前會進行清洗、語言判斷、句子切分
+* 提示語設計清楚指示模型如何辨別「須注意 / 一般資訊」
+
+---
+
+## 🧪 測試模組
+
+* `test_risk_analyzer.py`：驗證輸出格式正確性
+* `full_doc_tester.py`：整批文件測試
+
+---
+
+## 📈 開發紀錄與未來計畫
+
+* 已完成：二元分類邏輯整合、中英文 prompt 重寫、highlight 機制整合、HTML 報表視覺標示
+* 計畫中：
+
+  * 支援自訂敏感詞庫
+  * 分析結果匯出 PDF
+  * 契約版本比較功能
+
+---
+
+若有建議或需求，歡迎與開發者討論。
