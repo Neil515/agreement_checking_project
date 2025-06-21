@@ -6,7 +6,7 @@ C:.
 ¢x  Gpt Tool Slide Outline.md
 ¢x  output.txt
 ¢x  report_template.html
-¢x  structure.txt
+¢x  start_server.bat
 ¢x  
 ¢u¢wassets
 ¢x  ¢|¢wimages
@@ -31,12 +31,15 @@ C:.
 ¢x      README.md
 ¢x      
 ¢u¢woutputs
+¢x      full_agreement_analysis.json
 ¢x      sample_analysis.json
 ¢x      
 ¢u¢wprompts
+¢x      prompt_template_en.txt
 ¢x      prompt_template_zh.txt
 ¢x      
 ¢|¢wtests
+    ¢x  full_agreement.txt
     ¢x  full_doc_tester.py
     ¢x  risk_test.py
     ¢x  sample_clause.txt
