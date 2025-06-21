@@ -25,7 +25,11 @@ class TestRiskAnalyzer(unittest.TestCase):
                 self.assertIn("risk_level", result)
                 self.assertIn("reason", result)
                 self.assertIn("type", result)
-                self.assertIsInstance(result["risk_level"], str)
+                self.assertIn("highlight", result)
+
+                # 確保 risk_level 僅為二元分類值
+                self.assertIn(result["risk_level"], ["須注意", "一般資訊"])
+                self.assertIsInstance(result["highlight"], bool)
 
 if __name__ == "__main__":
     unittest.main()
