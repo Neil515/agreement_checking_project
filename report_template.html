@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>條款風險視覺化報告</title>
+  <title>條款提示報告</title>
   <style>
     body {
       font-family: sans-serif;
@@ -15,15 +15,11 @@
       padding: 0.5rem;
       border-radius: 5px;
     }
-    .risk-high {
+    .risk-important {
       background-color: #ffe5e5;
       border-left: 5px solid #d00;
     }
-    .risk-mid {
-      background-color: #fff3e0;
-      border-left: 5px solid #f90;
-    }
-    .risk-none {
+    .risk-normal {
       background-color: #f1f1f1;
       border-left: 5px solid #ccc;
     }
@@ -32,47 +28,33 @@
       margin-left: 0.5rem;
       font-weight: bold;
     }
-    #riskSummary {
+    #summaryPanel {
       margin-top: 2rem;
       background: #f9f9f9;
       padding: 1rem;
       border-top: 2px solid #ccc;
       display: none;
     }
-    .filter-buttons {
-      margin-top: 1rem;
-    }
-    .filter-buttons label {
-      margin-right: 1rem;
-    }
-    @media screen and (min-width: 768px) {
-      #toggleSummary {
-        display: inline-block;
-        margin-top: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <h1>條款風險報告</h1>
+  <h1>條款提示報告</h1>
 
   <label for="fileSelector">選擇分析檔案：</label>
   <select id="fileSelector">
     <option value="sample_analysis.json">sample_analysis.json</option>
-    <option value="full_agreement_analysis.json" selected>full_agreement_analysis.json</option>
+    <option value="full_agreement_analysis.json">full_agreement_analysis.json</option>
+    <option value="zh_sample_test_output.json" selected>zh_sample_test_output.json</option>
   </select>
 
-  <div class="filter-buttons">
-    <label><input type="checkbox" id="filterHigh" checked> 高風險</label>
-    <label><input type="checkbox" id="filterMid" checked> 中風險</label>
-    <label><input type="checkbox" id="filterNone" checked> 無風險</label>
-  </div>
+
+  <label><input type="checkbox" id="filterImportant" checked> 顯示須注意條款</label>
 
   <div id="clauses"></div>
 
-  <button id="toggleSummary">🔎 顯示風險摘要</button>
-  <div id="riskSummary">
-    <h2>📋 條款風險摘要</h2>
+  <button id="toggleSummary">🔎 顯示摘要</button>
+  <div id="summaryPanel">
+    <h2>📋 須注意條款摘要</h2>
     <ul id="summaryList"></ul>
   </div>
 
@@ -90,40 +72,31 @@
           renderClauses();
         })
         .catch(err => {
-          const clausesDiv = document.getElementById('clauses');
-          clausesDiv.innerHTML = `<p style="color:red;">⚠️ 錯誤：${err.message}</p>`;
+          document.getElementById('clauses').innerHTML = `<p style="color:red;">⚠️ 錯誤：${err.message}</p>`;
         });
     }
 
     function renderClauses() {
-      const showHigh = document.getElementById('filterHigh').checked;
-      const showMid = document.getElementById('filterMid').checked;
-      const showNone = document.getElementById('filterNone').checked;
-
+      const showImportant = document.getElementById('filterImportant').checked;
       const clausesDiv = document.getElementById('clauses');
       const summaryList = document.getElementById('summaryList');
       clausesDiv.innerHTML = '';
       summaryList.innerHTML = '';
 
       allClauses.forEach((item, index) => {
-        const level = (item.risk_level || '').toLowerCase();
-        const levelClass = level === '高' || level === 'high' ? 'high' :
-                           level === '中' || level === 'medium' ? 'mid' : 'none';
+        const isImportant = item.risk_level === '須注意';
+        const levelClass = isImportant ? 'important' : 'normal';
 
-        if ((levelClass === 'high' && !showHigh) ||
-            (levelClass === 'mid' && !showMid) ||
-            (levelClass === 'none' && !showNone)) {
-          return;
-        }
+        if (!isImportant && !showImportant) return;
 
         const clause = document.createElement('span');
         clause.className = `clause risk-${levelClass}`;
         clause.id = `clause_${index + 1}`;
         clause.title = `類型：${item.type}\n原因：${item.reason}`;
-        clause.innerHTML = `${item.clause} <span class="label">⚠️ ${item.risk_level} | ${item.type}</span>`;
+        clause.innerHTML = `${item.clause} <span class="label">${item.risk_level}｜${item.type}</span>`;
         clausesDiv.appendChild(clause);
 
-        if (levelClass !== 'none') {
+        if (isImportant) {
           const summaryItem = document.createElement('li');
           summaryItem.innerHTML = `<a href="#clause_${index + 1}">第 ${index + 1} 條｜${item.risk_level}｜${item.type}</a>`;
           summaryList.appendChild(summaryItem);
@@ -131,20 +104,13 @@
       });
     }
 
-    document.getElementById('fileSelector').addEventListener('change', (e) => {
-      fetchAndRender(e.target.value);
-    });
-
+    document.getElementById('fileSelector').addEventListener('change', e => fetchAndRender(e.target.value));
+    document.getElementById('filterImportant').addEventListener('change', renderClauses);
     document.getElementById('toggleSummary').addEventListener('click', () => {
-      const panel = document.getElementById('riskSummary');
+      const panel = document.getElementById('summaryPanel');
       panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
     });
 
-    document.getElementById('filterHigh').addEventListener('change', renderClauses);
-    document.getElementById('filterMid').addEventListener('change', renderClauses);
-    document.getElementById('filterNone').addEventListener('change', renderClauses);
-
-    // 初次載入
     fetchAndRender(document.getElementById('fileSelector').value);
   </script>
 </body>
