@@ -14,18 +14,17 @@ def load_test_clause(file_path: str) -> str:
     with open(file_path, "r", encoding="utf-8") as f:
         return f.read()
 
-def analyze_document(text: str) -> list:
+def analyze_document(text: str, only_highlight=False) -> list:
     cleaned = clean_text(text)
     lang = detect_language(cleaned)
     sentences = split_sentences(cleaned, lang)
-    #sentences = sentences[:10]  # 暫時只處理前 10 句
-
 
     results = []
     for sentence in sentences:
         if sentence.strip():  # 忽略空句
             result = analyze_clause(sentence, lang)
-            results.append(result)
+            if not only_highlight or result.get("highlight", False):
+                results.append(result)
     return results
 
 def save_json(results: list, output_path: str):
@@ -38,6 +37,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("input", nargs="?", default="tests/sample_clause.txt", help="輸入條款檔案路徑")
     parser.add_argument("--output", default="outputs/sample_analysis.json", help="輸出 JSON 路徑")
+    parser.add_argument("--only_highlight", action="store_true", help="是否僅輸出須注意條款")
     args = parser.parse_args()
 
     if not os.path.exists(args.input):
@@ -45,7 +45,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     input_text = load_test_clause(args.input)
-    analysis_result = analyze_document(input_text)
+    analysis_result = analyze_document(input_text, only_highlight=args.only_highlight)
 
     print(json.dumps(analysis_result, indent=2, ensure_ascii=False))
     save_json(analysis_result, args.output)
