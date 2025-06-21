@@ -33,6 +33,7 @@ C:.
 ¢u¢woutputs
 ¢x      full_agreement_analysis.json
 ¢x      sample_analysis.json
+¢x      zh_sample_test_output.json
 ¢x      
 ¢u¢wprompts
 ¢x      prompt_template_en.txt
@@ -41,10 +42,12 @@ C:.
 ¢|¢wtests
     ¢x  full_agreement.txt
     ¢x  full_doc_tester.py
+    ¢x  quick_test.txt
     ¢x  risk_test.py
     ¢x  sample_clause.txt
     ¢x  test_risk_analyzer.py
     ¢x  test_split_text.py
+    ¢x  zh_sample_test.txt
     ¢x  
     ¢|¢w__pycache__
             full_doc_tester.cpython-313.pyc
