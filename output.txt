@@ -7,6 +7,7 @@ C:.
 ¢x  output.txt
 ¢x  report_template.html
 ¢x  start_server.bat
+¢x  ¿Ã¹õÂ^¨úµe­± 2025-06-21 202151.jpg
 ¢x  
 ¢u¢wassets
 ¢x  ¢|¢wimages
@@ -14,17 +15,11 @@ C:.
 ¢x          AI_tool_overview.png
 ¢x          
 ¢u¢wcore
-¢x  ¢x  clean_text.py
-¢x  ¢x  lang_detect.py
-¢x  ¢x  risk_analyzer.py
-¢x  ¢x  split_text.py
-¢x  ¢x  
-¢x  ¢|¢w__pycache__
-¢x          clean_text.cpython-313.pyc
-¢x          lang_detect.cpython-313.pyc
-¢x          risk_analyzer.cpython-313.pyc
-¢x          split_text.cpython-313.pyc
-¢x          
+¢x      clean_text.py
+¢x      lang_detect.py
+¢x      risk_analyzer.py
+¢x      split_text.py
+¢x      
 ¢u¢wdocs
 ¢x      ai_progress.md
 ¢x      next_task_prompt.md
@@ -32,7 +27,6 @@ C:.
 ¢x      
 ¢u¢woutputs
 ¢x      full_agreement_analysis.json
-¢x      sample_analysis.json
 ¢x      zh_sample_test_output.json
 ¢x      
 ¢u¢wprompts
@@ -40,15 +34,10 @@ C:.
 ¢x      prompt_template_zh.txt
 ¢x      
 ¢|¢wtests
-    ¢x  full_agreement.txt
-    ¢x  full_doc_tester.py
-    ¢x  quick_test.txt
-    ¢x  risk_test.py
-    ¢x  sample_clause.txt
-    ¢x  test_risk_analyzer.py
-    ¢x  test_split_text.py
-    ¢x  zh_sample_test.txt
-    ¢x  
-    ¢|¢w__pycache__
-            full_doc_tester.cpython-313.pyc
-            
+        full_agreement.txt
+        full_doc_tester.py
+        risk_test.py
+        test_risk_analyzer.py
+        test_split_text.py
+        zh_sample_test.txt
+        
