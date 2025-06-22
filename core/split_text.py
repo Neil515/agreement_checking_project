@@ -6,15 +6,16 @@ def split_sentences(text, lang):
     text = text.strip()
 
     if lang == "zh":
-        # 中文依據 。！？ 分句
-        sentences = re.split(r'(?<=[。！？])\s*', text)
+        # 改為「段落」為單位切割（兩個以上換行）
+        paragraphs = re.split(r'\n{2,}', text)
+        return [p.strip() for p in paragraphs if len(p.strip()) > 10]
+
     elif lang == "en":
-        # 改進英文分句：避免切在網址、括號中、小數點、數字後
-        # 改用更安全的判斷方式（避免使用變長 lookbehind）
+        # 英文部分保留句號斷句但做緩衝合併
         sentence_endings = re.compile(r'(\b(?:Mr|Mrs|Dr|Inc|Ltd|Jr|Sr|vs|St|Ave|CA|NY|TX|U\.S|e\.g|i\.e)\.)|(?<=\.)\s+(?=[A-Z])|(?<=[!?])\s+|\n+')
         parts = sentence_endings.split(text)
 
-        # 合併句段
+        # 合併英文句段
         sentences = []
         buffer = ""
         for part in parts:
@@ -31,7 +32,7 @@ def split_sentences(text, lang):
         if buffer:
             sentences.append(buffer.strip())
 
-        # 合併太短句段（如地址）
+        # 合併太短句段
         merged = []
         buffer = ""
         for s in sentences:
@@ -45,8 +46,7 @@ def split_sentences(text, lang):
                     merged.append(s)
         if buffer:
             merged.append(buffer.strip())
-        sentences = merged
+        return merged
+
     else:
         return [text]
-
-    return [s.strip() for s in sentences if len(s.strip()) > 2]
