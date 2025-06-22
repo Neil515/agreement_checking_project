@@ -15,15 +15,15 @@ def run_tests():
     lang = "zh"  # 根據測資語言設定
 
     for i, case in enumerate(cases, 1):
-        result = analyze_clause(case["text"], lang)
+        result = analyze_clause(case["clause"], lang)
         actual = result.get("risk_level", "未輸出")
-        expected = case["expected_label"]
+        expected = case["expected_risk_level"]
 
         if actual != expected:
             failed += 1
             print(f"❌ Case {i}: 應為『{expected}』，實際為『{actual}』")
-            print(f"    條文: {case['text']}")
-            print(f"    備註: {case['note']}")
+            print(f"    條文: {case['clause']}")
+            print(f"    備註: {case.get('note', '（無說明）')}")
         else:
             print(f"✅ Case {i}: 正確分類為『{actual}』")
 
