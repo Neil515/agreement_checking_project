@@ -1,0 +1,56 @@
+列出磁碟區 Acer 的資料夾 PATH
+磁碟區序號為 A4E9-3314
+C:.
+│  .env
+│  .gitignore
+│  Gpt Tool Slide Outline.md
+│  output.txt
+│  report_template.html
+│  start_server.bat
+│  螢幕擷取畫面 2025-06-21 202151.jpg
+│  
+├─assets
+│  ├─clause examples
+│  │      Clickwrap_Software_Licence_Agreement.doc
+│  │      建築物室內裝修.doc
+│  │      生前殯葬服務預收費用信託定型化契約範本.doc
+│  │      石策聯合法律事務所會員.md
+│  │      
+│  └─images
+│          AI_risk_flowchart.png
+│          AI_tool_overview.png
+│          
+├─core
+│  │  clean_text.py
+│  │  lang_detect.py
+│  │  risk_analyzer.py
+│  │  split_text.py
+│  │  
+│  └─__pycache__
+│          risk_analyzer.cpython-313.pyc
+│          
+├─data
+│      whitelist_examples.json
+│      
+├─docs
+│      ai_progress.md
+│      next_task_prompt.md
+│      README.md
+│      使用者流程全景說明.txt
+│      
+├─outputs
+│      full_agreement_analysis.json
+│      zh_sample_test_output.json
+│      
+├─prompts
+│      prompt_template_en.txt
+│      prompt_template_zh.txt
+│      
+└─tests
+        full_agreement.txt
+        full_doc_tester.py
+        test_risk_analyzer.py
+        test_risk_cases.json
+        test_risk_cases_runner.py
+        zh_sample_test.txt
+        
