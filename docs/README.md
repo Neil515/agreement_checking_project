@@ -4,6 +4,23 @@
 
 ---
 
+## ✅ 最新進度整理（更新：2025-06-23）
+
+### 📌 whitelist 條文建構與導入
+
+- 成功建立 133 條中文 whitelist 條文，結構完整、中立無風險
+- 新增 `convert_to_whitelist.py` 腳本，支援 `.docx`, `.txt`, `.csv`, `.md` 批次轉換
+- 條文已標註預設欄位 `risk_level`, `type`, `tags`，可直接導入分析
+- 確認可於每次 GPT 分析時引用 whitelist 條文作為參考範例，提高準確率
+
+### 📌 待辦重點（2025/06/24 起）
+
+1. 合併子項條文（如 a., b., (i) 形式）成完整段落
+2. 補分類別（type）與語言（language）欄位
+3. 擴充英文 whitelist 條文，涵蓋常見 TOS/EULA/NDA
+
+---
+
 ## 🔧 專案架構
 
 ```
@@ -18,6 +35,9 @@
 │   └── prompt_template_en.txt
 │
 ├── whitelist_examples.json   # 用於提示語補強的「無風險」白名單條文
+│
+├── tools/                # 🔄 條文轉換與前處理腳本
+│   └── convert_to_whitelist.py
 │
 ├── tests/                # 測試資料與指令
 │   ├── full_doc_tester.py    # 全檔分析指令
@@ -116,20 +136,20 @@ python -m http.server
 
 ## 📈 開發紀錄與未來計畫
 
-* 已完成：
-
+* ✅ 已完成：
   * 二元分類邏輯整合
   * 中英文 prompt 重寫
   * highlight 機制整合
   * HTML 報表視覺標示
   * 範例引導 + 白名單機制
+  * whitelist 條文集建置與轉換工具
 
-* 計畫中：
-
+* 🔜 即將進行：
   * 支援自訂敏感詞庫
   * 分析結果匯出 PDF
   * 契約版本比較功能
   * 自動擴展 whitelist 的類別與樣式收集機制
+  * 英文條文的 whitelist 擴充與分類
 
 ---
 
