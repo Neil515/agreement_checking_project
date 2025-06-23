@@ -1,32 +1,3194 @@
 [
   {
-    "clause": "雙方應善意協商處理合約未盡事宜。",
+    "clause": "Click-wrap Software Licence Agreement",
     "risk_level": "一般資訊",
-    "type": "常規義務",
-    "tags": ["協商", "常規條款"]
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
   },
   {
-    "clause": "雙方應遵守相關個資保護法規，保障使用者資料隱私。",
+    "clause": "CAREFULLY READ THE FOLLOWING LICENCE AGREEMENT CAREFULLY! IT CONTAINS VERY IMPORTANT INFORMATION ABOUT YOUR RIGHTS AND OBLIGATIONS, AS WELL AS LIMITATIONS AND EXCLUSIONS THAT MAY APPLY TO YOU. THIS DOCUMENT CONTAINS A DISPUTE RESOLUTION CLAUSE. BY CLICKING ON THE “ACCEPT” BUTTON, YOU ARE CONSENTING TO BE BOUND BY AND ARE BECOMING A PARTY TO THIS AGREEMENT. IF YOU DO NOT AGREE TO ALL OF THE TERMS OF THIS AGREEMENT, CLICK THE “DO NOT ACCEPT” BUTTON OR LEAVE THE WEBSITE.",
     "risk_level": "一般資訊",
-    "type": "法律遵循",
-    "tags": ["隱私", "法律規範"]
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
   },
   {
-    "clause": "甲方違反本契約時，乙方得終止本契約，並於退費中扣除不超過20%的違約金。",
+    "clause": "Please contact us at [info@Licensor.com] for any queries.",
     "risk_level": "一般資訊",
-    "type": "違約處理條款",
-    "tags": ["終止", "違約", "退費"]
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
   },
   {
-    "clause": "若因天災等不可抗力因素導致履約遲延，雙方互不負責。",
+    "clause": "“You” or “Your” means the person or company who is being licensed to use the Licensor software in association with the Usage Agreement (“Usage Agreement”). “We”, “Our” and “Us” means Licensor Canada Inc.",
     "risk_level": "一般資訊",
-    "type": "不可抗力條款",
-    "tags": ["天災", "不可抗力", "履約"]
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
   },
   {
-    "clause": "乙方應保證其所提供資料皆為真實且未侵害第三人權利。",
+    "clause": "NOW, THEREFORE, THIS AGREEMENT WITNESSETH that, in consideration of the mutual covenants contained herein, the Parties hereto agree as follows:",
     "risk_level": "一般資訊",
-    "type": "資料保證",
-    "tags": ["資料", "保證", "合法性"]
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "1. DEFINITIONS",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "1.1. Definitions. Capitalized terms in this Agreement will have the following meanings:",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "“Agreement” means this Software Licence Agreement between Us and You;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "“Licensed Software” means certain commercial software products being provided to You under this Agreement, including executable program modules thereof, as well as related documentation and computer readable media;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "“Sublicensed Software” means certain third party owned software components being provided under this Agreement, that are required to properly enable or operate the Licensed Software;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "Other capitalized terms have the meanings defined in the Usage Agreement.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "2. SOFTWARE LICENCE, RIGHTS & RESTRICTIONS",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "2.1 Software Licence and Rights. In consideration of the mutual covenants, and subject to the provisions contained in this Agreement, We hereby grant to You a revocable, non-exclusive licence to use the Licensed Software solely in order to utilize the Products and Services as provided under the Usage Agreement.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "2.2 Restrictions. Without limiting the generality of the foregoing, You will use the Licensed Software only for purposes set forth herein, and, further, You expressly agree that You DO NOT have rights to:",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(a)\town title, or transfer title to the Licensed Software to another party;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(b)\tdistribute, or sublicense or otherwise provide copies or any rights in relation to the Licensed Software to any third party;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(c)\tpledge, hypothecate, alienate or otherwise encumber the Licensed Software to any third party;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(d)\tuse the Licensed Software to rent, lease or otherwise provide location-enabled telecommunication or information services to Your customers, including, without limitation, data processing, hosting, outsourcing, service bureau or online application services (ASP) offerings; or",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(e)\tmodify, enhance, reverse-engineer, decompile, disassemble or create substantially derived forms of the Licensed Software.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "2.3 Enforcement of Restrictions. We will have the right to inspect and enforce the restrictions and covenants contained in this Agreement at Your sole expense, and You hereby agree to promptly notify Us of any known violations of such restrictions.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "2.4 Our Obligations. Upon execution of this Agreement, We will:",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(a)\tpermit You to download a copy of the most current version of the Licensed Software for Your use under this Agreement; and",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(b)\tprovide You with ongoing updates to the Licensed Software as We consider needed. In each such case, We will automatically provide and install the necessary updates and will notify You when the update has been installed.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "3. COPYRIGHT AND MARKS",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "3.1 Copyright. The Licensed Software, including any documentation, media, packaging and illustrations, is copyrighted and constitutes Our valuable property. You agree that all physical manifestations of the Licensed Software will display Our copyright notice in a conspicuous manner. The Licensed Software is protected under Canadian copyright laws",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "and international treaty provisions. You Will have a right to copy the materials, provided copyright notices and acknowledgement of trade-marks are included, pursuant to the covenants herein. You will include the following notice on any printed, electronic, online or packaged version of the Licensed Software, in any form whatsoever:",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "“Copyright © [date] Licensor [formal name of owner]",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "All rights reserved.”",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "3.2 Trade-marks. Certain logos, product names and trade-marks owned by Us may be contained within the printed materials and electronic manifestations of the Licensed Software. You will have no right to use such marks in its end-user applications except as set out in the User Agreement.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "4. TITLE",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "4.1 Title. You acknowledge that the Licensed Software, including any associated written materials and other documentation provided under this Agreement, belongs exclusively to Us. Unencumbered title to the Licensed Software will, at all times, remain with Us. You agree to protect the Licensed Software from unauthorized use, reproduction, distribution or publication in electronic or physical form.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "5. WARRANTY AND INDEMNITY",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "5.1 Warranty. We warrant that We are the owner of the Licensed Software, and have the right and authority to grant the licence to the Licensed Software. We do not warrant, guarantee, accept any condition or make any representation that the Licensed Software will meet Your requirements or that the use of the Licensed Software will be uninterrupted or error-free. No other verbal or written information provided by Us will create a warranty or in any way increase Our liability, and You will not rely on such information.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "5.2 Indemnity. We warrant that the Licensed Software does not infringe on any current subsisting and enforceable Canadian patent or Canadian copyright, and We will and hereby do agree to indemnify and hold You harmless in respect of any losses, costs, damages or expenses (including reasonable attorney’s fees and court costs) arising out of any claim, demand or action alleging that the Licensed Software violates or infringes the Canadian copyright, patent or other intellectual property right of any third party, providing that You provide Us with reasonable cooperation in preparing a defence against any such claim.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "5.3 DISCLAIMER. THERE ARE NO WARRANTIES FOR SERVICES. WE MAKE NO EXPRESS REPRESENTATIONS OR WARRANTIES, OR ACCEPT ANY CONDITIONS EXCEPT THOSE EXPRESSLY STATED IN SECTIONS 5.1 AND 5.2 ABOVE. WE DISCLAIM ALL OTHER REPRESENTATIONS, WARRANTIES AND CONDITIONS, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. SOME PROVINCES DO NOT PERMIT THE EXCLUSION OF CERTAIN IMPLIED WARRANTIES OR CONDITIONS. THEREFORE, THE FOREGOING DISCLAIMERS MAY NOT APPLY TO YOU.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "6. LIMITATION OF LIABILITY AND REMEDIES",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "6.1 LIMITATION OF LIABILITY. IN NO EVENT WILL WE BE LIABLE FOR ANY LOSSES OR DAMAGES INCURRED BY YOU, WHETHER DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL, INCLUDING LOST OR ANTICIPATED PROFITS, SAVINGS, INTERRUPTION TO BUSINESS, LOSS OF BUSINESS OPPORTUNITIES, LOSS OF BUSINESS INFORMATION, THE COST OF RECOVERING SUCH LOST INFORMATION, THE COST OF SUBSTITUTE INTELLECTUAL PROPERTY OR ANY OTHER PECUNIARY LOSS ARISING FROM THE USE OF, OR THE INABILITY TO USE, THE LICENSED SOFTWARE REGARDLESS OF WHETHER YOU HAVE ADVISED US OR WE HAVE ADVISED YOU OF THE POSSIBILITY OF SUCH DAMAGES. OUR AGGREGATE LIABILITY IN RESPECT OF ANY AND ALL CLAIMS WILL BE LIMITED TO ONE HUNDERD ($100.00) DOLLARS. THE FOREGOING LIMITATIONS APPLY REGARDLESS OF THE CAUSE OR CIRCUMSTANCES GIVING RISE TO SUCH LOSS, DAMAGE OR LIABILITY, EVEN IF SUCH LOSS, DAMAGE OR LIABILITY IS BASED ON NEGLIGENCE OR OTHER TORTS OR BREACH OF CONTRACT (INCLUDING FUNDAMENTAL BREACH OR BREACH OF A FUNDAMENTAL TERM).",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "NEITHER YOU NOR WE MAY INSTITUTE ANY ACTION IN ANY FORM ARISING OUT OF THIS AGREEMENT MORE THAN ONE (1) YEAR AFTER THE CAUSE OF ACTION HAS ARISEN. SOME PROVINCES DO NOT ALLOW THE EXCLUSION OF LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES SO THE ABOVE EXCLUSIONS MAY NOT APPLY.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "6.2 Dispute Resolution. You acknowledge that We possess valuable confidential and proprietary information, including trade-marks and business practices, which would be damaging to Us if revealed in open court. You further acknowledge and agree that it is preferable to resolve all disputes between Us and You confidentially, individually and in an expeditious and inexpensive manner. We and You accordingly acknowledge and agree that private dispute resolution is preferable to court actions. Before commencing any arbitration in the manner set out in Section 6.3 below, We and You shall first attempt to resolve any dispute or differences between the both of us by way of good faith negotiation. The good faith negotiation shall commence by each of Us and You communicating our position regarding the complaint, claim, dispute or controversy to the other party, and how the both of us should resolve the dispute. We and You shall then make good faith efforts to negotiate a resolution of the claim, dispute or controversy. Neither We nor You shall commence any arbitral proceedings unless and until the good faith negotiation fails.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "6.3 ARBITRATION. ANY CLAIM, DISPUTE OR CONTROVERSY (WHETHER IN CONTRACT, TORT OR OTHERWISE, WHETHER PRE-EXISTING, PRESENT OR FUTURE, AND INCLUDING STATUTORY, COMMON LAW, INTENTIONAL TORT AND EQUITABLE CLAIMS CAPABLE IN LAW OF BEING SUBMITTED TO BINDING ARBITRATION) AGAINST US, Our agents, employees, officers, directors, successors, assigns or affiliates (collectively, for purposes of this paragraph, “Licensor Group”) arising from or relating to this Agreement, its interpretation or the breach, termination or validity thereof, the relationships between the parties, whether pre-existing, present or future (including, to the full extent permitted by applicable law,",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "relationships with third parties who are not signatories to this Agreement), Licensor Group’s advertising or any related purchase SHALL BE RESOLVED EXCLUSIVELY AND FINALLY BY BINDING ARBITRATION ADMINISTERED BY THE NATIONAL ARBITRATION FORUM (“NAF”) under its Code of Procedure and any specific procedures for the resolution of small claims and/or consumer disputes then in effect (available via the Internet at <http://www.arb-forum.com>, or via telephone at 1-800-474-2371). The arbitration will be limited solely to the dispute or controversy between Customer and Licensor Group. Any award of the arbitrator(s) shall be final and binding on each of us, and may be entered as a judgment in any court of competent jurisdiction. Information may be obtained, and claims may be filed with the NAF at P.O. Box 50191, Minneapolis, MN 55405, or by email at <file@arb-forum.com>, or by online filing at <http://www.arb-forum.com>.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "7. SUCCESSORS AND ASSIGNS",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "7.1 Successors and Assigns. You may not assign Your rights and duties under this Agreement to any party at any time. This Agreement will enure to the benefit of and will be binding on Us and our respective successors and permitted assigns. In the event of corporate merger, amalgamation, divestiture or asset sale, We will have the right to transfer and assign Our rights and obligations hereunder to any third party (the “Assignee”), upon written notice to You, provided that We cause the Assignee to agree in writing to all the terms contained in this Agreement.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "8. UPGRADES",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "8.1 Upgrades. Other than our obligation under Section 2.4(b), We shall have no other obligations to provide updates or support services to You. Obligations or expectations with regard to product upgrades, enhancements, support or remedies for errors, defects or deficiencies will be limited to those expressly set forth in a separate agreement between Us and You. In the absence of such an agreement between Us and You, We will use reasonable efforts to provide ongoing support and remedies to identified errors and defects, on a time and material basis, at Our then current commercial rates.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "9. CONFIDENTIALITY",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "9.1 Confidentiality. You acknowledge that the existence of this Agreement, the terms and conditions hereof, the transactions contemplated hereby and other information, including, without limitation, customer, technical and financial information that they have received or will receive in connection with this Agreement, is considered private and confidential (the “Confidential Information”). You will use reasonable diligence and in no event less than the degree of care which We use in respect to our own confidential and proprietary information of like nature, to prevent the unauthorized disclosure, reproduction or distribution of such Confidential Information to any other individual, corporation or entity. Such Confidential Information will exclude:",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(a)\tinformation that is already in the public domain;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(b)\tinformation already known to the receiving party, as of the date of the disclosure, unless the receiving party agreed to keep such information in confidence at the time of its original receipt;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(c)\tinformation hereafter obtained by the receiving party, from a source not otherwise under an obligation of confidentiality with the disclosing party;",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(d)\tinformation that the receiving party is obligated to produce under order of a court of competent jurisdiction, provided that the receiving party promptly notifies the disclosing party of such an event so that the disclosing party may seek an appropriate protective order.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "10. TERM",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "10.1 Term. The term of this Agreement will commence on the date of Your agreement to these terms and shall continue for the same term as the Usage Agreement.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11. GENERAL",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.1 Consents. Any consent required under this Agreement will not be unreasonably withheld.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.2 Captions. The Article and paragraph headings used herein are for convenience only and are not a part of this Agreement and will not be used in construing it.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.3 Entire Agreement. This Agreement constitutes the entire agreement of the Parties, and no amendment to the terms of this Agreement will be effective unless in writing and signed by both parties hereto.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.4 Equitable Relief. You agree that any breach of this Agreement by You would cause irreparable damage, and that, in event of such breach, in addition to any and all remedies at law, We will have the right to an injunction, specific performance or other equitable relief to prevent the continuous violations of the terms of this Agreement.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.5 Force Majeure. Notwithstanding anything herein to the contrary, We shall not be liable for any delay or failure in performance caused by circumstances beyond Our reasonable control.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.6 Relationship of the Parties. This Agreement does not constitute a partnership or joint venture, and nothing herein contained is intended to constitute, nor will it be construed to constitute, such a partnership or joint venture. Except as expressly provided in this Agreement, neither We nor You will have any power or authority to act in the name or on behalf of the other party, or to bind the other party to any legal agreement.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.7 Severability. The provisions of this Agreement are to be considered separately, and if any provision hereof should be found by any court or competent jurisdiction to be invalid or unenforceable, this Agreement will be deemed to have effect as if such provision were severed from this Agreement.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.8 Number and Gender. Where the context permits, the singular includes the plural, and the masculine includes the feminine and vice versa.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.9 Notices. All notices and communications required or permitted under this Agreement will be in writing and will be sent by registered or certified mail, postage prepaid, return receipt requested, facsimile transmission (the “Fax”), with confirmed answer back, or electronic mail, with confirmation of receipt, to Us or You at the respective addresses we provide to each other or to such other address as We or You may",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "from time to time specify by notice to the other given as provided in this paragraph. In Our case, Our address is:",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "[complete with Licensor address, phone, fax and email]",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "A notice given in electronic form shall be admissible in judicial or administrative proceedings based upon or relating to this Agreement to the same extent and subject to the same conditions as other business documents and records originally generated and maintained in printed form.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.10 JURISDICTION. THE PARTIES HEREBY IRREVOCABLY ATTORN TO THE EXCLUSIVE JURISDICTION OF THE COURTS OF THE PROVINCE OF [PROVINCE] WITH RESPECT TO ANY DISPUTE ARISING HEREUNDER.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.11 GOVERNING LAW. THIS AGREEMENT AND ANY SALES THEREUNDER SHALL BE DEEMED TO HAVE BEEN MADE IN THE PROVINCE OF ONTARIO AND SHALL BE CONSTRUED AND INTERPRETED ACCORDING TO THE LAWS OF THE PROVINCE OF [PROVINCE] AND THE APPLICABLE LAWS OF CANADA. We and You expressly exclude the United Nations Convention on Contracts for the International Sale of Goods, and the International Sale of Goods Act ([Province]), as amended, replaced or re-enacted from time to time.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "11.12 Revisions to this Agreement. We may at any time revise the terms of this Agreement by updating these terms and by providing notice to you of that change.",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "THIS AGREEMENT made as of the [_____] day of [________________], [20__].",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "BETWEEN:",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "[Customer]",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(“Customer”)",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "OF THE FIRST PART",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "- and -",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "________________________",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(the “Vendor”)",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "OF THE SECOND PART",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "____________",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "內政部台內營字第1030813951號公告",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "契約審閱權",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本契約及簽約注意事項於中華民國   年   月   日經甲方攜回審閱。（審閱期間至少為7日）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方簽章：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方簽章：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "建築物室內裝修—設計委託及工程承攬",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "契約書範本",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "內  政  部   編",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "中華民國103年12月",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第一條  設計及工程案名稱：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二條  設計及工程案地點：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第三條  設計面積及工程範圍",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "設計面積：約        平方公尺(約          坪)。(以實際設計面積為準)",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "□預售屋：依甲方提供之建築物平面圖(自牆內緣量測)。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "□成屋：依實測面積(自牆內緣量測)。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "工程範圍：依（附件一之階段三）乙方提出，經甲方認可之設計施工圖說文件 （含施工圖、估價單及施工說明書等）施工。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第四條  甲方協力事項",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方應提供或委託乙方協助取得建築物圖說文件（如附件二），供核對現況及規劃設計參照之用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本室內裝修如應向政府機關申請室內裝修許可，甲方應提供申請所需證件及用印，並配合所需一切手續。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第五條 乙方之義務",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方之義務如下：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、乙方應本於善良管理人注意義務，依據建築法及建築物室內裝修管理辦法等相關規定提供服務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、乙方之義務包含依法代為辦理本案室內裝修許可及消防審查申請。但不包括使用執照（用途）變更之申請。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、如依甲方之指示可能使本案無法取得室內裝修許可或有違反相關建築法令之情形者，乙方應即時告知；如未即時告知，應賠償甲方因此所受損害。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第六條  設計服務費用及初估工程費用之估價",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本室內裝修之設計服務範圍及費用估價如附件一；初估工程費用如附件三。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第七條  設計服務費用、初估工程費用及其他費用",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "設計服務費用、初估工程費用及其他費用應依下列規定辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、設計服務費用：計新臺幣（以下同）         元整（含稅，以下同）。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、初估工程費用：計         元整。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、設計服務費用與初估工程費用合計金額為        元整。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "四、其他費用：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（一）依法應辦理室內裝修許可或消防審核申請，由乙方代為辦理時，如發生審查費用及相關專業簽證費用，應由甲方負擔者，憑據按實付款。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（二）其他依法令應由申請人繳納之各項規費，應由甲方負擔。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（三）前二目之費用，甲方應於預定申請送件日   日前，全數預付，並於取得室內裝修合格證明時結清，憑單據多退少補。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第八條  實際工程費用",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "實際工程費用係以附件一乙方提供給甲方確認後之施工圖說文件為依據，所估算之費用，經雙方簽字確認為準。實際工程費用以不超過初估工程費用＿＿％為原則（最高不得逾初估工程費用20%），但經甲方同意者，不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "實際工程費用如超過初估工程費用20%且甲方不同意者，乙方應調整細部設計及施工圖；如乙方不調整，甲方得通知乙方停止工作，並得終止契約。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第九條  契約總價",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "契約總價為設計服務費用與實際工程費用之合計金額。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十條  付款辦法",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方付款方式應依下列規定辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、本契約簽定日，甲方支付契約總價      %（最高不得逾本契約總價5%）簽約金計      元。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、依附件四完成至節點2：設計階段三工作時或尚未完成，但甲方指示或雙方協議進場施工時，甲方應於工程開工日支付契約總價      %（最高不得逾本契約總價5%）計       元。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、依附件四進行至節點3：            工程完成時，甲方應支付契約總價    %（最高不得逾本契約總價25%）計       元。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "四、依附件四進行至節點4：              工程完成時，甲方應支付契約總價   %（最高不得逾本契約總價25%）計       元。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "五、依附件四工程進行至節點5：完工清潔時，甲方應支付契約總價    %（最高不得逾本契約總價30%）計       元。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "六、全部工程驗收完畢並取得室內裝修合格證明且乙方將保固保證金交付甲方後，乙方得向甲方申請結清本契約所餘款項。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "保固保證金計       元（不得低於契約總價5%），由乙方以無記名可轉讓定期存單、銀行保證書、銀行本行本票、保付支票或無記名政府公債提供甲方為保固擔保，於保固責任解除且無待解決事項後，由甲方無息退還給乙方。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方應自接獲乙方請款日起    日 (不得少於7日) 內支付，如甲方遲延給付者，應自遲延之日起按年利率百分之     （最多不得超過5％）計算遲延利息給予乙方。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十一條  契約期間",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "自中華民國（以下同）    年    月    日起至    年    月    日止（詳附件四）。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十二條  設計變更",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "經甲方書面通知乙方辦理下列變更設計項目時，乙方應配合辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、甲方於附件一之階段二、階段三檢視確定各該階段設計內容後，因變更需求，而導致乙方需重新辦理規劃設計。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、未涵蓋於本契約內之新增或減少原服務項目及範圍。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "前項變更設計服務費用依附件一估價單之單價，就各階段尚未服務完成部分，辦理設計服務費用追加減。其變更設計服務費用、支付期程及方式，由雙方另行協議定之。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方有下列變更設計項目時，不得向甲方要求增加工作期限及服務費用：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、規劃、設計辦理期間，因政府法令變更而導致需辦理變更設計事項者。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、原設計圖說未符合甲方要求之功能需求或可歸責乙方因素而導致之變更設計者。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、乙方作有利於甲方之修改且經甲方同意者。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "其他不可歸責於甲乙雙方之事由導致需變更設計時，變更設計費用由雙方平均分攤。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十三條  工程變更",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "工程變更應依下列規定辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、本工程範圍及內容得經雙方同意後增減之，其增減部分如與本工程契約附件內所訂項目相同時，即比照該單價計算增減金額；其增減項目與本契約附件有所不同時，應由雙方議定其金額。由甲方簽認後施工，並用書面作為本契約之附件。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、增減工程價款之支付或扣減，雙方另行協議付款期程。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、因甲方指示廢棄部分工程，其已訂購之成品、半成品之費用，由甲乙雙方協議處理。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "四、設計變更、工程變更致使局部或全部停工，其合理延展工程期限，由雙方協議之。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十四條  權利讓與及義務承擔",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲乙雙方未經他方書面同意，不得將本契約之權利義務移轉第三人。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十五條  乙方負責事項",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方負責事項應依下列規定辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、乙方應依本契約書、所附圖說文件及估價單施工，其有違反致甲方或其他第三人任何損害，乙方應負賠償責任。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、乙方得依專業分工原則，將本工程分包給第三人承作，但不得將本工程轉包或全部分包予第三人承作。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、乙方工程完成後應進行環境清潔，並將施工期間內造成公共設施之損害予以修復。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "四、乙方應採取適當之安全措施，以避免發生損及他人生命、身體、健康或財產之事故；如遇有緊急事故，乙方應立即採取必要之措施，並儘速通知甲方。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "五、乙方應遵守環境保護、勞工安全衛生等相關法規，並辦理有關工程意外保險及火災保險。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十六條  工程驗收",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "工程驗收應依下列規定辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、除有第二十五條之情形外，本工程全部完工時，乙方應以書面通知甲方驗收，甲方應於書面通知送達之翌日起10日內會同乙方進行驗收。如甲方無正當理由未於期間內會同驗收，經乙方先後再定相當期限之書面催告二次仍未會同驗收者，推定完成驗收程序。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、經驗收發現瑕疵部分，乙方應於甲方書面通知或驗收紀錄所協商約定之期限內修繕，並依前款方式通知甲方再行驗收；乙方未於修繕期限內完成修繕者，經甲方催告，乙方仍未完成修繕者，甲方得另委託第三人修繕，所生費用得由未撥付款項支應。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、前二款規定，不妨礙甲方就工作物之瑕疵，依民法向乙方主張承攬瑕疵擔保、不完全給付或其他責任。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "四、工作物之瑕疵經驗收完成後逾5年者，甲方不得主張。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十七條 提前使用",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方提前使用應依下列規定辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、甲方對於已完成之工程，如有提前使用之必要，應會同乙方驗收完成後使用，乙方得請領該已完成部分之工程全部費用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、甲方對於未完成之工程，得經乙方同意後使用。但因甲方使用致工程延宕，或造成工程瑕疵時，甲方應負其責。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、甲方對提前使用部分，應負保管之責。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十八條  違約之處理",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲乙雙方違約之處理應依下列規定辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、乙方違約之處理：乙方如未依本契約所定之期限內完成本案之規劃設計或施工，乙方應個別按日以設計服務費用或實際工程費用，每逾期1日，課以設計服務費用或實際工程費用之千分之一之遲延違約金予甲方，違約金總額以本契約總價百分之十為限。上述違約金得由甲方應付乙方之款項中扣除。但因甲方之因素或不可歸責於乙方之事由而遲延者，不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、甲方違約之處理：甲方未依約定付款時，經乙方書面定相當期間催告履行，仍不履行付款者，甲方應個別按日以設計服務費用或實際工程費用，每逾期1日，課以設計服務費用或工程費用之千分之一之遲延違約金予乙方，違約金總額以本契約總價百分之十為限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十九條  契約解除",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲乙雙方於一方有下列情形之一者，他方得解除本契約：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、乙方無正當理由遲未依第十一條契約期間進場施工，超過約定期限   日（不得逾30日，但契約期間在30日以下者，不得逾契約期間之半；未填寫者，亦同）以上者。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、甲方無正當理由遲未交付場地，經乙方書面催告逾30日，乙方仍無法進場施工。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "三、未經他方書面同意將本契約之權利義務移轉第三人。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十條  契約終止之事由",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲乙雙方契約終止應依下列規定辦理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、甲方之終止權：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(一)本契約工程未完成前，甲方得以書面終止契約，但應賠償乙方因契約終止而產生之損害。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(二)乙方有下列情形之一者，甲方得以書面終止本契約：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "1.因可歸責於乙方之事由致未能依第十一條規定契約各階段期間完成工作，經甲方書面催告逾15日仍無法完成者。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "2.乙方將本契約工程轉包或全部分包給第三人承作者。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、乙方之終止權：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(一)甲方違反第十條規定，未依約定付款時，經乙方書面催告逾15日，仍未給付者，乙方得以書面終止本契約。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(二)終止契約時，乙方得自已收之價款抵償已完成工作之報酬，差額得向甲方追償。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十一條  契約終止後之處理",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "契約終止後甲乙雙方應依下列規定辦理結算：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一、非可歸責於甲方部分：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(一)乙方尚未執行設計階段二者，應全額退還甲方已給付之簽約金並加計法定利息。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(二)乙方已進行設計階段三以後之工作者，甲方應結算乙方已完成階段之服務費用予乙方。乙方應給付完成階段之圖說文件。甲方並得另委託第三人修正圖面，接續工程承攬工作。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(三)已施作之工程經雙方驗收同意者，依估價單內項目及單價結算。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(四)已預先訂購之成品與半成品、材料由乙方自理，甲方毋須支付費用。甲方若願收購，則由雙方協議價購。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "二、可歸責於甲方部分：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(一)乙方得請領已完成各階段之設計服務費用。但乙方應給付完成階段之圖說文件。甲方並得另委託第三人修正圖面，接續工程承攬工作。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(二)已施作之工程經雙方驗收同意者，依估價單內項目及單價結算。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(三)已預先訂購之成品與半成品、材料，依估價單項目單價計算之，由甲方收購。乙方若願收購，則由雙方協議價購。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十二條  材料所有權之歸屬",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本契約工程所有乙方自備之裝修材料未固著前，在甲方尚未付清該部分工程款前，其所有權歸乙方所有。但該材料甲方已付款者，不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十三條  保固期限及範圍",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方對於施作之工程，應自驗收完成之日起負保固一年，在保固期間內非可歸責於甲方之損壞者，乙方應無條件照圖說文件負修復之責。但因不可抗力及材料自然之因素，或甲方使用不當、未善盡保管之責所造成之損害及消耗性物品（如燈泡等），不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "保固期限經過後，不免除乙方依民法承攬規定所負瑕疵擔保相關責任。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十四條  通知送達",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本契約雙方所為之通知辦理事項，以書面通知時，均依本契約所載之地址為準，如任何一方遇有地址變更時，應即以書面通知他方，其因拒收或無法送達而遭退回二次者，以最後退件日推定已依本契約受通知，雙方仍宜以簡訊（電子郵件或其他約定方式）告知他方此通知之事由。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十五條  爭議處理",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "因本契約發生之爭議，雙方得於直轄市、縣（市）政府消費爭議調解委員會、鄉（鎮、市、區）公所調解委員會或法院調解，或依下列方式擇一處理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "□除專屬管轄外，以標的物所在地之法院為第一審管轄法院。但不排除消費者保護法第四十七條或民事訴訟法第四百三十六條之九小額訴訟管轄法院之適用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "□依仲裁法規定進行仲裁。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十六條  消費者資訊之利用",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方僅得於履行本契約之目的範圍內蒐集處理及利用甲方之個人資料。但相關法律或法律具體明確授權之法規命令另有規定者，不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十七條  保密協議",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲乙雙方保證凡因本契約所知悉對方之秘密決不外洩，如有違反應賠償對方因此所生之損害。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十八條  著作權之歸屬",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "除另有約定外，依本契約所完成之設計圖說，其著作財產權屬於乙方。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方欲使用前項設計圖說於本契約以外之工程地點或其他用途時，須經乙方書面同意。但有前項另有約定或甲方合理使用之情形者，不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十九條  附件效力及契約分存",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "契約附件及雙方補充之書面協議均為本契約之一部分。本契約正本貳份，由雙方各執一份為憑，並自簽約日起生效。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第三十條  未盡事宜之處置",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本契約有未盡事宜者，依相關法令及平等互惠與誠實信用原則協議之。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "立委任契約書人",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲　　方：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "負 責 人：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "統一編號或國民身分證統一編號：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "地　　址：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "電　　話：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙　　方：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "負 責 人：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "統一編號：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "地　　址：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "電　　話：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "中華民國\t              年　          　月　          　日",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "設計委託及工程承攬契約書附件",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "■附件一：乙方設計服務範圍及費用估價單",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "說明：本表係提供甲、乙雙方確認設計範圍及計算設計費用，表內服務範圍內容為一般住宅個案的作業流程及內容，甲、乙雙方可視需要增加服務項目，並依甲方案件面積規模大小及工程費用總預算，酌情在□內勾選服務的內容，再由乙方計算設計服務費用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "費用計算單位：新臺幣",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "◆設計服務費用估算如下：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "◆其他費用：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "《代辦室內裝修審查費》",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "依法代為申請室內裝修許可、竣工查驗、消防審查、消防竣工查驗（不包括涉及使用執照用途變更及增改建行為之申請），繪圖及申辦費用               元（規費不含在內）。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "《其他代辦申請書圖文件規費》             元",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "■附件二：甲方預定提供之圖說文件",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "■附件三：初估工程費用",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "另詳附件（乙方提供）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "■附件四：整體設計委託及工程承攬預定進度表",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本進度表結合設計委託與工程承攬之進度。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "有關工程承攬部分，需說明工程施工順序，包括但不限於下列列舉之主要工種進場施工期程，例如牆壁、天花板、地板、表面裝飾材（例如油漆、壁紙）、燈具、廚俱、傢俱、衛浴設備……等，其工程完成預定時間及工程順序應依乙方之專業及本案之需求而排定。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "需註明配合階段完工之請領工程款之節點及其時間。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "註：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "1.本表係以約100平方公尺至300平方公尺內一般住宅規模之階段流程製作，僅供參考。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "2.《代辦室內裝修申請》自中華民國   年   月   日提出申請案並送件。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "3.《代辦室內裝修竣工查驗》自中華民國    年    月    日提出申請案並送件。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "生前殯葬服務契約預收費用信託定型化契約範本",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "立契約書人：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方公司名稱（委託人兼受益人）：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "營利事業統一編號：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "代表人：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "國民身分證統一編號：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "住址：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "電話：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方公司名稱（受託人）：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "營利事業統一編號：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "代表人：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "國民身分證統一編號：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "地址：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "電話：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "中華民國        年      月         日",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "線上服務條款\n歡迎您加入石策聯合法律事務所(下稱「石策」)會員，並使用石策所提供的各項線上服務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "為保障您的權益，請詳細閱讀本服務條款所有內容。當您在線上勾選「我同意」並註冊完成，或開始使用石策所提供的任一服務時，即表示您已經詳細閱讀、了解，並同意遵守本服務條款的所有約定。請注意，如您不同意本服務條款時，將無法繼續使用石策所提供之服務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "提醒您，要先行審閱本契約三日以上，再按「我同意」。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "當事人及其基本資料：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(一)石策會員（以下簡稱「甲方」）：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方個人資料皆載明於會員頁面",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(二)服務提供者（以下簡稱「乙方」）：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "石策聯合法律事務所",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "代表人：劉芳茵",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "電話：0972-099710",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "網址：https://ttslaw.tw",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "電子郵件：ttslawgrm@gmail.com",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第一條（本服務之定義）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方授權甲方於指定之網站系統，使用乙方透過網際網路連線進行之教學或其他相關服務。但其中的網際網路教學服務不包括正規教育、國民補習學校、進修學校及短期補習班所提供之服務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲乙雙方關於本服務之權利義務，依本契約條款訂定之。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二條（服務內容）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "服務內容包括下列各款：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（一）乙方提供服務之網站。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（二）乙方提供本服務之適用對象：不限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（三）乙方提供本服務之教學內容、教學課程數量及贈送之教學課程數量：依會員所購買的課程內容或所選擇的方案而定。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第三條（設備規格）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方於甲方使用本服務前，明確告知甲方使用本服務前，應具備下列之軟硬體設備基本規格及要求：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "作業系統\t電腦\nWindows 10\nMac OS 10.13\n手機\niOS 12\nAndroid 7\n瀏覽器\tChrome 75\nFirefox 68\n網路速度\t光纖網路 2M\n行動網路 4G\n　　甲方連結乙方指定網站系統之機房設備之接取網路，除經雙方約定由乙方所提供者外，應由甲方自行向合法經營之電信事業申請租用，甲方租用該接取網路所生之權利義務，依甲方與該電信事業間契約約定之。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方未事先告知第一項之約定，致甲方無法使用本服務或影響本服務之品質者，甲方得主張本契約不生效力。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第四條（契約之成立生效）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方經由網際網路申請本服務者，於乙方所指定網頁上點選「同意」鍵，表示同意申請本服務並同意以電子文件作為表示方式後，乙方應立即以網站系統，回覆通知甲方利用再次確認機制加以確認電子文件內容，經甲方再次確認後，本契約成立。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "除前項情形外，經雙方於本契約書上簽名或蓋章後，本契約成立。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第五條（法定代理人）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方為限制行為能力人者，本契約訂定時，應經甲方之法定代理人同意，本契約始生效力；甲方為無行為能力人者，應由甲方之法定代理人代理訂定契約。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "違反前項之約定者，除有民法第八十三條之情形者外，本契約不生效力，乙方不得據以要求甲方之法定代理人負擔契約履行或賠償責任。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "限制行為能力人於訂立本契約條款前，應主動告知其為限制行為能力人。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第六條（登錄使用）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方於收受乙方提供使用本服務所需之登錄帳號、序號或密碼之日起，應依乙方規定之登錄程序註冊與甲方身分證明文件相符之必要個人資料，並設定使用者帳號及個人密碼，以便乙方於甲方使用本服務時，確認甲方之身分。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第七條（授權登入方式）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方授權甲方登入本服務網站系統之方式為帳號密碼制，每個會員帳號密碼組之數目為1；每組帳號密碼於同一時間之使用權數目亦僅為1。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第八條（使用期間）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方授權甲方使用本服務之期間、次數或權利以甲方所購買服務或所選服務方案的頁面說明之記載為憑。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第九條（擔保授權）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "雙方應確保其就本契約所授權他方使用之服務內容，為合法權利人。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "一方有違反前項之情事致他方無法繼續使用者，違反者應補償他方無法使用之損失，如他方所使用的服務為教學服務者，所賠償以替換類似課程或全額退還該課程您所支付之授權使用費金額為限；如他方所使用的服務為其他服務，則不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "未經乙方事前之書面同意，甲方不得以任何方式將其使用權讓與他人使用；任何方式包括但不限於與他人共用您的會員帳號、分享串流或公開放映等。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十條（授權使用費）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本服務授權使用費之金額如購物車清單或所合作方案所記載。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方得以優惠價格提供甲方自由決定是否加價購買商品、教學課程或服務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方依前項優惠方式加價購買之教學課程或服務，契約終止或解除時，準用第23條第2項規定。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "訂立本契約時，乙方以「贈品」為名義，向甲方所為之贈與，於本契約終止或解除時，乙方不得向甲方請求返還該贈與物，亦不得向甲方主張應自返還之費用金額當中，扣除該贈品之價額。乙方以贈送教學課程數量、使用期限為內容而簽訂契約者，亦同。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "前項「贈品」，其價值之上限為商品、教學課程或服務價值之2分之1。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十一條（付費方式）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "雙方同意教學服務授權使用費之給付方式為一次全部繳納。其他服務依其性質不同，另有約定，不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十二條（授權使用原則）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方有下列情形之一者，應由甲方自負一切法律責任，乙方並得通知甲方終止本契約，甲方不得拒絕：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(一)甲方蓄意散布干擾乙方網站系統正常運作之電腦程式，或對於本平台進行包括但不限於修改、重製、對於任何功能、程式進行還原工程 （reverse engineering）、反向組譯（disassemble）或任何企圖取得原始碼或內容之行為等。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(二) 甲方在乙方網站系統上散布恐嚇、毀謗、侵害他人隱私、色情或其他違反強制或禁止規定、公序良俗之文字、圖片或影像。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "於前項情形，乙方有權自行認定並立即停止傳輸（下架）任何前述內容並採取相應行動，包括但不限於暫停甲方使用本服務之全部或部分、移除該內容或保存有關記錄等。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方利用本服務從事其他不法或違反本契約約定事項之行為，其情節重大，且經乙方通知甲方限期改正而屆期未改正者，乙方得通知甲方終止本契約，甲方不得拒絕。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方依前二項之約定終止本契約者，應按比例返還甲方相當於終止契約前尚未使用之本服務授權使用費金額，但乙方得於返還金額中扣除百分之20之懲罰性違約金。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十三條（甲方之義務）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方對於使用本服務所產生之授權使用費，有按時給付之義務，並對本契約終止前已產生之授權使用費，有繳納之義務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方如為合作夥伴者，應有給付合作內容要求的服務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方對於其使用者帳號與個人密碼有妥善保管以避免第三人知悉之義務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方在使用本服務時，有遵守本契約第12條所約定之授權使用原則之義務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方依本契約第7條之約定所註冊之個人資料有錯誤或已變更者，應儘速通知乙方請求更正。如因甲方怠於通知而致其權益受損者，應由甲方自行負責。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方應提供並持續保持所有建立該帳號之個人資料之真實性及完整性，所有的個人資料皆被視為註冊必備要素，如建立帳號時提供之個人資料有虛偽不實或不完整之情事，因此造成乙方之損害時，甲方應對乙方負損害賠償責任。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方不得以重製、公開傳輸、轉售、公開播放、分享或用本平台所提供服務以外之方式下載、使用本服務；且不得在乙方網站系統上散布恐嚇、毀謗、侵害他人隱私、色情或其他違反強制或禁止規定、公序良俗之文字、圖片或影像。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十四條（帳號密碼非法使用之處理）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "利用甲方之使用者帳號與個人密碼，登入本服務網站系統之行為，推定為甲方之行為。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "雙方當事人之任何一方，發現甲方之使用者帳號或個人密碼遭第三人不法或不當之使用，應立即通知對方。經甲方確認甲方之使用者帳號或個人密碼有遭第三人不法或不當之使用情事，乙方應立即暫停該使用者帳號或個人密碼之使用，並接受甲方更換其使用者帳號或個人密碼之請求。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "前項情形，除甲方能證明係因可歸責於乙方之事由，致甲方之使用者帳號或個人密碼遭第三人不法或不當使用所生之損失者外，如甲方使用教學服務他，乙方得於7個工作日內以延長甲方之使用期間或返還甲方已遭扣除之使用次數、時間單位作為補償；如甲方所使用為其他服務，則乙方之賠償以該次合作費用為限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十五條（服務品質）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方應提供具有合理期待安全性之服務，並應確保其系統設備，無發生錯誤、畫面暫停、遲滯、中斷或不能進行連線之情形。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "網際網路教學服務於乙方因可歸責於自己之事由，違反前項之約定者，除應及時更正或修復外，並經甲方舉證確定可歸責於乙方之事由後，應依下列各款之約定，賠償甲方之損失：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(一)定期制者：乙方應延長甲方之使用期間。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(二)計次制者：乙方應返還甲方已遭扣除之使用次數。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "經甲方通知或乙方知悉內容錯誤，除於網站公告錯誤內容外，並於通知或知悉之日起算及時完成更正或移除。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "具甲方身分之學生明白乙方平台上之課程由各具甲方身分之授課老師提供，乙方盡力要求授課老師所提供之教學內容或教材之正確性，經學生通知知悉課程或教材內容可能有錯誤，乙方將協助學生與授課老師確認內容，並於通知或知悉之日起算 3 個工作日內完成與授課老師之初步確認。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "於網際網路教學服務有效期間內發生情節重大之系統異常或教學內容、教材錯誤之情事達3次以上，且乙方未依規定修復或更正，甲方得通知乙方逕行終止本契約，乙方不得拒絕，乙方應按比例返還甲方相當於終止契約前尚未使用之網際網路教學服務授權使用費金額，並加計返還金額最高不得超過返還金額百分之1之違約金。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方使用網際網路教學服務時，因可歸責於與乙方合作的第三人之事由，發生教學內容錯誤、網站系統畫面暫停、中斷、不能進行連線或其他服務品質瑕疵之情形，甲方得準用第2項各款之約定，請求乙方於7個工作日內補償之。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方不保證以下事項：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(一)服務將符合甲方的特定要求。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "(二)於乙方購買或取得之任何產品、服務、資訊或其它課程將符合甲方的期望，對此是否使用服務應由您自行考慮且自負風險。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十六條（乙方之履約保證責任）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "網際網路教學服務授權使用費預付期間逾一年且預付金額超過新臺幣五萬元者，乙方應就超過金額部分，將依信託法規定開立信託專戶管理或由銀行提供履約保證，作為履約保證之內容。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十七條（智慧財產權）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方應尊重與本服務有關之所有智慧財產權，非經智慧財產權人事前書面同意，甲方不得以本契約授權以外之其他方式加以利用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方違反前項之約定者，應依法賠償智慧財產權人因此所受之損害，並應給付乙方以違反者依法應賠償給智慧財產權人賠償金之百分之20作為懲罰性違約金。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十八條（乙方保密義務）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方因提供網際網路教學服務而知悉或持有甲方之學習紀錄或其他個人資料，乙方負有保密義務，除甲方請求查詢或第三人依據個人資料保護相關法令請求查詢者外，乙方不得對任何第三人揭露。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第十九條（乙方免責事由）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "除本契約或乙方之廣告另有保證使用網際網路教學服務之學習成效外，乙方不保證甲方使用網際網路教學服務之學習成效。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十條（暫停服務之處理）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方對於本服務相關軟硬體設備，進行營運上必要之搬遷、更換、升級、保養或維修時，得暫停本服務之全部或一部。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方因前項事由而暫停本服務之全部或一部，應於暫停本服務7日前，於本服務網站首頁上及本服務進行中公告，或以電子郵件或書面通知甲方。但因臨時性、急迫性或不可歸責於乙方之事由者，不在此限。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十一條（個人資料之保護）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方因提供本服務得蒐集、處理及利用甲方之學習紀錄或其他個人資料，對於甲方個人資料之蒐集、處理及利用，應取得甲方事前之書面同意，並依誠實及信用方法為之，不得逾越本契約目的之必要範圍，且應與蒐集之目的具有正當合理之關聯。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "除法律另有規定者外，乙方不得將甲方個人資料為本契約目的必要範圍外之利用，並不得將甲方個人資料於乙方之關係企業之不同法人間流通。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十二條（契約之變更）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "乙方修改本契約時，應於30日前於網站系統公告之，或以電子郵件通知甲方。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方未為反對之表示且繼續使用本服務者，乙方依契約變更後之內容繼續提供本服務。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方不同意第1項之變更，得於公告後30日內向乙方主張終止契約，並依下列約定事項處理：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方主張網際網路教學服務終止時，乙方應按比例返還甲方相當於終止契約前尚未使用之網際網路教學服務授權使用費用金額，雙方準用第23條第2項規定處理。如甲方主張其他線上服務終止時，雙方準用第24條規定處理。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十三條（網際網路教學服務終止與退費）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本網站所提供的網際網路教學服務如係採定期制或計次制者，甲方於使用期間屆滿或所購使用次數使用完畢時，網際網路教學服務契約即告終止。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "除前項所約定之情形者外，甲方得隨時通知乙方終止網際網路教學服務契約，乙方不得拒絕。網際網路教學服務契約終止後，乙方應依下列方式，結算、撥付或收取網際網路教學服務之授權使用費：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（一）開課日前及開課日後7日內，終止網際網路教學服務契約，應全額返還網際網路教學服務授權使用費。但法規另有規定者，從其規定。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（二）開課日起第8日至第14日以內始終止網際網路教學服務契約，應返還網際網路教學服務授權使用費之百分之30。如經乙方釋明契約終止係可歸責於甲方之事由所致者，乙方並得自返還之金額中扣除百分之30之違約金。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（三）開課日起第15日始終止網際網路教學服務契約，網際網路教學服務授權使用費全額不予退還。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "若課程募資失敗或課程老師未完備其與乙方約定之義務，乙方將甲方已支付之費用全額退還。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十四條(其他線上服務終止與退費)",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "如甲方所選擇的服務為乙方所提供的其他線上服務，乙方得於服務終止前3日不附任何理由，通知甲方終止其他線上服務之提供。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "其他線上服務契約終止後，乙方應依以下方式，結算、撥付或收取服務之授權使用費：",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（一）其他線上服務如以計次制，乙方應返還甲方該次未使用之費用。如經乙方釋明契約終止係可歸責於甲方之事由所致者，乙方並得自返還之金額中扣除百分之30之違約金。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "（二）其他線上服務如以定期制，乙方應按比例返還甲方相當於終止契約前尚未使用之服務金額，且乙方以扣除該服務金額百分之5作為相關服務的行政費用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十五條（不可抗力事件）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "因不可抗力事件，致本契約無法履行者，雙方當事人之任何一方均得通知對方終止本契約。本契約終止後，乙方應按第23條、第24條規定返還甲方相當於終止契約前尚未使用之金額。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十六條(文書自動生成服務相關聲明)",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本網站所提供文書自動生成服務，如部分內容係參考司法院網站之書狀範例再作修改而成，就狀紙內容係司法院網站擁有著作權，惟就本網站提供其他內容之著作權等智慧財產權均歸屬完成著作人之所有。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本網站所提供文書自動生成服務功能，禁止不具律師資格者藉此辦理訴訟事件營利，如有使用者不具律師資格藉此辦理訴訟營利，經發現必進行檢舉，違反律師法第127條、第128條規定，絕不寬貸，請使用者自重。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "文書自動生成服務係依使用者輸入之資料所作成，請使用者依照事實輸入，如輸入不實資訊因而影響他人權益，除使用者另行購買其他服務外，因本網站就使用者如何使用生成之書狀並無審核確認之權限，無從擔保其真實性，亦無從擔保使用者向法院聲請之結果，使用者需自負民、刑事上之法律責任。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "在使用者使用文書自動生成服務時，除使用者另行購買其他服務外，在使用者僅使用文書自動生成服務時，因本網站無從監督或干涉使用者使用此服務的情形，是使用者與乙方(及合作律師)間並未成立任何律師與客戶間的契約關係。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "文書自動生成服務為消費者保護法第2條第10款所稱之「通訊交易」，屬一經提供即為完成之線上服務，適用「通訊交易解除權合理例外情事適用準則」第2條第5款之規定，不適用消費者保護法第19條第1項解除權之適用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "使用者就使用文書自動生成服務所生的書狀，另行進行的任何修改、添加等相類似之行為，皆為使用者之自我之行為，與本網站干涉，如因此產生任何法律責任，使用者應自行負責之。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十七條（申訴權利）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "甲方對於乙方所提供之線上服務，除得撥打乙方電話提出申訴外，亦得以電子郵件或書面，或至乙方之營業處所向乙方提出申訴，乙方應自接獲甲方申訴之日起15日內妥適處理之。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十八條（準據法）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "因本契約所生之一切爭議，雙方當事人約定適用中華民國法律。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第二十九條（契約之附件）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "有關本契約之廣告、分期攤還表及保證書均為本契約之一部分。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "前項廣告、分期攤還表及保證書之內容，如有與本契約條款內容相牴觸者，應為有利於甲方之適用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本契約成立時，乙方應將本契約及相關內容，提供甲方下載、列印儲存。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第三十條（契約之解釋）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "本契約條款內容如有疑義時，應為有利於甲方之解釋。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "第三十一條（管轄法院）",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
+  },
+  {
+    "clause": "因本契約所生之一切爭議，雙方當事人同意以台灣台中地方法院為第一審管轄法院，但不得排除消費者保護法第47條或民事訴訟法第436條之9有關小額訴訟管轄法院之適用。",
+    "risk_level": "一般資訊",
+    "type": "待分類",
+    "tags": [
+      "人工確認"
+    ]
   }
 ]
