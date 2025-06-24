@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import argparse
 from docx import Document
@@ -26,13 +27,57 @@ def extract_from_md(path):
     return extract_from_txt(path)
 
 
+def detect_language(text):
+    if re.search(r"[\u4e00-\u9fff]", text):
+        return "zh"
+    return "en"
+
+
+def is_valid_clause(text):
+    if len(text.strip()) < 30:
+        return False
+
+    if detect_language(text) == "zh":
+        keywords = ["同意", "承諾", "應", "不得", "授權", "願意", "保證"]
+    else:
+        keywords = ["shall", "agree", "must", "may", "is", "are", "will", "warrant", "consent", "authorize", "undertake"]
+
+    if not any(kw in text for kw in keywords):
+        return False
+
+    return True
+
+
+def merge_short_paragraphs(paragraphs, min_len=40):
+    merged = []
+    buffer = ""
+    for para in paragraphs:
+        para = para.strip()
+        if len(para) < min_len:
+            buffer += " " + para
+        else:
+            if buffer:
+                para = buffer.strip() + " " + para
+                buffer = ""
+            merged.append(para.strip())
+    if buffer:
+        merged.append(buffer.strip())
+    return merged
+
+
 def to_whitelist_format(clauses):
-    return [{
-        "clause": clause,
-        "risk_level": "一般資訊",
-        "type": "待分類",
-        "tags": ["人工確認"]
-    } for clause in clauses]
+    result = []
+    merged_clauses = merge_short_paragraphs(clauses)
+    for clause in merged_clauses:
+        if is_valid_clause(clause):
+            result.append({
+                "clause": clause,
+                "risk_level": "一般資訊",
+                "type": "待分類",
+                "language": detect_language(clause),
+                "tags": ["人工確認"]
+            })
+    return result
 
 
 def process_file(path):
