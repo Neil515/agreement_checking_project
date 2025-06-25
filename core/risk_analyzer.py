@@ -1,4 +1,3 @@
-# core/risk_analyzer.py（改為動態 few-shot 組合範例）
 import os
 import json
 import re
@@ -18,7 +17,14 @@ INSTRUCTION_ZH = """
 回傳格式：{\"clause\":..., \"risk_level\":..., \"type\":..., \"reason\":...}
 """
 
-# 範例清單（Few-shot）
+INSTRUCTION_EN = """
+Please help assess whether the following clause is a "Risky Clause".
+Evaluation criteria:
+- Only clauses that clearly impose unfair conditions, excessive obligations, restrict rights, or pose potential legal issues should be marked as "Risky".
+- Clauses that are common, informative, or standard legal language should be marked as "General Information".
+Return format: {"clause":..., "risk_level":..., "type":..., "reason":...}
+"""
+
 FEW_SHOT_EXAMPLES_ZH = [
     {
         "clause": "本契約雙方應善意協商處理合約未盡事宜。",
@@ -37,6 +43,27 @@ FEW_SHOT_EXAMPLES_ZH = [
         "risk_level": "須注意",
         "type": "資訊使用授權",
         "reason": "授權條款用途過於廣泛，且無償，可能造成資訊控制不對等"
+    }
+]
+
+FEW_SHOT_EXAMPLES_EN = [
+    {
+        "clause": "The parties agree to act in good faith to resolve any matters not covered by this agreement.",
+        "risk_level": "General Information",
+        "type": "Standard Obligation",
+        "reason": "This is a typical cooperation clause without imposing one-sided risks."
+    },
+    {
+        "clause": "The Company reserves the right to modify these terms at any time without prior notice.",
+        "risk_level": "Risky",
+        "type": "Unilateral Modification",
+        "reason": "Clause allows unilateral changes without informing the user, which may be unfair."
+    },
+    {
+        "clause": "User grants the service provider a perpetual, royalty-free license to use uploaded content for marketing purposes.",
+        "risk_level": "Risky",
+        "type": "Data Usage",
+        "reason": "The usage scope is too broad and royalty-free, possibly causing imbalance in information control."
     }
 ]
 
@@ -62,22 +89,23 @@ def lacks_high_risk_combinations(sentence: str, lang: str) -> bool:
             return False
     return True
 
-# GPT 分析主程式（用動態 few-shot prompt）
-def gpt_analyze(clause, lang):
-    if lang != "zh":
-        raise ValueError("目前僅支援中文模式")
+# GPT 分析主程式
 
-    few_shot_prompt = INSTRUCTION_ZH.strip() + "\n\n"
-    for ex in FEW_SHOT_EXAMPLES_ZH:
-        few_shot_prompt += f"條文：{ex['clause']}\n輸出：{json.dumps(ex, ensure_ascii=False)}\n\n"
-    few_shot_prompt += f"條文：{clause}"
+def gpt_analyze(clause, lang):
+    instruction = INSTRUCTION_ZH if lang == "zh" else INSTRUCTION_EN
+    examples = FEW_SHOT_EXAMPLES_ZH if lang == "zh" else FEW_SHOT_EXAMPLES_EN
+
+    prompt = instruction.strip() + "\n\n"
+    for ex in examples:
+        prompt += f"Clause: {ex['clause']}\nOutput: {json.dumps(ex, ensure_ascii=False)}\n\n"
+    prompt += f"Clause: {clause}"
 
     try:
         response = openai.ChatCompletion.create(
             model="gpt-4o",
             messages=[
-                {"role": "system", "content": "你是一位條款風險分析助手"},
-                {"role": "user", "content": few_shot_prompt.strip()}
+                {"role": "system", "content": "You are a contract clause risk analysis assistant."},
+                {"role": "user", "content": prompt.strip()}
             ],
             temperature=0.3,
             timeout=10
@@ -89,7 +117,8 @@ def gpt_analyze(clause, lang):
         print("📅 GPT 回傳內容：", text)
         result = json.loads(text)
         result["clause"] = clause
-        result["risk_level"] = "須注意" if result.get("risk_level") in ["高", "須注意"] else "一般資訊"
+        risk = result.get("risk_level", "")
+        result["risk_level"] = "須注意" if risk in ["高", "須注意", "Risky"] else "一般資訊"
         result["highlight"] = result["risk_level"] == "須注意"
         return result
 
@@ -103,7 +132,7 @@ def mock_analyze(clause, lang):
     return {
         "clause": clause,
         "risk_level": "須注意",
-        "type": "已同意權",
+        "type": "模擬結果",
         "reason": "模擬風險結果（未連接 GPT）",
         "highlight": True
     }
@@ -119,12 +148,5 @@ def analyze_clause(clause, lang):
             "reason": "Contextual sentence (e.g., heading or background info)",
             "highlight": False
         }
-    if lacks_high_risk_combinations(clause, lang):
-        return {
-            "clause": clause,
-            "risk_level": "一般資訊",
-            "type": "Informative",
-            "reason": "No high-risk keyword combinations detected",
-            "highlight": False
-        }
+
     return gpt_analyze(clause, lang)
