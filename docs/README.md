@@ -4,78 +4,80 @@
 
 ---
 
-## ✅ 最新進度整理（更新：2025-06-25）
+## ✅ 最新進度整理（更新：2025-06-26）
 
-### 📌 今日進度總結（2025-06-25）
+### 📌 近期完成項目
 
-#### ✅ `risk_analyzer.py` 改寫完成
+#### ✅ 快取機制擴充
 
-* 支援中英文語言動態判斷，`gpt_analyze()` 會根據 `lang` 自動選擇對應提示語與範例
-* 中英文 few-shot 提示範例皆已內嵌，無須外部載入
-* 增加 `Risky` 判斷關鍵字對應中文「須注意」，避免語意遺漏
+* 快取檔 `results_cache.json` 以 `clause + language` 為索引鍵
+* 支援 CLI：
 
-#### ✅ 雙測資測試 runner 架構完成
+  * `--no-cache` 不讀寫快取
+  * `--limit N` 限制測試數量
+* 有效避免重複送出 GPT 請求，加速測試
 
-* `test_risk_cases_runner_dual.py` 可同時讀取白名單與黑名單測資進行驗證
-* 內建快取系統（`results_cache.json`），分析結果會儲存以加速重複測試
-* 快取根據條文原文與語言做索引，避免重複請求 GPT
+#### ✅ 黑白名單格式統一
 
-#### ✅ 測資與資料優化
+* 所有條文均具備 `clause`, `risk_level`, `type`, `language`, `reason`, `tags` 欄位
+* 補上空白 `reason`、統一 `type` 欄位結構
+* 提供格式修正工具：
 
-* 白名單改以 `whitelist_examples.json` 作為唯一資料來源，不再需多餘轉換檔案
-* 測資自動讀取中英欄位，自動調用語言模式
-* 未來 `risk_examples.json` 將做為黑名單來源
+  * `tools/fix_risk_format.py`
+  * `tools/fix_whitelist_format.py`
 
-### 📌 whitelist 條文建構與英文支援進展
+#### ✅ CLI 測試與測資更新
 
-* 完成 convert\_to\_whitelist.py 強化：新增中英文語言判斷、自動過濾非條文片段（如標題、短語）
-* 合併短段為段落式條文，避免碎裂句誤判
-* 每條自動標記語言（language: zh/en），保留 risk\_level: "一般資訊"
-* 成功加入英文條文白名單樣本，作為 GPT 提示時的反例參考
+* `test_risk_cases_runner_dual.py` 可同時分析白／黑名單條文並比對 GPT 結果
+* 加入 20 筆新測資，錯誤比對機制完整：`risk_level`、未來將支援 `type`
 
-### 📌 下一階段任務預告
+---
 
-1. 建立高風險條文樣本集 `risk_examples.json`
-2. 擴充 CLI 工具參數支援：
+## 🔜 下一階段任務
 
-   * `--auto-tag` 自動分類 type（責任/付款/授權等）
-   * `--summary` 顯示統計（條數、中英文比例、分類分布）
-   * 條文加入來源檔名 `source`
+* `--check-type`：新增 GPT 分析結果與測資 type 欄位一致性比對
+* `--summary`：統計條文語言比例、風險等級與類型分布
+* 擴充黑名單測資至 100 條以上，完整標記欄位
+* 建立視覺化報表資料輸出（供 `report_template.html` 使用）
 
 ---
 
 ## 🔧 專案架構
 
 ```
-├── core/                  # 核心功能模組
+├── core/                  # 核心模組
 │   ├── clean_text.py         # 條文清理
 │   ├── lang_detect.py        # 自動語言偵測
 │   ├── split_text.py         # 條文分句
-│   └── risk_analyzer.py      # GPT 風險分析主模組
+│   └── risk_analyzer.py      # GPT 分析主模組
 │
 ├── prompts/              # GPT 提示語（中英文）
 │   ├── prompt_template_zh.txt
 │   └── prompt_template_en.txt
 │
-├── data/                 # 白名單與未來風險樣本資料
+├── data/                 # 測資來源
 │   ├── whitelist_examples.json
-│   └── risk_examples.json （預計加入）
+│   └── risk_examples.json
 │
-├── tools/                # 🔄 條文轉換與前處理腳本
-│   └── convert_to_whitelist.py
+├── tools/                # 前處理與格式統一腳本
+│   ├── convert_to_whitelist.py
+│   ├── fix_risk_format.py
+│   └── fix_whitelist_format.py
 │
-├── tests/                # 測試資料與指令
-│   ├── full_doc_tester.py    # 全檔分析指令
-│   ├── test_risk_analyzer.py # 單句分析測試
-│   └── zh_sample_test.txt    # 範例測試條文
+├── tests/                # 測試程式與測資檔
+│   ├── full_doc_tester.py
+│   ├── test_risk_analyzer.py
+│   ├── test_risk_cases_runner_dual.py
+│   ├── zh_sample_test.txt
+│   └── full_agreement.txt
 │
-├── outputs/              # 分析結果儲存位置
-│   └── zh_sample_test_output.json
+├── outputs/              # 測試結果輸出 JSON
+│   ├── zh_sample_test_output.json
+│   └── full_agreement_analysis.json
 │
-├── report_template.html  # 條款風險視覺化 HTML 報告
-│
-├── .env                  # 儲存 OpenAI API 金鑰
-├── start_server.bat      # Windows 一鍵啟動 HTML 報告（需裝簡易伺服器）
+├── report_template.html  # 視覺化分析報告 HTML
+├── .env                  # OpenAI API 金鑰
+├── start_server.bat      # Windows 一鍵開伺服器工具
 └── README.md             # 使用說明
 ```
 
@@ -85,78 +87,33 @@
 
 ### 條款分類邏輯
 
-目前採用「二元分類」：
+目前採用二元分類：
 
-* `須注意`：條文可能存在不公平條件、過度義務、權利限制、責任移轉、資訊授權等
-* `一般資訊`：不構成風險的常見條款，如背景描述、雙方約定、聯絡資訊等
+* `須注意`：包含風險、不公平條件、過度授權等
+* `一般資訊`：無風險的合約描述性內容
 
-未來將擴充風險層級（高／中／低）與明確 `type` 分類欄位。
+後續將擴充明確風險層級（高／中／低）與類型分類（type）
 
-### 中文與英文支援
+### 多語支援與提示優化
 
-* 自動偵測語言（使用 Unicode 判斷）
-* 條文篩選標準針對語言個別設計（避免中文條文被誤判為無效）
+* 自動偵測條文語言
+* 中英文提示語各自對應範例與 few-shot 設計
 
----
+### CLI 工具與快取支援
 
-## 🔍 使用方法
-
-### （1）安裝套件
-
-```
-pip install -r requirements.txt
-```
-
-### （2）設定 API 金鑰
-
-在 `.env` 中設定 OpenAI 金鑰：
-
-```
-OPENAI_API_KEY=sk-xxx
-```
-
-### （3）進行測試分析
-
-```
-python tests/full_doc_tester.py tests/zh_sample_test.txt --output outputs/zh_sample_test_output.json
-```
-
-### （4）開啟視覺化報告
-
-打開 `report_template.html`，可看到彩色條款分析報告。
-如需自架伺服器，可使用：
-
-```
-python -m http.server
-```
+* 測試 CLI 提供快速測資驗證，支援快取、限制筆數、結果比對
+* 使用者可加入新測資，快取會自動管理避免重複分析
 
 ---
 
-## 📄 白名單（Whitelist）機制介紹
+## 📈 開發里程碑追蹤
 
-為避免 GPT 誤將正常條文判為風險條款，我們建立了 whitelist 條文庫（`whitelist_examples.json`）：
-
-* 條文皆為合理、常見、不具風險特性的法律用語
-* 系統分析時會自動比對並載入相似樣本，作為模型反例參照
-* 提升 GPT 判斷精確性與穩定性
-
----
-
-## 📈 開發進度追蹤
-
-* ✅ 已完成：
-
-  * 中英文條文合併處理
-  * 條文清理 + 自動語言判斷
-  * 條文格式統一與轉換工具
-  * whitelist 自動過濾與合併短段
-
-* 🔜 即將完成：
-
-  * 黑名單 JSON 建立與範例擴充
-  * 條文類型自動標記（type 欄位）
-  * CLI 擴充：來源檔名、統計摘要、分類標籤
+✅ 條文快取與 CLI 參數整合
+✅ 黑白名單格式統一與修復工具建置
+✅ 測資初步驗證與快取資料建立
+🔜 擴充測資與型別驗證功能
+🔜 建立報告輸出與視覺化整合
 
 ---
 
-歡迎開發者或法律專業者加入，共同優化風險條款標記工具。
+歡迎法律背景或開發者共同參與，優化條款風險標記流程！
