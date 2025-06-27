@@ -1,41 +1,23 @@
-## ✅ 明天優先處理任務（2025/06/27）
+## ✅ 明天優先處理任務（2025/06/28）
 
-1. 🧪 建立 GPT 與測資 `type` 一致性驗證功能：
+1. 🧪 測試條文 41-50：
 
-   * 新增 `--check-type` 參數
-   * 檢查 GPT 輸出之 `type` 是否與測資中標記一致
-   * 若不一致，輸出錯誤項目、條文與雙方 type
-   * 忽略 `type = "待分類"` 的條文
+   * 執行 `test_risk_cases_runner_dual.py --offset 40 --limit 10 --check-type`
+   * 確認風險等級與類型比對結果
+   * 特別注意黑白名單中的預期與 GPT 判斷是否一致
 
-2. 📊 新增 `--summary` 功能：
+2. 📁 擴充黑名單測資：
 
-   * 統計黑白名單條文總數
-   * 顯示中英文比例
-   * 顯示各風險類型（type）與風險等級（risk\_level）分布
-
-3. 🔍 準備 GUI 報表輸出格式：
-
-   * 條文原文
-   * GPT 判定結果（風險等級、type、reason）
-   * 是否分類正確、來自黑或白名單
-   * 統一輸出成 JSON 檔供報表讀取
-
-4. 🚀 擴充黑名單測資：
-
-   * 目標總數達 100 條以上
-   * 每條補齊 `type`, `reason`, `tags` 欄位
-   * 可用 `fix_risk_format.py` 工具統一欄位格式
-
-5. ⏱️ 增加快取內容：
-
-   * 再執行一次 `--limit 10` 測試，擴充 `results_cache.json` 資料量
-   * 確保新加入條文順利寫入快取
+   * 目標條文數量擴充至 100 條以上
+   * 每筆補齊以下欄位：`type`、`reason`、`tags`
+   * 使用 `fix_risk_format.py` 工具確保格式一致
+   * 檢查是否含中文與英文版本混雜內容
 
 ---
 
-✅ 現有功能已完成：
+🔍 非優先但可提前準備項目：
 
-* CLI 參數 `--no-cache`、`--limit N` 功能正常
-* 快取格式為 `clause + lang`，已避免語言混淆
-* 黑白名單欄位格式已統一（含 type, reason, tags）
-* `fix_risk_format.py`、`fix_whitelist_format.py` 工具已備妥
+* 分析類型錯誤的主要模式（如：Legal Reference vs. Legal Precedent）
+* 評估是否需擴充 `analyze_clause` 回傳的標準類型集
+* 規劃分類提示語彙標籤強化（type tags）
+* 確認 `results_cache.json` 是否持續更新正常
