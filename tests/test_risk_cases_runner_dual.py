@@ -33,7 +33,7 @@ def save_cache(cache):
 def build_cache_key(clause, lang):
     return clause.strip() + "||" + lang
 
-def run_tests(no_cache=False, limit=None):
+def run_tests(no_cache=False, limit=None, offset=0):
     total = 0
     failed = 0
     cache = {} if no_cache else load_cache()
@@ -43,9 +43,11 @@ def run_tests(no_cache=False, limit=None):
         print(f"\n🔍 測試檔案：{filepath}（預設預期：{default_expected_level}）")
         cases = load_test_cases(filepath)
         if limit:
-            cases = cases[:limit]
+            cases = cases[offset:offset + limit]
+        else:
+            cases = cases[offset:]
 
-        for i, case in enumerate(cases, 1):
+        for i, case in enumerate(cases, offset + 1):
             clause = case.get("clause", "")
             lang = case.get("language") or detect_language(clause)
             expected = case.get("risk_level", default_expected_level)
@@ -87,7 +89,8 @@ def run_tests(no_cache=False, limit=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-cache", action="store_true", help="不使用快取")
-    parser.add_argument("--limit", type=int, help="只測試前 N 條")
+    parser.add_argument("--limit", type=int, help="只測試 N 條")
+    parser.add_argument("--offset", type=int, default=0, help="從第 N 筆開始測試（預設 0）")
     args = parser.parse_args()
 
-    run_tests(no_cache=args.no_cache, limit=args.limit)
+    run_tests(no_cache=args.no_cache, limit=args.limit, offset=args.offset)
