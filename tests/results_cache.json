@@ -278,5 +278,285 @@
     "type": "Unilateral Amendment",
     "reason": "This clause allows the Company to unilaterally replace unenforceable clauses, potentially leading to unfair terms without mutual consent.",
     "highlight": true
+  },
+  "O.L.C. 94, 96 (1984) (“Indemnification Agreements”) (recognizing the Comptroller General’s long series of opinions holding that “the Anti- Deficiency Act is transgressed by any indemnity provision that subjects||en": {
+    "clause": "O.L.C. 94, 96 (1984) (“Indemnification Agreements”) (recognizing the Comptroller General’s long series of opinions holding that “the Anti- Deficiency Act is transgressed by any indemnity provision that subjects",
+    "risk_level": "一般資訊",
+    "type": "Legal Reference",
+    "reason": "This clause appears to be a reference to legal opinions and interpretations regarding indemnification and the Anti-Deficiency Act, which is informative rather than imposing obligations or risks.",
+    "highlight": false
+  },
+  "4 In addition, the Adequacy of Appropriations Act, 41 U.S.C. § 11 (2006), prohibits any contractual arrangement of the government “unless the same is authorized by law or is under an appropriation adequate to its fulfillment.” We refer to both statutes collective- ly as the Anti-Deficiency Act or ADA.||en": {
+    "clause": "4 In addition, the Adequacy of Appropriations Act, 41 U.S.C. § 11 (2006), prohibits any contractual arrangement of the government “unless the same is authorized by law or is under an appropriation adequate to its fulfillment.” We refer to both statutes collective- ly as the Anti-Deficiency Act or ADA.",
+    "risk_level": "一般資訊",
+    "type": "Legal Reference",
+    "reason": "This clause provides a reference to a legal statute and explains its application, which is standard and informative.",
+    "highlight": false
+  },
+  "the United States to an indefinite, indeterminate, or potentially unlimited liability”); e.g., Federal Aviation Administration Negotiations with Pacif- ic Gas and Electric Company, B-260063, 1995 WL 390069, at *5 (Comp. Gen. June 30, 1995); Assumption by Government of Contractor Liability to Third Persons—Reconsideration, 62 Comp. Gen. 361, 363–66 (1983); To the Administrator, General Services Administration, 35 Comp. Gen. 85, 87 (1955); To the Secretary of the Interior, 16 Comp. Gen. 803, 804||en": {
+    "clause": "the United States to an indefinite, indeterminate, or potentially unlimited liability”); e.g., Federal Aviation Administration Negotiations with Pacif- ic Gas and Electric Company, B-260063, 1995 WL 390069, at *5 (Comp. Gen. June 30, 1995); Assumption by Government of Contractor Liability to Third Persons—Reconsideration, 62 Comp. Gen. 361, 363–66 (1983); To the Administrator, General Services Administration, 35 Comp. Gen. 85, 87 (1955); To the Secretary of the Interior, 16 Comp. Gen. 803, 804",
+    "risk_level": "須注意",
+    "type": "Indeterminate Liability",
+    "reason": "The clause suggests the assumption of indefinite or unlimited liability, which poses significant legal and financial risks.",
+    "highlight": true
+  },
+  "Not every indemnification agreement violates the ADA,6 but the kind of open-ended, uncapped indemnification clause at issue in many social media TOS agreements would run afoul of the statute. Although the online context does not alter the invalidity of such an indemnification clause, TOS agreements in this relatively new and growing area present some distinct legal issues, both because of the absence of traditional paper contracts and because of the ease with which government employees who are not authorized contracting officers can enter into agreements that purport to bind the United States.||en": {
+    "clause": "Not every indemnification agreement violates the ADA,6 but the kind of open-ended, uncapped indemnification clause at issue in many social media TOS agreements would run afoul of the statute. Although the online context does not alter the invalidity of such an indemnification clause, TOS agreements in this relatively new and growing area present some distinct legal issues, both because of the absence of traditional paper contracts and because of the ease with which government employees who are not authorized contracting officers can enter into agreements that purport to bind the United States.",
+    "risk_level": "須注意",
+    "type": "Indemnification",
+    "reason": "The clause discusses the risks associated with open-ended, uncapped indemnification clauses, which can pose significant legal issues, especially in the context of social media terms of service and unauthorized agreements.",
+    "highlight": true
+  },
+  "5 See also 2 Gov’t Accountability Office, Principles of Federal Appropriations Law 6-59 to 6-60 (3d ed. 2006) (“Federal Appropriations Law”) (“[A]bsent express statutory authority, the government may not enter into an agreement to indemnify where the amount of the government’s liability is indefinite, indeterminate, or potentially unlim- ited. Such an agreement would violate both the Antideficiency Act . . . and the Adequacy of Appropriations Act . . . , since it can never be said that sufficient funds have been appropriated to cover the government’s indemnification exposure.”); Office of Manage- ment and Budget, Circular No. A-11, § 145, at 3 (2010) (“If you . . . [s]ign a contract that obligates the Government to indemnify parties against losses (‘open-ended indemni- fication’ clause) . . . , [t]hen, you must report a violation of . . . 31 U.S.C. 1341(a).”).||en": {
+    "clause": "5 See also 2 Gov’t Accountability Office, Principles of Federal Appropriations Law 6-59 to 6-60 (3d ed. 2006) (“Federal Appropriations Law”) (“[A]bsent express statutory authority, the government may not enter into an agreement to indemnify where the amount of the government’s liability is indefinite, indeterminate, or potentially unlim- ited. Such an agreement would violate both the Antideficiency Act . . . and the Adequacy of Appropriations Act . . . , since it can never be said that sufficient funds have been appropriated to cover the government’s indemnification exposure.”); Office of Manage- ment and Budget, Circular No. A-11, § 145, at 3 (2010) (“If you . . . [s]ign a contract that obligates the Government to indemnify parties against losses (‘open-ended indemni- fication’ clause) . . . , [t]hen, you must report a violation of . . . 31 U.S.C. 1341(a).”).",
+    "risk_level": "一般資訊",
+    "type": "Legal Reference",
+    "reason": "This clause provides a legal reference and explanation regarding government indemnification limitations and does not impose obligations or risks on the parties involved.",
+    "highlight": false
+  },
+  "6 As we have recognized, the Comptroller General has upheld indemnification clauses when the potential liability of the United States is limited to an amount that is both known at the time of the agreement and within the amount of available appropriations. The Comptroller General has also created a narrow exception permitting indemnification of a public utility service, in limited circumstances, for injury or damage not caused by the utility company; and, of course, exceptions to the ADA have been created by statute. Indemnification Agreements, 8 Op. O.L.C. at 97–99 (citing Comptroller General decisions and statutes recognizing or creating exceptions to the ADA). Without an applicable exception, however, an indemnification agreement must include a limitation on the amount of liability and must state both that the liability is limited to the amount of appropriated funds available at the time of payment and that the contracting agency implies no promise that Congress will appropriate additional funds to meet any deficiency in the event of loss. Id. at 98.||en": {
+    "clause": "6 As we have recognized, the Comptroller General has upheld indemnification clauses when the potential liability of the United States is limited to an amount that is both known at the time of the agreement and within the amount of available appropriations. The Comptroller General has also created a narrow exception permitting indemnification of a public utility service, in limited circumstances, for injury or damage not caused by the utility company; and, of course, exceptions to the ADA have been created by statute. Indemnification Agreements, 8 Op. O.L.C. at 97–99 (citing Comptroller General decisions and statutes recognizing or creating exceptions to the ADA). Without an applicable exception, however, an indemnification agreement must include a limitation on the amount of liability and must state both that the liability is limited to the amount of appropriated funds available at the time of payment and that the contracting agency implies no promise that Congress will appropriate additional funds to meet any deficiency in the event of loss. Id. at 98.",
+    "risk_level": "一般資訊",
+    "type": "Legal Precedent",
+    "reason": "The clause provides a detailed explanation of legal precedents and requirements for indemnification agreements involving the United States, focusing on limitations and exceptions. It does not impose unfair conditions or excessive obligations.",
+    "highlight": false
+  },
+  "A. Online TOS agreements often present basic questions regarding whether the consent necessary to form a contract is present. See Total Med. Mgmt., Inc. v. United States, 104 F.3d 1314, 1319 (Fed. Cir. 1997) (among the requirements for a valid contract with the United States is “a mutual intent to contract including offer, acceptance, and considera- tion”). In this emerging area, courts have applied traditional principles of contract law and focused on whether the web user had reasonable notice of, and manifested assent to, the online agreement. See Specht v. Netscape Commc’ns Corp., 306 F.3d 17, 28–30 (2d Cir. 2002).||en": {
+    "clause": "A. Online TOS agreements often present basic questions regarding whether the consent necessary to form a contract is present. See Total Med. Mgmt., Inc. v. United States, 104 F.3d 1314, 1319 (Fed. Cir. 1997) (among the requirements for a valid contract with the United States is “a mutual intent to contract including offer, acceptance, and considera- tion”). In this emerging area, courts have applied traditional principles of contract law and focused on whether the web user had reasonable notice of, and manifested assent to, the online agreement. See Specht v. Netscape Commc’ns Corp., 306 F.3d 17, 28–30 (2d Cir. 2002).",
+    "risk_level": "一般資訊",
+    "type": "Legal Reference",
+    "reason": "This clause provides legal context and references case law, serving as informative background rather than imposing obligations or risks.",
+    "highlight": false
+  },
+  "As both you and GSA recognize, the two scenarios you describe in which Department employees “actively consented to the terms” raise no substantial legal questions regarding whether adequate consent to contract was present. See Commerce Letter at 3, 4; GSA Letter at 2. The type of TOS agreement you have described is commonly called a “clickwrap” agreement, in which a user must manifest assent to the website’s terms of service by affirmatively taking an action, such as checking a box or click- ing an “I accept” or “I agree” button. Because clickwrap agreements require affirmative consent on the part of the user, courts generally have upheld their enforceability as contracts. See, e.g., Segal v. Amazon.com, Inc., 763 F. Supp. 2d 1367, 1369 (S.D. Fla. 2011), mandamus denied, No.||en": {
+    "clause": "As both you and GSA recognize, the two scenarios you describe in which Department employees “actively consented to the terms” raise no substantial legal questions regarding whether adequate consent to contract was present. See Commerce Letter at 3, 4; GSA Letter at 2. The type of TOS agreement you have described is commonly called a “clickwrap” agreement, in which a user must manifest assent to the website’s terms of service by affirmatively taking an action, such as checking a box or click- ing an “I accept” or “I agree” button. Because clickwrap agreements require affirmative consent on the part of the user, courts generally have upheld their enforceability as contracts. See, e.g., Segal v. Amazon.com, Inc., 763 F. Supp. 2d 1367, 1369 (S.D. Fla. 2011), mandamus denied, No.",
+    "risk_level": "一般資訊",
+    "type": "Legal Explanation",
+    "reason": "This clause provides a legal explanation about the enforceability of clickwrap agreements, which is standard and informative.",
+    "highlight": false
+  },
+  "Mo. Mar. 6, 2009); Moore v. Microsoft Corp., 741 N.Y.S.2d 91, 92 (N.Y. App. Div. 2002). Whether the web user actually reads the website’s TOS is immaterial. “Absent a showing of fraud, failure to read an enforceable clickwrap agreement, as with any binding contract, will not excuse com- pliance with its terms.” Feldman, 513 F. Supp. 2d at 236.||en": {
+    "clause": "Mo. Mar. 6, 2009); Moore v. Microsoft Corp., 741 N.Y.S.2d 91, 92 (N.Y. App. Div. 2002). Whether the web user actually reads the website’s TOS is immaterial. “Absent a showing of fraud, failure to read an enforceable clickwrap agreement, as with any binding contract, will not excuse com- pliance with its terms.” Feldman, 513 F. Supp. 2d at 236.",
+    "risk_level": "一般資訊",
+    "type": "Legal Precedent",
+    "reason": "This clause references legal precedent regarding the enforceability of clickwrap agreements, which is standard legal information.",
+    "highlight": false
+  },
+  "You have also asked about the legal ramifications of a government em- ployee’s passive agreement to a website’s TOS—often called a “browse- wrap” agreement—simply by using the online application. Commerce Letter at 4. Browsewrap agreements, unlike clickwrap agreements, do not require the user to give express assent to the website’s terms, such as by checking a box or clicking a button. Instead, browsewrap agreements typically “involve a situation where notice on a website conditions use of||en": {
+    "clause": "You have also asked about the legal ramifications of a government em- ployee’s passive agreement to a website’s TOS—often called a “browse- wrap” agreement—simply by using the online application. Commerce Letter at 4. Browsewrap agreements, unlike clickwrap agreements, do not require the user to give express assent to the website’s terms, such as by checking a box or clicking a button. Instead, browsewrap agreements typically “involve a situation where notice on a website conditions use of",
+    "risk_level": "須注意",
+    "type": "Consent and Agreement",
+    "reason": "Browsewrap agreements may not provide adequate notice or explicit consent, potentially leading to enforceability issues and legal disputes.",
+    "highlight": true
+  },
+  "若乙方連續超過30日未登入服務，甲方有權刪除乙方帳號與其所有儲存資料，且不另行通知亦無需備份。||zh": {
+    "clause": "若乙方連續超過30日未登入服務，甲方有權刪除乙方帳號與其所有儲存資料，且不另行通知亦無需備份。",
+    "risk_level": "須注意",
+    "type": "帳號及資料處理條款",
+    "reason": "條款允許甲方在未通知乙方的情況下刪除帳號及資料，可能導致乙方資料損失且無法恢復，對乙方權利限制過大",
+    "highlight": true
+  },
+  "本服務可定期執行自動更新，乙方不得關閉該功能，更新內容由甲方全權決定且不另行說明。||zh": {
+    "clause": "本服務可定期執行自動更新，乙方不得關閉該功能，更新內容由甲方全權決定且不另行說明。",
+    "risk_level": "須注意",
+    "type": "自動更新條款",
+    "reason": "條款限制乙方控制權，且更新內容由甲方單方面決定，可能影響乙方使用權益",
+    "highlight": true
+  },
+  "乙方不得於任何社群平台、網站或媒體上評論、討論或揭露本服務之任何缺陷或問題。||zh": {
+    "clause": "乙方不得於任何社群平台、網站或媒體上評論、討論或揭露本服務之任何缺陷或問題。",
+    "risk_level": "須注意",
+    "type": "言論限制條款",
+    "reason": "條款限制乙方的言論自由，可能被視為不公平且過度限制乙方權利",
+    "highlight": true
+  },
+  "所有乙方透過本服務上傳之內容，甲方有權於其他合作平台或廣告上重製與轉發，無需再次徵求同意。||zh": {
+    "clause": "所有乙方透過本服務上傳之內容，甲方有權於其他合作平台或廣告上重製與轉發，無需再次徵求同意。",
+    "risk_level": "須注意",
+    "type": "資訊使用授權",
+    "reason": "條款允許甲方在未經乙方再次同意的情況下廣泛使用乙方內容，可能導致乙方對其內容的控制權減少，且未提供乙方任何補償或限制使用範圍",
+    "highlight": true
+  },
+  "乙方同意在發生系統問題時，僅可透過甲方指定之客服平台回報，且甲方無義務回應或解決所有請求。||zh": {
+    "clause": "乙方同意在發生系統問題時，僅可透過甲方指定之客服平台回報，且甲方無義務回應或解決所有請求。",
+    "risk_level": "須注意",
+    "type": "客戶服務限制",
+    "reason": "條款限制乙方的問題回報渠道，且甲方無義務回應或解決所有請求，可能導致乙方權益受損",
+    "highlight": true
+  },
+  "The Company reserves the right to insert third-party advertisements or sponsored content into any user interface, including paid accounts, without opt-out options.||en": {
+    "clause": "The Company reserves the right to insert third-party advertisements or sponsored content into any user interface, including paid accounts, without opt-out options.",
+    "risk_level": "須注意",
+    "type": "Advertising and User Experience",
+    "reason": "The clause imposes advertisements on users, including those with paid accounts, without providing an opt-out option, which can be seen as unfair and potentially misleading for paid users.",
+    "highlight": true
+  },
+  "User content may be scanned, indexed, and used for algorithm training and commercial AI services without specific consent or compensation.||en": {
+    "clause": "User content may be scanned, indexed, and used for algorithm training and commercial AI services without specific consent or compensation.",
+    "risk_level": "須注意",
+    "type": "Data Usage",
+    "reason": "The clause allows extensive use of user content without explicit consent or compensation, which may be considered unfair and raise privacy concerns.",
+    "highlight": true
+  },
+  "The Company may throttle bandwidth or restrict feature access at any time based on its own internal metrics or business needs.||en": {
+    "clause": "The Company may throttle bandwidth or restrict feature access at any time based on its own internal metrics or business needs.",
+    "risk_level": "須注意",
+    "type": "Service Limitation",
+    "reason": "This clause allows the company to unilaterally limit service features without clear criteria or notice, potentially leading to unfair treatment of users.",
+    "highlight": true
+  },
+  "If the user fails to update the application within a period specified by the Company, the account may be locked and all data made inaccessible.||en": {
+    "clause": "If the user fails to update the application within a period specified by the Company, the account may be locked and all data made inaccessible.",
+    "risk_level": "須注意",
+    "type": "Service Access Restriction",
+    "reason": "This clause imposes excessive obligations on the user by potentially locking their account and making data inaccessible without clear justification or recourse.",
+    "highlight": true
+  },
+  "Any reported bugs or feature feedback submitted by users become the sole intellectual property of the Company, with no attribution or credit to the user.||en": {
+    "clause": "Any reported bugs or feature feedback submitted by users become the sole intellectual property of the Company, with no attribution or credit to the user.",
+    "risk_level": "須注意",
+    "type": "Intellectual Property",
+    "reason": "The clause transfers all rights to the company without compensation or recognition, potentially discouraging user contributions and creating an imbalance in rights.",
+    "highlight": true
+  },
+  "the site upon compliance with certain terms or conditions, which may be included on the same page as the notice or accessible via a hyperlink. . . . Thus, a party gives his or her assent simply by using the website.” Van Tassell v. United Mktg. Grp., LLC, 795 F. Supp. 2d 770, 790 (N.D. Ill. 2011) (quoting Sw. Airlines v. Boardfirst, L.L.C., No. 06-CV-0891-B, 2007 WL 4823761, at *4 (N.D. Tex. Sept. 12, 2007)).||en": {
+    "clause": "the site upon compliance with certain terms or conditions, which may be included on the same page as the notice or accessible via a hyperlink. . . . Thus, a party gives his or her assent simply by using the website.” Van Tassell v. United Mktg. Grp., LLC, 795 F. Supp. 2d 770, 790 (N.D. Ill. 2011) (quoting Sw. Airlines v. Boardfirst, L.L.C., No. 06-CV-0891-B, 2007 WL 4823761, at *4 (N.D. Tex. Sept. 12, 2007)).",
+    "risk_level": "須注意",
+    "type": "Assent by Use",
+    "reason": "The clause implies that users agree to terms simply by using the website, which may not provide adequate notice or opportunity for users to review terms, potentially leading to enforceability issues.",
+    "highlight": true
+  },
+  "Both you and GSA suggest that such an agreement could not constitute a binding contract because the web user has taken no affirmative action to agree to its terms. Commerce Letter at 4; GSA Letter at 2. Current case law, however, suggests that there is no categorical rule that browsewrap agreements are unenforceable. Instead, their validity is assessed on a case- by-case basis. Specifically, for a browsewrap agreement to be enforcea- ble, “[r]easonably conspicuous notice of the existence of contract terms and unambiguous manifestation of assent to those terms by consumers are essential.” Specht, 306 F.3d at 35. As other courts have put it: “[A]bsent a showing of actual knowledge of the terms by the webpage user, the validi- ty of a browsewrap contract hinges on whether the website provided reasonable notice of the terms of the contract.” Van Tassell, 795 F. Supp. 2d at 790–91; see also Hines v. Overstock.com, Inc., 668 F. Supp. 2d 362, 367 (E.D.N.Y. 2009) (“In ruling on the validity of a browsewrap agree- ment, courts consider primarily ‘whether a website user has actual or constructive knowledge of a site’s terms and conditions prior to using the site.’”), aff’d, 380 F. App’x 22 (2d Cir. 2010).||en": {
+    "clause": "Both you and GSA suggest that such an agreement could not constitute a binding contract because the web user has taken no affirmative action to agree to its terms. Commerce Letter at 4; GSA Letter at 2. Current case law, however, suggests that there is no categorical rule that browsewrap agreements are unenforceable. Instead, their validity is assessed on a case- by-case basis. Specifically, for a browsewrap agreement to be enforcea- ble, “[r]easonably conspicuous notice of the existence of contract terms and unambiguous manifestation of assent to those terms by consumers are essential.” Specht, 306 F.3d at 35. As other courts have put it: “[A]bsent a showing of actual knowledge of the terms by the webpage user, the validi- ty of a browsewrap contract hinges on whether the website provided reasonable notice of the terms of the contract.” Van Tassell, 795 F. Supp. 2d at 790–91; see also Hines v. Overstock.com, Inc., 668 F. Supp. 2d 362, 367 (E.D.N.Y. 2009) (“In ruling on the validity of a browsewrap agree- ment, courts consider primarily ‘whether a website user has actual or constructive knowledge of a site’s terms and conditions prior to using the site.’”), aff’d, 380 F. App’x 22 (2d Cir. 2010).",
+    "risk_level": "一般資訊",
+    "type": "Legal Interpretation",
+    "reason": "This clause provides a legal interpretation of browsewrap agreements and their enforceability, which is informative and does not impose obligations or restrictions.",
+    "highlight": false
+  },
+  "Different facts have produced different conclusions about the enforcea- bility of browsewrap agreements. In Specht, the Second Circuit held that a reasonably prudent Internet user would not have known or learned of the existence of the license terms before responding to a particular website’s invitation to download free software and, accordingly, that the website did not provide reasonable notice of the license terms. 306 F.3d at 20, 28–30. As a result, “plaintiffs’ bare act of downloading the software did not unambiguously manifest assent to the arbitration provision contained in the license terms.” Id. at 20. Similarly, in Hines, the court found no con- tract because the user was never advised of the terms and conditions and could not see the link to them without scrolling down to the bottom of the screen, which she was not required to do to make her purchase. 668||en": {
+    "clause": "Different facts have produced different conclusions about the enforcea- bility of browsewrap agreements. In Specht, the Second Circuit held that a reasonably prudent Internet user would not have known or learned of the existence of the license terms before responding to a particular website’s invitation to download free software and, accordingly, that the website did not provide reasonable notice of the license terms. 306 F.3d at 20, 28–30. As a result, “plaintiffs’ bare act of downloading the software did not unambiguously manifest assent to the arbitration provision contained in the license terms.” Id. at 20. Similarly, in Hines, the court found no con- tract because the user was never advised of the terms and conditions and could not see the link to them without scrolling down to the bottom of the screen, which she was not required to do to make her purchase. 668",
+    "risk_level": "一般資訊",
+    "type": "Legal Precedent",
+    "reason": "This passage provides a summary of legal precedents regarding the enforceability of browsewrap agreements, offering general information on the topic.",
+    "highlight": false
+  },
+  "F. Supp. 2d at 367. By contrast, an Illinois appellate court found that an online contract provided reasonable notice where a blue hyperlink entitled||en": {
+    "clause": "F. Supp. 2d at 367. By contrast, an Illinois appellate court found that an online contract provided reasonable notice where a blue hyperlink entitled",
+    "risk_level": "一般資訊",
+    "type": "Legal Citation",
+    "reason": "This appears to be a citation or reference to a legal case or example, not an enforceable contract clause.",
+    "highlight": false
+  },
+  "“Terms and Conditions of Sale” appeared on numerous web pages the plaintiffs completed in the ordering process, and where the plaintiffs were advised on three separate web pages that “[a]ll sales are subject to Dell’s Term[s] and Conditions of Sale.” Hubbert v. Dell Corp., 835 N.E.2d 113, 121–22 (Ill. App. 2005); see also PDC Labs., Inc. v. Hach Co., No. 09- 1110, 2009 WL 2605270, at *3 (C.D. Ill. Aug. 25, 2009) (finding online terms sufficiently conspicuous where the terms were “hyperlinked on three separate pages of the online Plate order process in underlined, blue, contrasting text” and were brought to the user’s attention by specific reference in the final order step, which directed the user to “[r]eview terms,” followed by a hyperlink to the terms).||en": {
+    "clause": "“Terms and Conditions of Sale” appeared on numerous web pages the plaintiffs completed in the ordering process, and where the plaintiffs were advised on three separate web pages that “[a]ll sales are subject to Dell’s Term[s] and Conditions of Sale.” Hubbert v. Dell Corp., 835 N.E.2d 113, 121–22 (Ill. App. 2005); see also PDC Labs., Inc. v. Hach Co., No. 09- 1110, 2009 WL 2605270, at *3 (C.D. Ill. Aug. 25, 2009) (finding online terms sufficiently conspicuous where the terms were “hyperlinked on three separate pages of the online Plate order process in underlined, blue, contrasting text” and were brought to the user’s attention by specific reference in the final order step, which directed the user to “[r]eview terms,” followed by a hyperlink to the terms).",
+    "risk_level": "一般資訊",
+    "type": "Legal Precedent",
+    "reason": "This clause provides a legal precedent regarding the conspicuousness of terms and conditions, which is informative and standard in legal discussions.",
+    "highlight": false
+  },
+  "As this case law reflects, browsewrap agreements often present more difficult questions about user consent than clickwrap agreements, but there is no per se rule against their enforceability. Government employees registering for Internet social media accounts will need to ensure that they do not inadvertently consent to TOS agreements that violate the ADA (or other provisions of law), whether or not the online application requires the user to give express consent to the website’s terms of service.||en": {
+    "clause": "As this case law reflects, browsewrap agreements often present more difficult questions about user consent than clickwrap agreements, but there is no per se rule against their enforceability. Government employees registering for Internet social media accounts will need to ensure that they do not inadvertently consent to TOS agreements that violate the ADA (or other provisions of law), whether or not the online application requires the user to give express consent to the website’s terms of service.",
+    "risk_level": "一般資訊",
+    "type": "Legal Commentary",
+    "reason": "This clause provides general information and commentary on legal principles related to user consent and enforceability of agreements, without imposing obligations or risks.",
+    "highlight": false
+  },
+  "B. You first ask whether a government employee without authority to bind the government who signs up for a social media account, and thereby assents to the terms of an agreement containing an open-ended, unrestrict- ed indemnification clause, has violated the ADA. In your view, while the employee may have made an unauthorized commitment, there would be no valid agreement because the employee has no authority to bind the government. Accordingly, the employee would not have violated the ADA. Commerce Letter at 3; see also GSA Letter at 3 (same). Although the question is a difficult one on which little authority exists, we agree that government employees who lack authority to contract on behalf of the United States have made unauthorized commitments, but have not violated the ADA, even if they purport to consent to contract terms, such as an open-ended, unrestricted indemnification clause, that would impose an obligation on the United States exceeding or preceding available funds in an appropriation.||en": {
+    "clause": "B. You first ask whether a government employee without authority to bind the government who signs up for a social media account, and thereby assents to the terms of an agreement containing an open-ended, unrestrict- ed indemnification clause, has violated the ADA. In your view, while the employee may have made an unauthorized commitment, there would be no valid agreement because the employee has no authority to bind the government. Accordingly, the employee would not have violated the ADA. Commerce Letter at 3; see also GSA Letter at 3 (same). Although the question is a difficult one on which little authority exists, we agree that government employees who lack authority to contract on behalf of the United States have made unauthorized commitments, but have not violated the ADA, even if they purport to consent to contract terms, such as an open-ended, unrestricted indemnification clause, that would impose an obligation on the United States exceeding or preceding available funds in an appropriation.",
+    "risk_level": "須注意",
+    "type": "Indemnification and Authority",
+    "reason": "The clause discusses an open-ended, unrestricted indemnification clause, which poses potential legal issues, especially when signed by someone without authority, potentially leading to unauthorized commitments.",
+    "highlight": true
+  },
+  "An open-ended, unrestricted indemnification clause potentially violates the ADA because it represents an “obligation exceeding an amount avail- able in an appropriation or fund.” 31 U.S.C. § 1341(a)(1)(A). It may also “involve” the government in an “obligation” for “payment of money before an appropriation is made.” Id. § 1341(a)(1)(B). To violate the statute, therefore, the government officer or employee entering into the contract must have authorized or involved the government in an “obliga- tion” in excess or in advance of funds available in an appropriation. Only a government officer or employee with actual authority to bind the gov- ernment in contract, however, can authorize or involve the government in such an obligation.||en": {
+    "clause": "An open-ended, unrestricted indemnification clause potentially violates the ADA because it represents an “obligation exceeding an amount avail- able in an appropriation or fund.” 31 U.S.C. § 1341(a)(1)(A). It may also “involve” the government in an “obligation” for “payment of money before an appropriation is made.” Id. § 1341(a)(1)(B). To violate the statute, therefore, the government officer or employee entering into the contract must have authorized or involved the government in an “obliga- tion” in excess or in advance of funds available in an appropriation. Only a government officer or employee with actual authority to bind the gov- ernment in contract, however, can authorize or involve the government in such an obligation.",
+    "risk_level": "須注意",
+    "type": "Indemnification",
+    "reason": "The clause potentially violates legal statutes by creating obligations beyond available appropriations, posing significant legal and financial risks.",
+    "highlight": true
+  },
+  "The term “obligation” has a well-understood meaning in fiscal law, as is illustrated in the usage of the term by the Comptroller General and the||en": {
+    "clause": "The term “obligation” has a well-understood meaning in fiscal law, as is illustrated in the usage of the term by the Comptroller General and the",
+    "risk_level": "一般資訊",
+    "type": "Definition",
+    "reason": "This clause appears to be providing a definition or explanation of a term, which is standard in contracts and does not impose any unfair conditions.",
+    "highlight": false
+  },
+  "U.S. Government Accountability Office (“GAO”). They have defined “obligation” as “[a] definite commitment that creates a legal liability of the government for the payment of goods and services ordered or re- ceived, or a legal duty on the part of the United States that could mature into a legal liability by virtue of actions on the part of the other party beyond the control of the United States.” Gov’t Accountability Office, GAO-05-734SP, A Glossary of Terms Used in the Federal Budget Process 70 (2005); To the Administrator, Agency for International Development, 42 Comp. Gen. 733, 734 (1963) (an “obligation of funds” exists if there is “a legal duty on the part of the United States which constitutes a legal liability or which could mature into a legal liability by virtue of actions on the part of the other party beyond the control of the United States”); accord Contract for Legal Services, B-322147, 2011 WL 2644733, at *2 (Comp. Gen. July 6, 2011); Obligational Practices of the Corporation for National and Community Service, B-300480, 2003 WL 1857402, at *3 (Comp. Gen. Apr. 9, 2003); see also McDonnell Douglas Corp. v. United States, 39 Fed. Cl. 665, 671 (1997). Thus, “[w]hen an agency takes some action that creates a legal liability, the agency ‘obligates’ the United States government to make a payment   A legal liability is a claim that||en": {
+    "clause": "U.S. Government Accountability Office (“GAO”). They have defined “obligation” as “[a] definite commitment that creates a legal liability of the government for the payment of goods and services ordered or re- ceived, or a legal duty on the part of the United States that could mature into a legal liability by virtue of actions on the part of the other party beyond the control of the United States.” Gov’t Accountability Office, GAO-05-734SP, A Glossary of Terms Used in the Federal Budget Process 70 (2005); To the Administrator, Agency for International Development, 42 Comp. Gen. 733, 734 (1963) (an “obligation of funds” exists if there is “a legal duty on the part of the United States which constitutes a legal liability or which could mature into a legal liability by virtue of actions on the part of the other party beyond the control of the United States”); accord Contract for Legal Services, B-322147, 2011 WL 2644733, at *2 (Comp. Gen. July 6, 2011); Obligational Practices of the Corporation for National and Community Service, B-300480, 2003 WL 1857402, at *3 (Comp. Gen. Apr. 9, 2003); see also McDonnell Douglas Corp. v. United States, 39 Fed. Cl. 665, 671 (1997). Thus, “[w]hen an agency takes some action that creates a legal liability, the agency ‘obligates’ the United States government to make a payment   A legal liability is a claim that",
+    "risk_level": "一般資訊",
+    "type": "Legal Definition",
+    "reason": "This clause provides a legal definition and references for understanding 'obligation' in a government context, which is standard and informative.",
+    "highlight": false
+  },
+  "乙方須對任何第三方因使用本服務而產生的所有索賠、訴訟負完全責任，即使該索賠源自甲方的產品缺陷。||zh": {
+    "clause": "乙方須對任何第三方因使用本服務而產生的所有索賠、訴訟負完全責任，即使該索賠源自甲方的產品缺陷。",
+    "risk_level": "須注意",
+    "type": "責任分配條款",
+    "reason": "條款將所有責任轉嫁給乙方，即使問題源自甲方，對乙方極不公平，可能導致重大法律風險",
+    "highlight": true
+  },
+  "甲方有權未經乙方同意，自行變更乙方帳戶資訊或存取權限，且無需提供通知或理由。||zh": {
+    "clause": "甲方有權未經乙方同意，自行變更乙方帳戶資訊或存取權限，且無需提供通知或理由。",
+    "risk_level": "須注意",
+    "type": "單方變更條款",
+    "reason": "條款允許甲方在未經乙方同意的情況下變更乙方的帳戶資訊或存取權限，且不需通知或提供理由，對乙方權利構成重大限制和風險",
+    "highlight": true
+  },
+  "若乙方未於三日內對甲方通知做出回應，即視為同意一切修改與新增條款。||zh": {
+    "clause": "若乙方未於三日內對甲方通知做出回應，即視為同意一切修改與新增條款。",
+    "risk_level": "須注意",
+    "type": "默示同意條款",
+    "reason": "條款設定過短的回應期限，且默示同意可能導致乙方在未充分知情的情況下接受不利條件",
+    "highlight": true
+  },
+  "乙方不得以任何形式保存或備份其在平台上產生的資料，否則視為違約。||zh": {
+    "clause": "乙方不得以任何形式保存或備份其在平台上產生的資料，否則視為違約。",
+    "risk_level": "須注意",
+    "type": "資料限制條款",
+    "reason": "條款限制乙方保存或備份其資料的權利，可能導致乙方無法保護或管理自身資料，對乙方權益有重大影響",
+    "highlight": true
+  },
+  "本合約不適用任何本地法律規範，僅依甲方註冊地國家法律解釋與裁判。||zh": {
+    "clause": "本合約不適用任何本地法律規範，僅依甲方註冊地國家法律解釋與裁判。",
+    "risk_level": "須注意",
+    "type": "法律適用條款",
+    "reason": "條款排除了本地法律的適用，可能對乙方不利，尤其在法律環境差異較大時",
+    "highlight": true
+  },
+  "甲方可無限期保留乙方資料，即使乙方已刪除帳號或請求移除。||zh": {
+    "clause": "甲方可無限期保留乙方資料，即使乙方已刪除帳號或請求移除。",
+    "risk_level": "須注意",
+    "type": "資料保留條款",
+    "reason": "條款允許甲方在乙方終止使用服務後仍保留其資料，可能侵犯乙方的資料隱私權和刪除權",
+    "highlight": true
+  },
+  "乙方需承擔因不可抗力因素導致的所有損害，包括但不限於自然災害與系統故障。||zh": {
+    "clause": "乙方需承擔因不可抗力因素導致的所有損害，包括但不限於自然災害與系統故障。",
+    "risk_level": "須注意",
+    "type": "責任分配條款",
+    "reason": "條款將不可抗力風險全部轉嫁給乙方，對乙方不公平，且可能引發法律爭議",
+    "highlight": true
+  },
+  "所有乙方與客服之間的對話記錄可作為法律用途使用，且甲方不需另行通知乙方。||zh": {
+    "clause": "所有乙方與客服之間的對話記錄可作為法律用途使用，且甲方不需另行通知乙方。",
+    "risk_level": "須注意",
+    "type": "資訊使用條款",
+    "reason": "條款允許甲方使用對話記錄作為法律用途，且未通知乙方，可能影響乙方的隱私權及知情權",
+    "highlight": true
+  },
+  "若本合約中任一條款無效，甲方有權決定其最終替代條款，乙方不得異議。||zh": {
+    "clause": "若本合約中任一條款無效，甲方有權決定其最終替代條款，乙方不得異議。",
+    "risk_level": "須注意",
+    "type": "單方決定條款",
+    "reason": "條款賦予甲方單方面決定替代條款的權利，限制乙方的參與和異議權，可能導致不公平結果",
+    "highlight": true
+  },
+  "乙方如參與任何行銷活動，即授權甲方永久使用其姓名、照片與聲音於公開場域。||zh": {
+    "clause": "乙方如參與任何行銷活動，即授權甲方永久使用其姓名、照片與聲音於公開場域。",
+    "risk_level": "須注意",
+    "type": "個人資訊使用授權",
+    "reason": "條款涉及永久授權，且使用範圍廣泛，可能對乙方的隱私權和人格權造成影響",
+    "highlight": true
   }
 }
