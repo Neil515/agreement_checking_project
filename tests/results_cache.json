@@ -138,5 +138,145 @@
     "type": "單方變更條款",
     "reason": "條款允許甲方片面變更合約內容，且未保障乙方知情權與同意權，可能導致乙方處於不利地位",
     "highlight": true
+  },
+  "You agree to indemnify and hold harmless morguefile.com, its contractors, and its li- censors, and their respective directors, officers, employees and agents from and against any and all losses, damages, claims and expenses, including attorneys’ fees, arising out of your use of the Website, including but not limited to any such losses, damages, claims and expenses arising out of your violation of the Agreement.||en": {
+    "clause": "You agree to indemnify and hold harmless morguefile.com, its contractors, and its li- censors, and their respective directors, officers, employees and agents from and against any and all losses, damages, claims and expenses, including attorneys’ fees, arising out of your use of the Website, including but not limited to any such losses, damages, claims and expenses arising out of your violation of the Agreement.",
+    "risk_level": "須注意",
+    "type": "Indemnification",
+    "reason": "The clause imposes a broad indemnification obligation on the user, which can be considered excessive as it covers all possible claims and expenses, potentially placing an unfair burden on the user.",
+    "highlight": true
+  },
+  "Commerce Letter at 2 n.4. these three websites, the employee consented to TOS agreements that contained indemnification clauses. Id. at 2. According to the Depart- ment, the employee is not a contracting officer, does not maintain a purchase card, and has not been delegated proper authority to register to use social media applications. Id. at 3.||en": {
+    "clause": "Commerce Letter at 2 n.4. these three websites, the employee consented to TOS agreements that contained indemnification clauses. Id. at 2. According to the Depart- ment, the employee is not a contracting officer, does not maintain a purchase card, and has not been delegated proper authority to register to use social media applications. Id. at 3.",
+    "risk_level": "一般資訊",
+    "type": "Contextual Information",
+    "reason": "The clause provides background information about an employee's consent to terms and their lack of authority, rather than imposing obligations or risks.",
+    "highlight": false
+  },
+  "In the second situation, an employee with a different agency within the Department registered for an account with watershed.ustream.tv, a self- serve platform for live, interactive video. Watershed does not offer a free account; the user must pay for a subscription or select a pay-as-you-go option. Watershed also requires that the user consent to a TOS agreement that includes an indemnification clause. The Department discovered that the agency had established an account with watershed.ustream.tv and that one of its offices had been subscribing to that account for the past two years and was billed quarterly through its purchase card. In this case, the employee consenting to the TOS agreement was a purchase card holder and thus, by regulation, was a contracting officer or other authorized individual designated by the agency to contract on its behalf. Id. at 2, 4.3||en": {
+    "clause": "In the second situation, an employee with a different agency within the Department registered for an account with watershed.ustream.tv, a self- serve platform for live, interactive video. Watershed does not offer a free account; the user must pay for a subscription or select a pay-as-you-go option. Watershed also requires that the user consent to a TOS agreement that includes an indemnification clause. The Department discovered that the agency had established an account with watershed.ustream.tv and that one of its offices had been subscribing to that account for the past two years and was billed quarterly through its purchase card. In this case, the employee consenting to the TOS agreement was a purchase card holder and thus, by regulation, was a contracting officer or other authorized individual designated by the agency to contract on its behalf. Id. at 2, 4.3",
+    "risk_level": "一般資訊",
+    "type": "Contractual Obligation",
+    "reason": "The clause describes a situation involving standard contractual obligations and the role of an authorized individual in consenting to terms, which is common in business transactions.",
+    "highlight": false
+  },
+  "You have asked whether the ADA is violated whenever a government employee, in establishing a social media account, consents to a TOS agreement containing an indemnification clause and what practical con- sequences flow from such unauthorized agreements. You also have asked whether a passive TOS agreement—one in which (unlike the situations described above) a user agrees to the TOS of an online application simp- ly by using the application—can bind the government. While we decline to address whether particular past actions violated the ADA, we will use the basic features of these scenarios to provide general guidance in re- sponse to your questions.||en": {
+    "clause": "You have asked whether the ADA is violated whenever a government employee, in establishing a social media account, consents to a TOS agreement containing an indemnification clause and what practical con- sequences flow from such unauthorized agreements. You also have asked whether a passive TOS agreement—one in which (unlike the situations described above) a user agrees to the TOS of an online application simp- ly by using the application—can bind the government. While we decline to address whether particular past actions violated the ADA, we will use the basic features of these scenarios to provide general guidance in re- sponse to your questions.",
+    "risk_level": "一般資訊",
+    "type": "Legal Interpretation",
+    "reason": "The clause provides a general discussion on legal interpretations and does not impose obligations or restrictions.",
+    "highlight": false
+  },
+  "(a)(1) An officer or employee of the United States Government or of the District of Columbia government may not—||en": {
+    "clause": "(a)(1) An officer or employee of the United States Government or of the District of Columbia government may not—",
+    "risk_level": "一般資訊",
+    "type": "Regulatory Compliance",
+    "reason": "This appears to be a regulatory or compliance-related clause, which is standard in legal documents pertaining to government employees.",
+    "highlight": false
+  },
+  "3 We assume, for purposes of discussion, that all of the indemnification clauses at issue are similar to that quoted above for MorgueFile.com.||en": {
+    "clause": "3 We assume, for purposes of discussion, that all of the indemnification clauses at issue are similar to that quoted above for MorgueFile.com.",
+    "risk_level": "一般資訊",
+    "type": "Assumption Statement",
+    "reason": "This clause appears to be a contextual statement for discussion purposes and does not impose obligations or risks.",
+    "highlight": false
+  },
+  "make or authorize an expenditure or obligation exceeding an amount available in an appropriation or fund for the expendi- ture or obligation; [or]||en": {
+    "clause": "make or authorize an expenditure or obligation exceeding an amount available in an appropriation or fund for the expendi- ture or obligation; [or]",
+    "risk_level": "須注意",
+    "type": "Financial Obligation",
+    "reason": "This clause suggests committing to financial obligations beyond available funds, which could lead to legal and financial issues.",
+    "highlight": true
+  },
+  "involve either government in a contract or obligation for the payment of money before an appropriation is made unless author- ized by law[.]||en": {
+    "clause": "involve either government in a contract or obligation for the payment of money before an appropriation is made unless author- ized by law[.]",
+    "risk_level": "一般資訊",
+    "type": "Legal Compliance",
+    "reason": "This clause ensures compliance with legal requirements regarding government contracts and appropriations, which is a standard legal necessity.",
+    "highlight": false
+  },
+  "31 U.S.C. § 1341(a)(1) (2006).4 Violations of section 1341(a) must be reported immediately to the President and Congress, with a copy of each report going to the Comptroller General. Id. § 1351. Officers or employ- ees violating this section are subject to administrative discipline, and knowing and willful violators may face criminal penalties. Id. §§ 1349, 1350.||en": {
+    "clause": "31 U.S.C. § 1341(a)(1) (2006).4 Violations of section 1341(a) must be reported immediately to the President and Congress, with a copy of each report going to the Comptroller General. Id. § 1351. Officers or employ- ees violating this section are subject to administrative discipline, and knowing and willful violators may face criminal penalties. Id. §§ 1349, 1350.",
+    "risk_level": "一般資訊",
+    "type": "Legal Compliance",
+    "reason": "This clause outlines legal compliance requirements and consequences for violations, which is standard legal language.",
+    "highlight": false
+  },
+  "As recognized by the courts and this Office, the Comptroller General has long taken the position that the ADA is violated by any indemnifica- tion agreement that, without statutory authorization, imposes on the United States an open-ended, potentially unrestricted liability. In such circumstances, there can never be certainty that sufficient funds have been appropriated to cover the liability. For example, in Hercules, 516 U.S. 417, the Supreme Court refused to find an implied-in-fact indemnity agreement. It explained that “the Comptroller General has repeatedly ruled that Government procurement agencies may not enter into . . . open- ended indemnity for third-party liability” because such agreements are barred by the ADA. Id. at 427; see also Cal.-Pac. Utils. Co. v. United States, 194 Ct. Cl. 703, 715 (1971) (“The United States Supreme Court, the Court of Claims, and the Comptroller General have consistently held that absent an express provision in an appropriation for reimbursement adequate to make such payment, [the ADA] proscribes indemnification on the grounds that it would constitute the obligation of funds not yet appro- priated.”); Indemnification Agreements and the Anti-Deficiency Act, 8 Op.||en": {
+    "clause": "As recognized by the courts and this Office, the Comptroller General has long taken the position that the ADA is violated by any indemnifica- tion agreement that, without statutory authorization, imposes on the United States an open-ended, potentially unrestricted liability. In such circumstances, there can never be certainty that sufficient funds have been appropriated to cover the liability. For example, in Hercules, 516 U.S. 417, the Supreme Court refused to find an implied-in-fact indemnity agreement. It explained that “the Comptroller General has repeatedly ruled that Government procurement agencies may not enter into . . . open- ended indemnity for third-party liability” because such agreements are barred by the ADA. Id. at 427; see also Cal.-Pac. Utils. Co. v. United States, 194 Ct. Cl. 703, 715 (1971) (“The United States Supreme Court, the Court of Claims, and the Comptroller General have consistently held that absent an express provision in an appropriation for reimbursement adequate to make such payment, [the ADA] proscribes indemnification on the grounds that it would constitute the obligation of funds not yet appro- priated.”); Indemnification Agreements and the Anti-Deficiency Act, 8 Op.",
+    "risk_level": "一般資訊",
+    "type": "Legal Precedent",
+    "reason": "This clause provides a legal interpretation and precedent regarding indemnification agreements and the Anti-Deficiency Act, serving as informative content rather than imposing obligations or risks.",
+    "highlight": false
+  },
+  "The Company reserves the right to access, monitor, and disclose any user content or communication without prior notice, for any reason deemed appropriate by the Company.||en": {
+    "clause": "The Company reserves the right to access, monitor, and disclose any user content or communication without prior notice, for any reason deemed appropriate by the Company.",
+    "risk_level": "須注意",
+    "type": "Privacy Invasion",
+    "reason": "The clause allows the company to access and disclose user content without notice, potentially violating privacy rights and lacking transparency.",
+    "highlight": true
+  },
+  "By using the service, you irrevocably waive your right to participate in any class action lawsuit or collective legal proceeding against the Company.||en": {
+    "clause": "By using the service, you irrevocably waive your right to participate in any class action lawsuit or collective legal proceeding against the Company.",
+    "risk_level": "須注意",
+    "type": "Waiver of Legal Rights",
+    "reason": "This clause restricts the user's legal rights by preventing participation in class action lawsuits, which may be considered unfair or unenforceable in some jurisdictions.",
+    "highlight": true
+  },
+  "In the event of any dispute, the Company alone will determine whether a breach has occurred, and its decision shall be final and binding with no appeal.||en": {
+    "clause": "In the event of any dispute, the Company alone will determine whether a breach has occurred, and its decision shall be final and binding with no appeal.",
+    "risk_level": "須注意",
+    "type": "Dispute Resolution",
+    "reason": "This clause grants the Company unilateral power to determine breaches without recourse, which is potentially unfair and restricts the other party's rights to a fair dispute resolution process.",
+    "highlight": true
+  },
+  "You grant the Company a perpetual, worldwide, royalty-free license to reproduce, distribute, and publicly display any content you submit, including personal images and documents.||en": {
+    "clause": "You grant the Company a perpetual, worldwide, royalty-free license to reproduce, distribute, and publicly display any content you submit, including personal images and documents.",
+    "risk_level": "須注意",
+    "type": "Data Usage",
+    "reason": "The clause grants extensive rights to the Company over personal content, potentially leading to privacy concerns and an imbalance in control over personal information.",
+    "highlight": true
+  },
+  "You agree to indemnify the Company and its affiliates from all claims, damages, or losses arising from your use of the service, even if caused by the Company's own negligence.||en": {
+    "clause": "You agree to indemnify the Company and its affiliates from all claims, damages, or losses arising from your use of the service, even if caused by the Company's own negligence.",
+    "risk_level": "須注意",
+    "type": "Indemnification",
+    "reason": "This clause imposes excessive obligations on the user by requiring indemnification even for claims resulting from the Company's own negligence, which is generally considered unfair and potentially unenforceable.",
+    "highlight": true
+  },
+  "The Company may terminate your access to the service at any time, for any reason or no reason, without notice or liability.||en": {
+    "clause": "The Company may terminate your access to the service at any time, for any reason or no reason, without notice or liability.",
+    "risk_level": "須注意",
+    "type": "Termination Clause",
+    "reason": "This clause allows the company to terminate access unilaterally and without notice, which can be considered unfair to the user as it provides no security or recourse.",
+    "highlight": true
+  },
+  "You agree not to make any public statement about the service or the Company without prior written approval from the Company.||en": {
+    "clause": "You agree not to make any public statement about the service or the Company without prior written approval from the Company.",
+    "risk_level": "須注意",
+    "type": "Restriction on Speech",
+    "reason": "This clause excessively restricts the user's ability to communicate freely about their experiences with the service, potentially infringing on rights to free speech and transparency.",
+    "highlight": true
+  },
+  "The Company shall not be liable for any damages, including loss of profits, data, or goodwill, regardless of the cause or foreseeability.||en": {
+    "clause": "The Company shall not be liable for any damages, including loss of profits, data, or goodwill, regardless of the cause or foreseeability.",
+    "risk_level": "須注意",
+    "type": "Liability Limitation",
+    "reason": "This clause excessively limits liability, potentially leaving the other party without recourse for significant losses.",
+    "highlight": true
+  },
+  "Any modification to this agreement will be effective immediately upon posting on the website, and continued use constitutes acceptance.||en": {
+    "clause": "Any modification to this agreement will be effective immediately upon posting on the website, and continued use constitutes acceptance.",
+    "risk_level": "須注意",
+    "type": "Unilateral Modification",
+    "reason": "This clause allows changes to be made without direct notification to the user, potentially leading to unfair conditions as users may not be aware of changes.",
+    "highlight": true
+  },
+  "If any clause in this agreement is found unenforceable, the Company may replace it with a similar clause of its choosing, which will then be binding.||en": {
+    "clause": "If any clause in this agreement is found unenforceable, the Company may replace it with a similar clause of its choosing, which will then be binding.",
+    "risk_level": "須注意",
+    "type": "Unilateral Amendment",
+    "reason": "This clause allows the Company to unilaterally replace unenforceable clauses, potentially leading to unfair terms without mutual consent.",
+    "highlight": true
   }
 }
