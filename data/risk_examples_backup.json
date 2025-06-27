@@ -1,0 +1,402 @@
+[
+  {
+    "clause": "甲方有權單方面終止本合約，且無需說明理由或提前通知乙方，乙方應無條件接受此結果。",
+    "risk_level": "須注意",
+    "type": "單方終止權",
+    "language": "zh",
+    "reason": "甲方可無預警終止合約，剝奪乙方保障，構成單方權利過大",
+    "tags": []
+  },
+  {
+    "clause": "乙方同意授權甲方永久、無償、不可撤回地使用其所有上傳資料，包括但不限於個人資訊、照片及通訊紀錄，並可轉授權予第三方用於任何商業用途。",
+    "risk_level": "須注意",
+    "type": "資訊使用授權",
+    "language": "zh",
+    "reason": "授權範圍過廣、用途未限定，且不可撤回，構成資訊控制不對等",
+    "tags": []
+  },
+  {
+    "clause": "乙方不得因任何理由要求解除本契約，且放棄一切依法律可能享有之解約或異議權利。",
+    "risk_level": "須注意",
+    "type": "權利放棄",
+    "language": "zh",
+    "reason": "全面放棄解約與異議權，剝奪乙方正當法律主張",
+    "tags": []
+  },
+  {
+    "clause": "若甲方認為乙方違反本合約內容，甲方有權單方面決定是否處罰、扣款或終止合約，且無需提供證據或與乙方協議。",
+    "risk_level": "須注意",
+    "type": "單方裁量條款",
+    "language": "zh",
+    "reason": "處罰與終止由甲方單方決定且無救濟機制",
+    "tags": []
+  },
+  {
+    "clause": "乙方同意對因使用本服務而產生之任何爭議放棄提起訴訟之權利，僅能接受甲方指定地點與語言進行仲裁。",
+    "risk_level": "須注意",
+    "type": "爭議解決限制",
+    "language": "zh",
+    "reason": "剝奪訴訟權，且仲裁條件完全由甲方設定",
+    "tags": []
+  },
+  {
+    "clause": "所有因本服務產生之智慧財產權，包括但不限於使用紀錄與使用者回饋，均歸甲方所有，乙方不得主張任何權利或對價。",
+    "risk_level": "須注意",
+    "type": "智慧財產權轉讓",
+    "language": "zh",
+    "reason": "未經補償即全面轉讓使用者創作，權利歸屬不對等",
+    "tags": []
+  },
+  {
+    "clause": "乙方在任何情況下應賠償甲方因本合約所生之一切直接與間接損害，包括但不限於律師費、商譽損失與第三方索賠。",
+    "risk_level": "須注意",
+    "type": "過度賠償義務",
+    "language": "zh",
+    "reason": "賠償範圍過廣，對乙方風險極高",
+    "tags": []
+  },
+  {
+    "clause": "若本條款與其他公開資訊或口頭說明有所出入，以本條款為準，乙方不得主張其他解釋。",
+    "risk_level": "須注意",
+    "type": "解釋排除條款",
+    "language": "zh",
+    "reason": "可能排除對使用者有利之解釋或承諾，降低保障",
+    "tags": []
+  },
+  {
+    "clause": "即使甲方未執行本合約任何權利，不代表其放棄該權利，乙方不得因此主張任何合法期待。",
+    "risk_level": "須注意",
+    "type": "權利保留條款",
+    "language": "zh",
+    "reason": "保障完全傾向甲方，對乙方可能構成隱性風險",
+    "tags": []
+  },
+  {
+    "clause": "甲方保留隨時修改本合約所有條款之權利，且不需另行通知乙方，修改後條款即刻生效。",
+    "risk_level": "須注意",
+    "type": "單方變更條款",
+    "language": "zh",
+    "reason": "可單方面變更條款且無通知義務，乙方權益不穩定",
+    "tags": []
+  },
+  {
+    "clause": "The Company reserves the right to access, monitor, and disclose any user content or communication without prior notice, for any reason deemed appropriate by the Company.",
+    "risk_level": "須注意",
+    "type": "資訊監控條款",
+    "language": "en",
+    "reason": "Grants broad surveillance rights without user consent or limitation",
+    "tags": []
+  },
+  {
+    "clause": "By using the service, you irrevocably waive your right to participate in any class action lawsuit or collective legal proceeding against the Company.",
+    "risk_level": "須注意",
+    "type": "訴訟權限制",
+    "language": "en",
+    "reason": "Eliminates user's collective legal remedies, reducing legal leverage",
+    "tags": []
+  },
+  {
+    "clause": "In the event of any dispute, the Company alone will determine whether a breach has occurred, and its decision shall be final and binding with no appeal.",
+    "risk_level": "須注意",
+    "type": "單方裁決條款",
+    "language": "en",
+    "reason": "Company acts as sole judge of contract violations, denying fair review",
+    "tags": []
+  },
+  {
+    "clause": "You grant the Company a perpetual, worldwide, royalty-free license to reproduce, distribute, and publicly display any content you submit, including personal images and documents.",
+    "risk_level": "須注意",
+    "type": "資訊使用授權",
+    "language": "en",
+    "reason": "Overbroad license on user-submitted content without limitation or compensation",
+    "tags": []
+  },
+  {
+    "clause": "You agree to indemnify the Company and its affiliates from all claims, damages, or losses arising from your use of the service, even if caused by the Company's own negligence.",
+    "risk_level": "須注意",
+    "type": "不對等賠償責任",
+    "language": "en",
+    "reason": "Includes indemnification for Company's own fault, shifting full burden to user",
+    "tags": []
+  },
+  {
+    "clause": "The Company may terminate your access to the service at any time, for any reason or no reason, without notice or liability.",
+    "risk_level": "須注意",
+    "type": "單方終止權",
+    "language": "en",
+    "reason": "Allows service denial without cause or notice, leaving user unprotected",
+    "tags": []
+  },
+  {
+    "clause": "You agree not to make any public statement about the service or the Company without prior written approval from the Company.",
+    "risk_level": "須注意",
+    "type": "言論限制條款",
+    "language": "en",
+    "reason": "Restricts user expression even on personal experience, limiting free speech",
+    "tags": []
+  },
+  {
+    "clause": "The Company shall not be liable for any damages, including loss of profits, data, or goodwill, regardless of the cause or foreseeability.",
+    "risk_level": "須注意",
+    "type": "全面免責條款",
+    "language": "en",
+    "reason": "Broadly disclaims liability even for foreseeable harm, denying remedy",
+    "tags": []
+  },
+  {
+    "clause": "Any modification to this agreement will be effective immediately upon posting on the website, and continued use constitutes acceptance.",
+    "risk_level": "須注意",
+    "type": "單方變更條款",
+    "language": "en",
+    "reason": "Unilateral changes bind user automatically, risking unexpected terms",
+    "tags": []
+  },
+  {
+    "clause": "If any clause in this agreement is found unenforceable, the Company may replace it with a similar clause of its choosing, which will then be binding.",
+    "risk_level": "須注意",
+    "type": "單方修正條款",
+    "language": "en",
+    "reason": "Gives Company power to substitute unenforceable terms unilaterally",
+    "tags": []
+  },
+  {
+    "clause": "若乙方連續超過30日未登入服務，甲方有權刪除乙方帳號與其所有儲存資料，且不另行通知亦無需備份。",
+    "risk_level": "須注意",
+    "type": "帳號資料刪除",
+    "language": "zh",
+    "reason": "未登入即可能導致資料永久刪除，且無備援機制",
+    "tags": []
+  },
+  {
+    "clause": "本服務可定期執行自動更新，乙方不得關閉該功能，更新內容由甲方全權決定且不另行說明。",
+    "risk_level": "須注意",
+    "type": "強制更新條款",
+    "language": "zh",
+    "reason": "更新不可拒絕且內容不公開，可能導致服務變更損及使用者",
+    "tags": []
+  },
+  {
+    "clause": "乙方不得於任何社群平台、網站或媒體上評論、討論或揭露本服務之任何缺陷或問題。",
+    "risk_level": "須注意",
+    "type": "言論限制條款",
+    "language": "zh",
+    "reason": "全面禁止公開評論，限制使用者回饋與資訊揭露權",
+    "tags": []
+  },
+  {
+    "clause": "所有乙方透過本服務上傳之內容，甲方有權於其他合作平台或廣告上重製與轉發，無需再次徵求同意。",
+    "risk_level": "須注意",
+    "type": "資料再利用條款",
+    "language": "zh",
+    "reason": "擴大使用者內容至其他平台，未設用途與範圍限制",
+    "tags": []
+  },
+  {
+    "clause": "乙方同意在發生系統問題時，僅可透過甲方指定之客服平台回報，且甲方無義務回應或解決所有請求。",
+    "risk_level": "須注意",
+    "type": "客服處理限制",
+    "language": "zh",
+    "reason": "限定回報管道且無服務承諾，減少用戶救濟可能",
+    "tags": []
+  },
+  {
+    "clause": "The Company reserves the right to insert third-party advertisements or sponsored content into any user interface, including paid accounts, without opt-out options.",
+    "risk_level": "須注意",
+    "type": "廣告插入權利",
+    "language": "en",
+    "reason": "Ads can appear even for paid users, no control or removal option",
+    "tags": []
+  },
+  {
+    "clause": "User content may be scanned, indexed, and used for algorithm training and commercial AI services without specific consent or compensation.",
+    "risk_level": "須注意",
+    "type": "內容再利用條款",
+    "language": "en",
+    "reason": "Permits AI training from user data without user control or reward",
+    "tags": []
+  },
+  {
+    "clause": "The Company may throttle bandwidth or restrict feature access at any time based on its own internal metrics or business needs.",
+    "risk_level": "須注意",
+    "type": "資源限制條款",
+    "language": "en",
+    "reason": "Unilateral control over service quality may degrade paid experience",
+    "tags": []
+  },
+  {
+    "clause": "If the user fails to update the application within a period specified by the Company, the account may be locked and all data made inaccessible.",
+    "risk_level": "須注意",
+    "type": "強制升級條款",
+    "language": "en",
+    "reason": "Denies access for non-updated users, risking data loss",
+    "tags": []
+  },
+  {
+    "clause": "Any reported bugs or feature feedback submitted by users become the sole intellectual property of the Company, with no attribution or credit to the user.",
+    "risk_level": "須注意",
+    "type": "使用者貢獻轉讓",
+    "language": "en",
+    "reason": "Removes recognition and rights from user suggestions",
+    "tags": []
+  },
+  {
+    "clause": "乙方須對任何第三方因使用本服務而產生的所有索賠、訴訟負完全責任，即使該索賠源自甲方的產品缺陷。",
+    "risk_level": "須注意",
+    "type": "過度責任轉嫁",
+    "language": "zh",
+    "reason": "將第三方風險完全轉嫁予乙方，對乙方極不合理",
+    "tags": []
+  },
+  {
+    "clause": "甲方有權未經乙方同意，自行變更乙方帳戶資訊或存取權限，且無需提供通知或理由。",
+    "risk_level": "須注意",
+    "type": "帳號控制權過度",
+    "language": "zh",
+    "reason": "過度控制使用者帳號資訊，缺乏正當程序保障",
+    "tags": []
+  },
+  {
+    "clause": "若乙方未於三日內對甲方通知做出回應，即視為同意一切修改與新增條款。",
+    "risk_level": "須注意",
+    "type": "默示同意條款",
+    "language": "zh",
+    "reason": "以不回應視為全面同意，屬不對等默示機制",
+    "tags": []
+  },
+  {
+    "clause": "乙方不得以任何形式保存或備份其在平台上產生的資料，否則視為違約。",
+    "risk_level": "須注意",
+    "type": "資料控制限制",
+    "language": "zh",
+    "reason": "限制資料自主管理與備份權，對使用者極不利",
+    "tags": []
+  },
+  {
+    "clause": "本合約不適用任何本地法律規範，僅依甲方註冊地國家法律解釋與裁判。",
+    "risk_level": "須注意",
+    "type": "法律適用排除",
+    "language": "zh",
+    "reason": "完全排除消費者所在地法律保障，削弱救濟管道",
+    "tags": []
+  },
+  {
+    "clause": "甲方可無限期保留乙方資料，即使乙方已刪除帳號或請求移除。",
+    "risk_level": "須注意",
+    "type": "資料保存無限制",
+    "language": "zh",
+    "reason": "違反資料最小化原則，未尊重使用者刪除意願",
+    "tags": []
+  },
+  {
+    "clause": "乙方需承擔因不可抗力因素導致的所有損害，包括但不限於自然災害與系統故障。",
+    "risk_level": "須注意",
+    "type": "不可抗力責任擴張",
+    "language": "zh",
+    "reason": "不可抗力通常應免責，卻反向轉嫁風險予乙方",
+    "tags": []
+  },
+  {
+    "clause": "所有乙方與客服之間的對話記錄可作為法律用途使用，且甲方不需另行通知乙方。",
+    "risk_level": "須注意",
+    "type": "通訊紀錄用途不當",
+    "language": "zh",
+    "reason": "擴大通訊用途且無同意，侵犯隱私",
+    "tags": []
+  },
+  {
+    "clause": "若本合約中任一條款無效，甲方有權決定其最終替代條款，乙方不得異議。",
+    "risk_level": "須注意",
+    "type": "單方替換條款",
+    "language": "zh",
+    "reason": "未提供協議或仲裁空間，僅由甲方決定替代內容",
+    "tags": []
+  },
+  {
+    "clause": "乙方如參與任何行銷活動，即授權甲方永久使用其姓名、照片與聲音於公開場域。",
+    "risk_level": "須注意",
+    "type": "個人肖像授權",
+    "language": "zh",
+    "reason": "未限範圍用途且授權永久，侵害個資與人格權",
+    "tags": []
+  },
+  {
+    "clause": "Users waive the right to receive any refund under all circumstances, including service failure or contractual breach by the Company.",
+    "risk_level": "須注意",
+    "type": "退款權全面放棄",
+    "language": "en",
+    "reason": "Unfairly removes user remedy even when service fails",
+    "tags": []
+  },
+  {
+    "clause": "By agreeing to this contract, you authorize the Company to record and store all voice communications with or through the platform indefinitely.",
+    "risk_level": "須注意",
+    "type": "語音監控條款",
+    "language": "en",
+    "reason": "Indefinite recording of voice data without user control",
+    "tags": []
+  },
+  {
+    "clause": "The Company reserves the right to suspend your access for behavior it considers 'unfavorable', without defining criteria or appeal.",
+    "risk_level": "須注意",
+    "type": "模糊懲處條款",
+    "language": "en",
+    "reason": "Vague standard gives unchecked discretion to suspend service",
+    "tags": []
+  },
+  {
+    "clause": "You may not retain any local copies of data or content accessed via the platform, and doing so is a breach of contract.",
+    "risk_level": "須注意",
+    "type": "內容保存禁令",
+    "language": "en",
+    "reason": "Restricts legitimate use and backup of accessible content",
+    "tags": []
+  },
+  {
+    "clause": "This contract overrides any consumer protection rights you may have under local law, to the extent permitted.",
+    "risk_level": "須注意",
+    "type": "消保權限縮小",
+    "language": "en",
+    "reason": "Limits statutory consumer rights, weakening legal position",
+    "tags": []
+  },
+  {
+    "clause": "The Company may publicly disclose user identities in case of any perceived breach, without proof or due process.",
+    "risk_level": "須注意",
+    "type": "公開處分條款",
+    "language": "en",
+    "reason": "Violates privacy and presumption of innocence",
+    "tags": []
+  },
+  {
+    "clause": "Any intellectual property developed during your use of the platform is considered the sole property of the Company, regardless of authorship.",
+    "risk_level": "須注意",
+    "type": "創作成果歸屬不當",
+    "language": "en",
+    "reason": "Claims ownership over user-created content without basis",
+    "tags": []
+  },
+  {
+    "clause": "User feedback, ideas, or suggestions become exclusive assets of the Company, with no attribution or compensation.",
+    "risk_level": "須注意",
+    "type": "建議權益剝奪",
+    "language": "en",
+    "reason": "Unjustified appropriation of user contributions",
+    "tags": []
+  },
+  {
+    "clause": "Company policies may change retroactively, affecting even past user behavior and content.",
+    "risk_level": "須注意",
+    "type": "溯及變更條款",
+    "language": "en",
+    "reason": "Retroactive application undermines fairness and predictability",
+    "tags": []
+  },
+  {
+    "clause": "In disputes, the English version of this agreement shall prevail over any translations or localized versions.",
+    "risk_level": "須注意",
+    "type": "語言優先條款",
+    "language": "en",
+    "reason": "May disadvantage non-English speakers by ignoring local meaning",
+    "tags": []
+  }
+]
