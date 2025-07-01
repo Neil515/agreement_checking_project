@@ -40,13 +40,18 @@
 <body>
   <h1>條款提示報告</h1>
 
+  <label for="langSelector">顯示語言：</label>
+  <select id="langSelector">
+    <option value="zh">中文</option>
+    <option value="en">English</option>
+  </select>
+
   <label for="fileSelector">選擇分析檔案：</label>
   <select id="fileSelector">
     <option value="sample_analysis.json">sample_analysis.json</option>
     <option value="full_agreement_analysis.json">full_agreement_analysis.json</option>
     <option value="zh_sample_test_output.json" selected>zh_sample_test_output.json</option>
   </select>
-
 
   <label><input type="checkbox" id="filterImportant" checked> 顯示須注意條款</label>
 
@@ -60,6 +65,7 @@
 
   <script>
     let allClauses = [];
+    let currentLang = 'zh';
 
     function fetchAndRender(filename) {
       fetch('./outputs/' + filename)
@@ -84,21 +90,22 @@
       summaryList.innerHTML = '';
 
       allClauses.forEach((item, index) => {
-        const isImportant = item.risk_level === '須注意';
-        const levelClass = isImportant ? 'important' : 'normal';
+        const level = typeof item.risk_level === 'object' ? item.risk_level[currentLang] : item.risk_level;
+        const type = typeof item.type === 'object' ? item.type[currentLang] : item.type;
+        const isImportant = level === '須注意' || level === 'Warning';
 
         if (!isImportant && !showImportant) return;
 
         const clause = document.createElement('span');
-        clause.className = `clause risk-${levelClass}`;
+        clause.className = `clause risk-${isImportant ? 'important' : 'normal'}`;
         clause.id = `clause_${index + 1}`;
-        clause.title = `類型：${item.type}\n原因：${item.reason}`;
-        clause.innerHTML = `${item.clause} <span class="label">${item.risk_level}｜${item.type}</span>`;
+        clause.title = `類型：${type}\n原因：${item.reason}`;
+        clause.innerHTML = `${item.clause} <span class="label">${level}｜${type}</span>`;
         clausesDiv.appendChild(clause);
 
         if (isImportant) {
           const summaryItem = document.createElement('li');
-          summaryItem.innerHTML = `<a href="#clause_${index + 1}">第 ${index + 1} 條｜${item.risk_level}｜${item.type}</a>`;
+          summaryItem.innerHTML = `<a href="#clause_${index + 1}">第 ${index + 1} 條｜${level}｜${type}</a>`;
           summaryList.appendChild(summaryItem);
         }
       });
@@ -109,6 +116,10 @@
     document.getElementById('toggleSummary').addEventListener('click', () => {
       const panel = document.getElementById('summaryPanel');
       panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    });
+    document.getElementById('langSelector').addEventListener('change', e => {
+      currentLang = e.target.value;
+      renderClauses();
     });
 
     fetchAndRender(document.getElementById('fileSelector').value);
