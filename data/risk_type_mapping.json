@@ -1,28 +1,102 @@
 {
-  "Compensation Clause": "賠償條款",
-  "Information Reuse": "資訊再利用",
-  "Content Ownership and IP": "創作內容權利",
-  "Unilateral Decision Clause": "單方決定條款",
-  "Forced Upgrade Clause": "強制升級條款",
-  "Data Restriction Clause": "資料限制條款",
-  "Account and Data Rights": "帳號與資料權限",
-  "Waiver of Consumer Rights": "消費者權益剝奪",
-  "Governing Law Bias": "法律適用偏向",
-  "Limitation of Liability": "責任限制條款",
-  "Restriction on Expression": "言論限制條款",
-  "Monitoring and Information Clause": "監控與資訊條款",
-  "UI Control and Interference": "使用介面控制",
-  "User Support Limitation": "使用者支援限制",
-  "Personal Data and Likeness": "個資與肖像權",
-  "Clause Interpretation Restriction": "條文解釋限制",
-  "Legal Remedy Restriction": "法律救濟限制",
-  "Usage Limitation Clause": "使用限制條款",
-  "Unilateral Modification Clause": "單方變更條款",
-  "Special Role Privilege": "特殊角色優待",
-  "Needs Manual Review": "待人工審核",
-  "Unilateral Termination Right": "單方終止權",
-  "Waiver of Rights": "權利放棄",
-  "Dispute Resolution Restriction": "爭議解決限制",
-  "Reservation of Rights": "權利保留條款",
-  "Reuse of Submitted Data": "資料再利用條款"
+  "賠償條款": {
+    "en": "Compensation Clause",
+    "category": "official"
+  },
+  "資訊再利用": {
+    "en": "Information Reuse",
+    "category": "official"
+  },
+  "創作內容權利": {
+    "en": "Content Ownership and IP",
+    "category": "official"
+  },
+  "單方決定條款": {
+    "en": "Unilateral Decision Clause",
+    "category": "official"
+  },
+  "單方變更條款": {
+    "en": "Unilateral Modification Clause",
+    "category": "official"
+  },
+  "單方終止權": {
+    "en": "Unilateral Termination Right",
+    "category": "official"
+  },
+  "強制升級條款": {
+    "en": "Forced Upgrade Clause",
+    "category": "official"
+  },
+  "資料限制條款": {
+    "en": "Data Restriction Clause",
+    "category": "official"
+  },
+  "帳號與資料權限": {
+    "en": "Account and Data Rights",
+    "category": "official"
+  },
+  "消費者權益剝奪": {
+    "en": "Waiver of Consumer Rights",
+    "category": "official"
+  },
+  "法律適用偏向": {
+    "en": "Governing Law Bias",
+    "category": "official"
+  },
+  "責任限制條款": {
+    "en": "Limitation of Liability",
+    "category": "official"
+  },
+  "言論限制條款": {
+    "en": "Restriction on Expression",
+    "category": "official"
+  },
+  "監控與資訊條款": {
+    "en": "Monitoring and Information Clause",
+    "category": "official"
+  },
+  "使用介面控制": {
+    "en": "User Interface Control",
+    "category": "official"
+  },
+  "使用者支援限制": {
+    "en": "User Support Limitation",
+    "category": "official"
+  },
+  "個資與肖像權": {
+    "en": "Personal Data and Likeness",
+    "category": "official"
+  },
+  "條文解釋限制": {
+    "en": "Clause Interpretation Restriction",
+    "category": "official"
+  },
+  "法律救濟限制": {
+    "en": "Legal Remedy Restriction",
+    "category": "official"
+  },
+  "使用限制條款": {
+    "en": "Usage Restrictions",
+    "category": "official"
+  },
+  "特殊角色優待": {
+    "en": "Privileges for Special Roles",
+    "category": "official"
+  },
+  "爭議解決限制": {
+    "en": "Dispute Resolution Restriction",
+    "category": "official"
+  },
+  "權利保留條款": {
+    "en": "Reservation of Rights",
+    "category": "official"
+  },
+  "權利放棄": {
+    "en": "Waiver of Rights",
+    "category": "official"
+  },
+  "待人工審核": {
+    "en": "Needs Manual Review",
+    "category": "flag"
+  }
 }
