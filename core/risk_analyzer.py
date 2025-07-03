@@ -8,6 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+# 讀取風險類型對照表
+with open("data/risk_type_mapping.json", encoding="utf-8") as f:
+    TYPE_MAPPING_DICT = json.load(f)
+
 # 固定說明語（不含範例）
 INSTRUCTION_ZH = """
 請你協助判斷以下條文是否屬於「須注意」的合約條款。
@@ -79,18 +83,7 @@ def is_contextual_sentence(sentence: str) -> bool:
         return True
     return False
 
-# 關鍵組合過濾（略）
-KEYWORD_COMBINATIONS_ZH = [["終止", "契約"], ["違約", "金"], ["解除", "合約"], ["賠償", "責任"], ["不再", "追償"]]
-
-def lacks_high_risk_combinations(sentence: str, lang: str) -> bool:
-    sentence_lower = sentence.lower()
-    for combo in KEYWORD_COMBINATIONS_ZH if lang == "zh" else []:
-        if all(word in sentence_lower for word in combo):
-            return False
-    return True
-
 # GPT 分析主程式
-
 def gpt_analyze(clause, lang):
     instruction = INSTRUCTION_ZH if lang == "zh" else INSTRUCTION_EN
     examples = FEW_SHOT_EXAMPLES_ZH if lang == "zh" else FEW_SHOT_EXAMPLES_EN
@@ -117,9 +110,26 @@ def gpt_analyze(clause, lang):
         print("📅 GPT 回傳內容：", text)
         result = json.loads(text)
         result["clause"] = clause
-        risk = result.get("risk_level", "")
-        result["risk_level"] = "須注意" if risk in ["高", "須注意", "Risky"] else "一般資訊"
-        result["highlight"] = result["risk_level"] == "須注意"
+
+        # 格式轉換區
+        RISK_LEVEL_MAP = {
+            "Risky": {"zh": "須注意", "en": "Risky"},
+            "General Information": {"zh": "一般資訊", "en": "General Information"},
+            "須注意": {"zh": "須注意", "en": "Risky"},
+            "一般資訊": {"zh": "一般資訊", "en": "General Information"}
+        }
+
+        raw_risk = result.get("risk_level", "")
+        raw_type = result.get("type", "")
+
+        result["risk_level"] = RISK_LEVEL_MAP.get(raw_risk, {"zh": raw_risk, "en": raw_risk})
+        type_info = TYPE_MAPPING_DICT.get(raw_type)
+        if not type_info:
+            print(f"⚠️ 無法在 risk_type_mapping.json 中找到類型對應：{raw_type}")
+        result["type"] = {"zh": raw_type, "en": type_info["en"] if type_info else raw_type}
+
+        result["highlight"] = result["risk_level"]["zh"] == "須注意"
+
         return result
 
     except Exception as e:
@@ -127,26 +137,23 @@ def gpt_analyze(clause, lang):
         return mock_analyze(clause, lang)
 
 # 模擬模式
-
 def mock_analyze(clause, lang):
     return {
         "clause": clause,
-        "risk_level": "須注意",
-        "type": "模擬結果",
+        "risk_level": {"zh": "須注意", "en": "Risky"},
+        "type": {"zh": "模擬結果", "en": "Mock Result"},
         "reason": "模擬風險結果（未連接 GPT）",
         "highlight": True
     }
 
 # 對外函式
-
 def analyze_clause(clause, lang):
     if is_contextual_sentence(clause):
         return {
             "clause": clause,
-            "risk_level": "一般資訊",
-            "type": "Contextual",
+            "risk_level": {"zh": "一般資訊", "en": "General Information"},
+            "type": {"zh": "上下文內容", "en": "Contextual"},
             "reason": "Contextual sentence (e.g., heading or background info)",
             "highlight": False
         }
-
     return gpt_analyze(clause, lang)
