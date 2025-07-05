@@ -102,5 +102,25 @@
   "待人工審核": {
     "en": "Needs Manual Review",
     "category": "flag"
+  },
+  "單方定價條款": {
+    "en": "Unilateral Pricing Clause",
+    "category": "custom"
+  },
+  "附加條件限制": {
+    "en": "Conditional Usage Clause",
+    "category": "custom"
+  },
+  "付款及退款條款": {
+    "en": "Payment and Refund Clause",
+    "category": "custom"
+  },
+  "贈與返還條款": {
+    "en": "Gift Reclaim Clause",
+    "category": "custom"
+  },
+  "估價條款": {
+    "en": "Valuation Clause",
+    "category": "custom"
   }
 }
