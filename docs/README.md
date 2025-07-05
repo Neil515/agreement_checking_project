@@ -1,51 +1,44 @@
 # AI 合約條款風險分析工具
 
-這是一個基於 GPT 模型的自動合約條款風險偵測工具，協助使用者快速分析中英文合約條文，辨識潛在須注意條款，並以 JSON 格式回傳結果。支援語言辨識、風險分類標註、中英對照輸出，前後端報表可切換語系顯示，適合用於風險預警與可視化分析。
+這是一個基於 GPT 模型的自動合約條款風險傷別工具，用於分析中英文合約條文，自動辨識「須注意」條款，輸出 JSON 格式。支援語言分析、精準分類、雙語編譯、分頁報表顯示，適合用於風險預警與可視化分析。
 
 ---
 
-## ✅ 最新進度整理（更新：2025-07-02）
+## ✅ 最新進度整理（更新：2025-07-05）
 
-### 📌 今日進度總結
+### 一、根據合約分類重新建立主類別 standard\_types.json
 
-1. **核心模組改寫支援中英文格式**：
-   - `risk_analyzer.py` 輸出 `type` 與 `risk_level` 改為 `{zh, en}` 結構
-   - 類型欄位從 `risk_type_mapping.json` 自動補上英文名稱，未對應者會 log 警示
+* 合容現有 30+ 簡體精緻類型，清構分類 15 個主類別
+* 新增 `standard_type_mapping.json` 用於中英對照，整合 `map_to_main_type()` 連動
 
-2. **建立兩套測試腳本：**
-   - `test_single_clause.py`：手動貼單條條文做格式確認（適合 Debug 測試）
-   - `test_multi_clauses.py`：可分析整段或整篇 `.txt` 條文，自動切句與分析，輸出 JSON 結果
+### 二、圖像認知與推理清理
 
-3. **保留 `test_risk_cases_runner_dual.py` 作為測資驗證工具**：
-   - 僅適用已分類好的測資（如黑白名單）
-   - 可比對 GPT 分類與預期類型
+* GPT 返回介於自由格式，會出現 `type.en` 是中文或 null
+* 重新編譯\u `core/risk_analyzer.py`，確保 `type.zh`/、`type.en`/、`type_main.zh`/、`type_main.en`均為精準值，未對應時 fallback 為 `Unmapped`
 
-4. **風險類型對照資料更新：**
-   - `risk_type_mapping.json` 新增「單方終止條款」對應英文名稱：`Unilateral Termination Clause`
+### 三、對比模組功能完成
 
----
-
-## 📁 專案架構概覽
-
-```
-├── core/                  # 核心模組：clean_text, lang_detect, risk_analyzer
-├── prompts/              # GPT 提示語模板（中英文）
-├── data/                 # 測資來源與類型對照表
-├── tools/                # 欄位補齊與格式轉換工具
-├── tests/                # 單條測試、多條分析、黑白名單驗證模組
-├── outputs/              # 分析結果儲存 JSON
-├── report_template.html  # 結果報表，支援語言切換與欄位呈現
-└── README.md             # 專案說明與進度追蹤文件
-```
+* 新增 `test_risk_cases_runner_dual.py`，用於點名測試 GPT 能否判讀正確
+* `risk_type_mapping.json` 、`standard_type_mapping.json` 兩種管理檔輸出
+* `split_into_clauses()` 判認是否是 contextual sentence 還有 bug，繼續原有檢測方式
 
 ---
 
-## 🔜 下一階段任務（2025-07-03 起）
+## 📅 明日任務預告
 
-1. 🧪 分析實際段落／整篇條款：測試 `test_multi_clauses.py` 對長條文的準確度與格式一致性
-2. 📁 黑名單擴充至 100 條以上，補齊 `type.zh/en`、`risk_level.zh/en`、`reason`、`tags`
-3. ✅ 預計將分析結果轉為測資，進一步用 `test_risk_cases_runner_dual.py` 比對驗證
+### ✅ 工作 1：測試條文切句準確性
+
+* 檢查目前的切句策略，是否會:
+
+  * 把完整條文誤切成碎片
+  * 把不同週載條文合併為一句
+* 推薦挑選 2\~3 份條款密集的範例文件，觀察 `split_into_clauses()` 處理結果是否符合實務
+
+### ✅ 工作 2：建立 clause\_id 與條號對應維護
+
+* 目前每條 clause 都會自動生成 `clause_id` (C1, C2...)，但無法和原始合約中的範例條號對應
+* 推薦新增一個 `source_ref` 層，例如 "第十條 第3段"，依證資清楚還原資料對應強
 
 ---
 
-本專案已完成分類結構與雙語顯示功能，進入條文解析與資料擴充階段，歡迎熟悉契約條款或 NLP 應用者參與貢獻。
+此工具已進入體系管理與分類網絡化階段，歡迎繼續優化。
