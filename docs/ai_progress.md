@@ -4,52 +4,48 @@
 
 ---
 
-## ✅ 最新進度整理（更新：2025-07-02）
+## ✅ 最新進度整理（更新：2025-07-05）
 
-### 📌 今日進度總結（2025-07-02）
+### 📌 今日進度總結（2025-07-05）
 
-#### ✅ 實作與測試成果
+#### ✅ 程式邏輯與資料優化
 
-1. **新增 `test_single_clause.py` 進行條文逐筆測試**：
-   - 可快速貼上條文，直接觀察 `language`、`type`、`risk_level` 是否分類正確
-   - 支援 `detect_language()` 自動偵測語系
+1. **風險分類處理邏輯優化**：
 
-2. **改寫 `risk_analyzer.py`：
-   - `type` 與 `risk_level` 改為 `{zh, en}` 雙語格式
-   - `type` 自動比對 `risk_type_mapping.json`，並補上英文對應名稱
-   - 若無對應則在 console 顯示警告 log，方便補充資料表
+   * 新增 `standard_type_mapping.json` 作為主類別對照表（15 類）
+   * 新增 `map_to_main_type()` 用以對應 GPT 自由輸出的類型關鍵字至主分類
+   * 改寫 `risk_analyzer.py`，當 `type.zh` 有主分類對應時，自動補齊 `type_main.zh/en`
 
-3. **建立 `test_multi_clauses.py` 支援整段或整篇條文分析**：
-   - 載入 `.txt` 檔案 → 自動斷句 → 多條呼叫 `analyze_clause()`
-   - 結果統一儲存為 JSON，可做為未來黑名單來源
+2. **穩定化 `type.en` 欄位**：
 
-4. **維持 `test_risk_cases_runner_dual.py` 作為測資比對用工具**：
-   - 僅適用於格式化後的 JSON 測資（含預期 `type`, `risk_level`）
-   - 明日測試可接續分析結果後轉測資用
+   * 若風險類型無對應於 `risk_type_mapping.json`，則 type.en fallback 為 `Unmapped`
+   * 保證輸出格式一致，不再出現 type.en 欄位為中文或 null 的情況
 
-5. **更新黑名單對照表**：
-   - `risk_type_mapping.json` 補上「單方終止條款」對應：`Unilateral Termination Clause`
+3. **調整 `analyze_clause()` 輸出邏輯**：
 
----
+   * 僅在 risk\_level 為「須注意」時才執行 `type` 與 `type_main` 推論
+   * 縮短分析流程時間，提升解析效率
 
-## 🔜 下一階段任務（2025-07-05 起）
+4. **回測分析流程結果穩定**：
 
-1. 🧪 測試整段與整篇條文分析流程：
-   - 使用 `test_multi_clauses.py` 測試合約 `.txt` 或 `.docx` 清理後輸入
-   - 檢查輸出結構與欄位是否齊全
-
-2. 📁 擴充黑名單測資至 100 條：
-   - 補齊每條：`type.zh/en`, `risk_level.zh/en`, `reason`, `tags`
-   - 使用 `fix_risk_format.py` 確保縮排與欄位一致性
-   - 測試抽樣結果是否分類正確
+   * 測試 `test_multi_clauses.py` 中多筆黑名單條文，type 與主分類皆準確對應
+   * 多筆「一般資訊」條文被排除主分類處理，避免無效分析
 
 ---
 
-## ✅ 現有功能
+## 🔜 下一階段任務（2025-07-06 起）
 
-* 條文語言自動判斷與清理工具
-* GPT 條文分析與分類轉換
-* 測資格式化與風險欄位補齊工具
-* 測試快取與 CLI 驗證框架
-* 雙語風險分類結構與視覺化報表
-* 自動類型對應（讀取 `risk_type_mapping.json`）與缺漏警示
+1. ✅ **測試條文切句準確性**：
+
+   * 檢查目前的切句邏輯是否會：
+
+     * 把完整條文誤切成碎片
+     * 把不同邏輯的條文合併為一句
+   * 建議挑選 2～3 份條款密集的範例檔案，觀察 `split_into_clauses()` 處理結果是否符合實務需求
+
+2. ✅ **建立 clause\_id 與條號對應邏輯**：
+
+   * 目前每條 clause 都會自動生成 `clause_id`（如 `C1`, `C2`），但與原始合約段落中的條號（如「第十條」、「1.2.3」）未對應
+   * 建議新增一層 `source_ref` 欄位，例如：`"source_ref": "第十條 第3段"`，提升追溯性與可讀性
+
+如需我協助開始進行這兩項任務，請隨時告訴我！
