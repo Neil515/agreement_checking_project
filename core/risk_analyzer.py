@@ -12,6 +12,10 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 with open("data/risk_type_mapping.json", encoding="utf-8") as f:
     TYPE_MAPPING_DICT = json.load(f)
 
+# 讀取主分類對照表
+with open("data/standard_type_mapping.json", encoding="utf-8") as f:
+    STANDARD_TYPE_MAPPING = json.load(f)
+
 # 固定說明語（不含範例）
 INSTRUCTION_ZH = """
 請你協助判斷以下條文是否屬於「須注意」的合約條款。
@@ -83,7 +87,7 @@ def is_contextual_sentence(sentence: str) -> bool:
         return True
     return False
 
-# GPT 分析主程式
+# GPT 分析主程式（已優化）
 def gpt_analyze(clause, lang):
     instruction = INSTRUCTION_ZH if lang == "zh" else INSTRUCTION_EN
     examples = FEW_SHOT_EXAMPLES_ZH if lang == "zh" else FEW_SHOT_EXAMPLES_EN
@@ -111,7 +115,6 @@ def gpt_analyze(clause, lang):
         result = json.loads(text)
         result["clause"] = clause
 
-        # 格式轉換區
         RISK_LEVEL_MAP = {
             "Risky": {"zh": "須注意", "en": "Risky"},
             "General Information": {"zh": "一般資訊", "en": "General Information"},
@@ -121,14 +124,24 @@ def gpt_analyze(clause, lang):
 
         raw_risk = result.get("risk_level", "")
         raw_type = result.get("type", "")
-
         result["risk_level"] = RISK_LEVEL_MAP.get(raw_risk, {"zh": raw_risk, "en": raw_risk})
-        type_info = TYPE_MAPPING_DICT.get(raw_type)
-        if not type_info:
-            print(f"⚠️ 無法在 risk_type_mapping.json 中找到類型對應：{raw_type}")
-        result["type"] = {"zh": raw_type, "en": type_info["en"] if type_info else raw_type}
+        is_risky = result["risk_level"]["zh"] == "須注意"
 
-        result["highlight"] = result["risk_level"]["zh"] == "須注意"
+        if is_risky:
+            type_info = TYPE_MAPPING_DICT.get(raw_type)
+            if not type_info:
+                print(f"⚠️ 無法在 risk_type_mapping.json 中找到類型對應：{raw_type}")
+            type_en = type_info["en"] if type_info else "Unmapped"
+            type_main = map_to_main_type(raw_type)
+            type_main_en = STANDARD_TYPE_MAPPING.get(type_main, {}).get("en") or "Unmapped"
+        else:
+            type_en = raw_type
+            type_main = None
+            type_main_en = None
+
+        result["type"] = {"zh": raw_type, "en": type_en}
+        result["type_main"] = {"zh": type_main, "en": type_main_en} if type_main else None
+        result["highlight"] = is_risky
 
         return result
 
@@ -143,8 +156,42 @@ def mock_analyze(clause, lang):
         "risk_level": {"zh": "須注意", "en": "Risky"},
         "type": {"zh": "模擬結果", "en": "Mock Result"},
         "reason": "模擬風險結果（未連接 GPT）",
-        "highlight": True
+        "highlight": True,
+        "type_main": {"zh": "模擬分類", "en": "Mock Category"}
     }
+
+# 風險類型 → 主分類 對應
+def map_to_main_type(risk_type):
+    if not isinstance(risk_type, str):
+        return None
+    for keyword, main in {
+        "單方": "單方決策與變更條款",
+        "變更": "單方決策與變更條款",
+        "定價": "單方決策與變更條款",
+        "終止": "單方決策與變更條款",
+        "付款": "付款與退費條款",
+        "退款": "付款與退費條款",
+        "費用": "付款與退費條款",
+        "資訊": "資料與帳號權限",
+        "資料": "資料與帳號權限",
+        "帳號": "資料與帳號權限",
+        "創作": "智慧財產與使用授權",
+        "IP": "智慧財產與使用授權",
+        "內容": "智慧財產與使用授權",
+        "賠償": "法律責任與賠償",
+        "責任": "法律責任與賠償",
+        "法律": "法律責任與賠償",
+        "消費者": "權益剝奪與限制",
+        "放棄": "權益剝奪與限制",
+        "限制": "權益剝奪與限制",
+        "言論": "內容與言論審查",
+        "爭議": "解釋與爭議解決",
+        "條文": "解釋與爭議解決",
+        "選擇權": "特殊角色條款"
+    }.items():
+        if keyword in risk_type:
+            return main
+    return None
 
 # 對外函式
 def analyze_clause(clause, lang):
@@ -154,6 +201,7 @@ def analyze_clause(clause, lang):
             "risk_level": {"zh": "一般資訊", "en": "General Information"},
             "type": {"zh": "上下文內容", "en": "Contextual"},
             "reason": "Contextual sentence (e.g., heading or background info)",
-            "highlight": False
+            "highlight": False,
+            "type_main": None
         }
     return gpt_analyze(clause, lang)
