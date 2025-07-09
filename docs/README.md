@@ -4,64 +4,54 @@
 
 ---
 
-## ✅ 最新進度整理（更新：2025-07-07）
+## ✅ 最新進度整理（更新：2025-07-09）
 
-### 一、斷句策略優化
+### 一、Chrome Extension MVP 啟動
 
-* 改為以「兩個以上換行符號」作為主段落切點，避免條文被切碎
-* 若單段中同時出現兩個以上「條號」開頭（如「第\_\_條」「Article」「§」），才進一步細分為多條 clause
-* 強化條號辨識模式，避免誤判中段出現的條號
+* 建立 Flask API `/analyze`，支援自動語言辨識與條文切分。
+* 成功整合 GPT 模型進行條文風險等級與類型判定。
+* 開發測試程式 `test_api_post.py`，可模擬傳入條文並回傳 JSON 結果。
+* 處理 GPT API timeout 問題，延長至 30 秒並顯示完整錯誤訊息。
 
-### 二、分析結果標準化與分類強化
+### 二、風險分類輸出結構優化
 
-* 完整支援 `type.zh`、`type.en`、`type_main.zh`、`type_main.en` 四欄位分類輸出
-* 未對應成功類別，自動 fallback 為 `Unmapped`
-* 建立 `risk_type_mapping.json` 與 `standard_type_mapping.json` 為中英對應表
+* `type.zh`、`type.en`、`type_main.zh`、`type_main.en` 全面支援
+* 若無法對應，標記為 `Unmapped`
+* 使用 `risk_type_mapping.json` 與 `standard_type_mapping.json` 提供中英對照
 
-### 三、黑白名單測試模組完成
+### 三、下一階段後端強化項目（依優先順序）
 
-* 測試模組 `test_risk_cases_runner_dual.py` 支援對照 `whitelist_examples.json` 與 `risk_examples.json`
-* 可進行批次測試、cache 管理與風險/分類標準交叉驗證
-* 僅用於測試階段，不會影響正式分析流程
-
-### 四、文件與條文分析流程完整化
-
-* 條款分析流程：
-
-  1. 使用者提供條款輸入（文字/檔案/網址等）
-  2. 分段處理與條號辨識（split\_text.py）
-  3. 語言判斷（lang\_detect.py）
-  4. 條文風險分析（risk\_analyzer.py）
-  5. 結果輸出與標註（含 highlight, clause\_id 等）
-
-* 說明文件 `使用者流程全景說明.md` 已更新對應以上邏輯
-
-### 五、支援更多條款輸入方式
-
-* 文件拖曳上傳（Word, PDF）
-* 圖片 OCR 上傳辨識
-* 條款網址自動擷取
-* 純文字貼上
-* 多檔拖曳批次分析
-* API 串接與 Chrome 擴充元件接入已列入開發預規劃
+* 前端顯示「分析中」提示
+* Celery + Redis 非同步任務處理 queue
+* 支援一次分析多條（Batch 模式）
 
 ---
 
-## ✅ 明日任務規劃（2025-07-08）
+## 🧩 第二階段預備事項（尚未實作）
 
-### 📌 任務核心：擴充多元條款上傳模式
+### 目標：支援非網頁來源條款，例如 Word、PDF、圖片等文件
 
-* [ ] Word 與 PDF 自動格式化處理
-* [ ] OCR 斷句與條號保留測試
-* [ ] 網頁條款爬取與轉換模組原型
-* [ ] API 文件初稿撰寫
-* [ ] 擴充 upload 介面支援上述輸入模式
-
-✅ 備註：
-
-* ❌ 原任務「測試條文切句準確性」與「建立 clause\_id 與條號對應邏輯」已取消
-* ✅ 改以「斷句穩定性」與「上傳體驗提升」為近期主軸
+* 文件上傳 API：支援 .docx、.pdf 檔案處理（python-docx、PyMuPDF）
+* 圖像 OCR 模組：導入 Tesseract 或 Google Vision，含預處理與切段
+* 文件 → 條文 → 分析結果的整合流程
+* 設計簡易前端上傳介面與進度提示模組
 
 ---
 
-此工具已具備初步自動化判斷邏輯，歡迎後續擴展判別條件細則與 UI 接入。
+## ✅ 使用流程簡介
+
+1. 輸入條文（貼上、上傳、擷取）
+2. 系統自動判別語言與切句
+3. 每條傳送至 GPT 分析模型
+4. 回傳結果：風險等級、風險類型、主分類、中英文對應與標註
+
+---
+
+## 🔍 測試與驗證模組
+
+* 測試檔案：`test_risk_analyzer.py`、`test_single_clause.py` 等
+* 測試資料：黑白名單 `risk_examples.json`、`whitelist_examples.json`
+
+---
+
+✅ 本工具已進入 Chrome Extension MVP 開發階段，將逐步完成條文擷取、風險提示、介面整合等核心功能，後續亦可擴展支援文件與 OCR 條文來源。
