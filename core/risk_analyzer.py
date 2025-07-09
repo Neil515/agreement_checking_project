@@ -105,7 +105,7 @@ def gpt_analyze(clause, lang):
                 {"role": "user", "content": prompt.strip()}
             ],
             temperature=0.3,
-            timeout=10
+            timeout=20
         )
         text = response['choices'][0]['message']['content'].strip()
         if text.startswith("```"):
@@ -146,7 +146,7 @@ def gpt_analyze(clause, lang):
         return result
 
     except Exception as e:
-        print(f"⚠️ GPT API 分析失敗，使用模擬模式：{e}")
+        print(f"⚠️ GPT API 分析失敗，使用模擬模式：{e.__class__.__name__}: {str(e)}")
         return mock_analyze(clause, lang)
 
 # 模擬模式
