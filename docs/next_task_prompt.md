@@ -1,37 +1,50 @@
-## ✅ 明日工作任務規劃（延續 MVP 階段）
+## 🔧 明日(7/15)首要工作：Chrome Extension 正式版第一步（模組化 sidebar 架構）
 
-### 🔰 MVP 第一階段：主打 Chrome Extension「一鍵分析網站條款」
+### 🔎 問題背景：
 
-#### 下一個具體步驟：
+目前 content.js 屬於 MVP 快速整合版本，將 sidebar 的 HTML、邏輯與樣式全部硬寫在 content script 中（透過 innerHTML 建立側欄畫面），雖然運作正常，但缺乏正式 Chrome Extension 架構的可維護性與擴充性。
 
-* [ ] 設計 Chrome Extension 前端操作邏輯（popup UI / content script 擷取條文）
-* [ ] 決定擷取條文的方式（例如：content script 擷取網頁內容 / shadow DOM / iframe）
-* [ ] 將擷取的條文透過 fetch POST 至 Flask API `/analyze`
-* [ ] 顯示回傳結果（條文、風險等級、類型）於前端 popup 或側欄
-* [ ] 製作簡易測試用網頁（包含條款段落）作為擷取對象進行模擬
+### 🚀 明日目標：開始將 Chrome Extension 架構模組化，邁向正式版本
 
 ---
 
-### 🧩 強化後端處理效能與使用者體驗（依優先順序）
+### ✅ 你要完成的任務內容：
 
-#### ✅ 1. 前端顯示「分析中」狀態
+#### 1. 拆出獨立的 `sidebar.html`
 
-* [ ] 條文尚未分析完時，呈現 Loading Spinner 或 "分析中..."
-* [ ] 分析完成後動態替換顯示結果
+* 將目前 content.js 中的 HTML 區塊抽出成一個實體檔案 `sidebar.html`
+* 用來註冊在 manifest.json 的 `sidebar_action`（類似 popup，但可固定在畫面右側）
 
-#### ✅ 2. 加入非同步處理 queue（建議 Celery + Redis）
+#### 2. 新增 `sidebar.js`
 
-* [ ] 安裝並設置 Celery 背景任務框架
-* [ ] 修改 `/analyze` API：將分析請求丟入 Celery 任務
-* [ ] 提供另一支查詢任務狀態的 API（/status/\<task\_id>）
+* 原本 sidebar 的更新邏輯（顯示進度、顯示風險條文）要轉移至 `sidebar.js`
+* 預留與 content.js 溝通用的 message listener（未來可擴充）
 
-#### ✅ 3. 支援 batch 分析（一次 3-5 條）
+#### 3. 抽離樣式至 `style.css`
 
-* [ ] 修改 prompt 設計：允許同時分析多條條文
-* [ ] 解析 GPT 回傳陣列，對應每條條文結果
-* [ ] 測試多條回傳格式穩定性與錯誤率
+* 將 inline style 的 CSS 規則全部集中管理，提升外觀一致性與維護方便性
+* 與 `sidebar.html` 連結
+
+#### 4. 修改 `manifest.json`
+
+* 加入 `sidebar_action` 欄位，指定 `sidebar.html` 作為側欄頁面
+* 並保留 content script 欄位供 content.js 操作網頁條文
 
 ---
 
+### 📌 你將得到什麼結果？
 
-✅ 備註：以上工作皆可配合現有的 `/analyze` 結構進行改版與擴充，MVP 重點仍以 Chrome Extension 使用體驗為主，第二階段開始支援更多文件來源的實務場景。
+* 擁有更正式的 Extension 架構
+* 側欄視圖不再由 JS 動態產生，而是獨立的 HTML + CSS + JS 檔案
+* 後續更容易連接背景任務、儲存分析結果、雙向溝通
+
+---
+
+### 💡 延伸注意事項（供日後實作）
+
+* 待與 content.js 完整溝通，可使用 `chrome.runtime.sendMessage()` 或 `chrome.storage`
+* 側欄樣式也可日後考慮使用 tailwind 風格或 dark mode
+
+---
+
+是否要由我先幫你草擬 `sidebar.html` / `sidebar.js` / `style.css` 的最小可用版本？
