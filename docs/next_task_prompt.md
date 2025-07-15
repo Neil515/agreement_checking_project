@@ -1,50 +1,28 @@
-## 🔧 明日(7/15)首要工作：Chrome Extension 正式版第一步（模組化 sidebar 架構）
+## 🔧 明日（7/17）重點任務規劃
 
-### 🔎 問題背景：
+### 1. 修正：關閉側欄後自動重新顯示藍色「啟動條文風險分析」按鈕
 
-目前 content.js 屬於 MVP 快速整合版本，將 sidebar 的 HTML、邏輯與樣式全部硬寫在 content script 中（透過 innerHTML 建立側欄畫面），雖然運作正常，但缺乏正式 Chrome Extension 架構的可維護性與擴充性。
-
-### 🚀 明日目標：開始將 Chrome Extension 架構模組化，邁向正式版本
-
----
-
-### ✅ 你要完成的任務內容：
-
-#### 1. 拆出獨立的 `sidebar.html`
-
-* 將目前 content.js 中的 HTML 區塊抽出成一個實體檔案 `sidebar.html`
-* 用來註冊在 manifest.json 的 `sidebar_action`（類似 popup，但可固定在畫面右側）
-
-#### 2. 新增 `sidebar.js`
-
-* 原本 sidebar 的更新邏輯（顯示進度、顯示風險條文）要轉移至 `sidebar.js`
-* 預留與 content.js 溝通用的 message listener（未來可擴充）
-
-#### 3. 抽離樣式至 `style.css`
-
-* 將 inline style 的 CSS 規則全部集中管理，提升外觀一致性與維護方便性
-* 與 `sidebar.html` 連結
-
-#### 4. 修改 `manifest.json`
-
-* 加入 `sidebar_action` 欄位，指定 `sidebar.html` 作為側欄頁面
-* 並保留 content script 欄位供 content.js 操作網頁條文
+- 目前情況：分析完畢並關閉側欄後，藍色按鈕就消失，必須重新整理網頁才會再出現。
+- 明確目標：
+  - 當使用者點擊側欄右上角「✖」關閉側欄時，藍色「🔍 啟動條文風險分析」按鈕要自動重新顯示在網頁右側。
+  - 讓使用者可以重複啟動分析，不用每次都重整網頁。
+- 實作建議：
+  - 在關閉側欄的事件處理函式中，呼叫插入藍色按鈕的程式。
+  - 確保每次都只會有一個按鈕，不會重複插入。
 
 ---
 
-### 📌 你將得到什麼結果？
+### 2. 新增：側欄分析進度與結果重置機制
 
-* 擁有更正式的 Extension 架構
-* 側欄視圖不再由 JS 動態產生，而是獨立的 HTML + CSS + JS 檔案
-* 後續更容易連接背景任務、儲存分析結果、雙向溝通
-
----
-
-### 💡 延伸注意事項（供日後實作）
-
-* 待與 content.js 完整溝通，可使用 `chrome.runtime.sendMessage()` 或 `chrome.storage`
-* 側欄樣式也可日後考慮使用 tailwind 風格或 dark mode
+- 目前情況：每次分析後，側欄內的進度、風險條文等資料會殘留，若再次分析可能出現顯示錯亂。
+- 明確目標：
+  - 當使用者關閉側欄或重新啟動分析時，所有分析狀態（如 riskItems、analyzedResults、進度等）都要重置為初始值。
+  - 再次點擊藍色按鈕時，側欄與進度顯示都從 0 開始，確保每次分析都是全新狀態。
+- 實作建議：
+  - 在關閉側欄時，將所有全域變數（如 riskItems、analyzedResults、completedCount、totalCount 等）歸零或清空。
+  - 在 showSidebarAndAnalyze() 開始時，也要初始化所有狀態。
+  - 可考慮在側欄加一個「重新分析」按鈕，讓使用者不用關閉側欄也能直接重跑分析。
 
 ---
 
-是否要由我先幫你草擬 `sidebar.html` / `sidebar.js` / `style.css` 的最小可用版本？
+這兩項任務完成後，使用者體驗會大幅提升，能夠隨時重複分析條文，且每次分析都是乾淨、正確的狀態。
