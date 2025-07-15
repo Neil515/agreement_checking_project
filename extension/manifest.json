@@ -7,10 +7,6 @@
     "scripting",
     "activeTab"
   ],
-  "action": {
-    "default_title": "AI 條文風險分析",
-    "default_popup": "sidebar.html"
-  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
