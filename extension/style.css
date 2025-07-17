@@ -60,3 +60,55 @@
   border-radius: 4px;
   cursor: pointer;
 }
+
+/* 小icon浮動按鈕 */
+#ai-risk-icon-container {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#ai-risk-fab-icon {
+  width: 48px;
+  height: 48px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+#ai-risk-fab-icon:hover {
+  box-shadow: 0 4px 16px rgba(0,86,210,0.18);
+  background: #f0f6ff;
+}
+#ai-risk-start-button {
+  margin-top: 8px;
+  padding: 10px 16px;
+  background-color: rgba(25, 118, 210, 0.92); /* 亮藍+透明 */
+  color: white;
+  border: none;
+  border-radius: 4px; /* 四角圓角 */
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: -2px 2px 6px rgba(0,0,0,0.2);
+  display: none;
+  animation: fadeInBtn 0.2s;
+  max-width: 220px;
+  white-space: normal;
+  line-height: 1.3;
+  text-align: right;
+  /* 可選：加點字體陰影讓字更清楚 */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+@keyframes fadeInBtn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
