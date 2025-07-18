@@ -35,7 +35,7 @@
           <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#0056d2" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </div>
-      <button id="ai-risk-start-button" style="display:none;">👇 啟動AI條文分析<br>Start AI Clause Analysis</button>
+      <button id="ai-risk-start-button" style="display:none;">🔍 啟動AI條文分析<br>Start AI Clause Analysis</button>
     `;
     document.body.appendChild(iconContainer);
 
@@ -56,6 +56,22 @@
 
   // 頁面載入時插入icon
   insertFabIcon();
+
+  async function analyzeClausesWithAPI(clauses, lang = 'auto') {
+    try {
+      const response = await fetch('http://localhost:5000/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: clauses.join('\n'), lang })
+      });
+      if (!response.ok) throw new Error('API error');
+      const data = await response.json();
+      return data.clauses || [];
+    } catch (e) {
+      console.error('API 分析失敗', e);
+      return [];
+    }
+  }
 
   function showSidebarAndAnalyze() {
     console.log("🔧 建立側欄與開始分析");
@@ -107,45 +123,40 @@
       }
     }, 1000);
 
-    filteredNodes.forEach(node => {
-      const text = node.innerText?.trim() || "";
-      // 條款內容直接用節點本身 innerText
-      const clauseId = idCounter++;
-      node.setAttribute("data-clause-id", clauseId);
-      node.classList.add("clause-processing");
+    // 條款內容陣列
+    const clauseTexts = filteredNodes.map(node => node.innerText?.trim() || "");
+    totalCount = filteredNodes.length;
+    updateProgress();
 
-      totalCount++;
-      clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
-
-      setTimeout(() => {
+    // 呼叫後端 API 進行分析
+    analyzeClausesWithAPI(clauseTexts, 'auto').then(results => {
+      completedCount = 0;
+      riskItems = [];
+      analyzedResults = [];
+      results.forEach((result, idx) => {
+        const node = filteredNodes[idx];
+        const clauseId = idCounter++;
+        node.setAttribute("data-clause-id", clauseId);
+        node.classList.add("clause-processing");
+        clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
         completedCount++;
         updateProgress();
-
-        const isRisky = Math.random() < 0.3;
-        const preview = text.slice(0, 15).replace(/\n+/g, ' ');
-        const risk = isRisky ? "須注意" : "一般資訊";
-
+        const preview = result.text.slice(0, 15).replace(/\n+/g, ' ');
+        // 只有 risk_type 為「須注意」才標記為須注意，其餘一律為「一般資訊」
+        const risk = result.risk_type === "須注意" ? "須注意" : "一般資訊";
         analyzedResults.push({ preview, risk });
-
-        if (isRisky) {
+        if (risk === "須注意") {
           riskItems.push({ id: clauseId, label: `⚠️ 須注意 / Risky：${preview}...` });
           renderSortedRisks();
         }
-
         chrome.runtime.sendMessage({
           type: "update_clauses",
           data: analyzedResults
         });
-
-        if (completedCount === totalCount) {
-          clearInterval(timerInterval);
-        }
-      }, 1000 + Math.random() * 2000);
+      });
+      clearInterval(timerInterval);
+      updateProgress();
     });
-
-    if (missedCount > 0) {
-      console.warn(`⚠️ 有 ${missedCount} 個條文過短或無法標記，可能需人工檢查 / ${missedCount} clauses too short or unprocessed`);
-    }
   }
 
   function renderSortedRisks() {
