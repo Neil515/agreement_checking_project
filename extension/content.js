@@ -35,7 +35,7 @@
           <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="#0056d2" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </div>
-      <button id="ai-risk-start-button" style="display:none;">🔍 啟動AI條文分析<br>Start AI Clause Analysis</button>
+      <button id="ai-risk-start-button" style="display:none;">👇 啟動AI條文分析<br>Start AI Clause Analysis</button>
     `;
     document.body.appendChild(iconContainer);
 
@@ -59,7 +59,18 @@
 
   function showSidebarAndAnalyze() {
     console.log("🔧 建立側欄與開始分析");
-    const clauseNodes = document.querySelectorAll("p, li, div[class*='clause'], div[class*='term'], span[class*='clause']");
+    // 擴大條款節點選取範圍，納入 h2~h6
+    const clauseNodes = document.querySelectorAll(
+      "p, li, div, section, article, blockquote, span, h2, h3, h4, h5, h6"
+    );
+
+    // 過濾有實際內容且未被標記過的節點
+    const filteredNodes = Array.from(clauseNodes).filter(node => {
+      const text = node.innerText?.trim() || "";
+      // 避免重複標記
+      if (node.hasAttribute("data-clause-id")) return false;
+      return text.length > 0;
+    });
 
     const sidebar = document.createElement("div");
     sidebar.id = "clause-sidebar";
@@ -78,6 +89,10 @@
 
     document.getElementById("close-sidebar").addEventListener("click", () => {
       document.getElementById("clause-sidebar")?.remove();
+      // 關閉側欄時移除所有條款著色
+      document.querySelectorAll('.clause-processing').forEach(node => {
+        node.classList.remove('clause-processing');
+      });
       insertFabIcon(); // 關閉側欄時重新插入icon
     });
 
@@ -92,17 +107,12 @@
       }
     }, 1000);
 
-    clauseNodes.forEach(node => {
+    filteredNodes.forEach(node => {
       const text = node.innerText?.trim() || "";
-      if (text.length < 20) {
-        missedCount++;
-        return;
-      }
-
+      // 條款內容直接用節點本身 innerText
       const clauseId = idCounter++;
-      const textNode = findTextContainer(node);
-      textNode.setAttribute("data-clause-id", clauseId);
-      textNode.classList.add("clause-processing");
+      node.setAttribute("data-clause-id", clauseId);
+      node.classList.add("clause-processing");
 
       totalCount++;
       clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
@@ -161,10 +171,4 @@
     }
   }
 
-  function findTextContainer(node) {
-    const all = [...node.querySelectorAll("*")];
-    const best = all.find(el => el.innerText && el.innerText.trim().length > 20);
-    return best || node;
-  }
-
-})();
+})(); 
