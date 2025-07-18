@@ -3,11 +3,13 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from core.split_text import split_sentences
 from core.lang_detect import detect_language
 from core.risk_analyzer import analyze_clause
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
