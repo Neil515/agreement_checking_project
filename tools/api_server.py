@@ -16,6 +16,7 @@ def analyze():
     data = request.get_json()
     text = data.get('text', '')
     lang = data.get('lang', 'auto')
+    mode = data.get('mode', 'fast')  # 新增 mode 參數，預設為快速模式
 
     if not text.strip():
         return jsonify({"error": "No text provided."}), 400
@@ -28,14 +29,26 @@ def analyze():
     clauses = split_sentences(text, lang)
     results = []
 
+    print(f"🎯 開始分析，模式：{mode}，語言：{lang}，條款數量：{len(clauses)}")
+
     for clause in clauses:
-        result = analyze_clause(clause, lang)
+        # 傳遞 mode 參數給 analyze_clause 函式
+        result = analyze_clause(clause, lang, mode)
         result['text'] = clause  # 保留原文
         # 補上 risk_type 欄位（以中文為主）
         result['risk_type'] = result.get('type', {}).get('zh', None)
         results.append(result)
 
-    return jsonify({"clauses": results})
+    # 在回應中包含分析模式資訊
+    response_data = {
+        "clauses": results,
+        "analysis_mode": mode,
+        "language": lang,
+        "total_clauses": len(clauses)
+    }
+
+    print(f"✅ 分析完成，模式：{mode}，處理條款：{len(results)} 個")
+    return jsonify(response_data)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
