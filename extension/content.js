@@ -20,6 +20,13 @@
   let completedCount = 0;
   let riskItems = [];
   let analyzedResults = [];
+  let selectedMode = 'fast'; // 預設使用快速模式
+  let timerInterval = null; // 計時器變數
+  let isAnalysisComplete = false; // 分析完成狀態
+  let lastClauseTexts = [];
+
+  // 條款淺藍色背景色
+  const clauseBlueBg = '#e3f0ff';
 
   console.log("✅ content.js 已載入，等待使用者啟動分析。");
 
@@ -57,12 +64,12 @@
   // 頁面載入時插入icon
   insertFabIcon();
 
-  async function analyzeClausesWithAPI(clauses, lang = 'auto') {
+  async function analyzeClausesWithAPI(clauses, lang = 'auto', mode = 'fast') {
     try {
       const response = await fetch('http://localhost:5000/analyze', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: clauses.join('\n'), lang })
+        body: JSON.stringify({ text: clauses.join('\n'), lang, mode })
       });
       if (!response.ok) throw new Error('API error');
       const data = await response.json();
@@ -75,87 +82,148 @@
 
   function showSidebarAndAnalyze() {
     console.log("🔧 建立側欄與開始分析");
-    // 擴大條款節點選取範圍，納入 h2~h6
-    const clauseNodes = document.querySelectorAll(
-      "p, li, div, section, article, blockquote, span, h2, h3, h4, h5, h6"
-    );
-
-    // 過濾有實際內容且未被標記過的節點
-    const filteredNodes = Array.from(clauseNodes).filter(node => {
-      const text = node.innerText?.trim() || "";
-      // 避免重複標記
-      if (node.hasAttribute("data-clause-id")) return false;
-      return text.length > 0;
-    });
-
     const sidebar = document.createElement("div");
     sidebar.id = "clause-sidebar";
     sidebar.innerHTML = `
-      <div style="font-family: sans-serif; font-size: 14px; padding: 24px 12px 12px 12px; background: #f8f8f8; border-left: 3px solid #ccc; height: 100vh; overflow-y: auto; position: fixed; top: 0; right: 0; width: 300px; z-index: 2147483646; box-shadow: -2px 0 4px rgba(0,0,0,0.05);">
+      <div style="font-family: sans-serif; font-size: 14px; padding: 24px 12px 12px 12px; background: #f8f8f8; border-left: 3px solid #ccc; height: 100vh; overflow-y: auto; position: fixed; top: 0; right: 0; width: 320px; z-index: 2147483646; box-shadow: -2px 0 4px rgba(0,0,0,0.05);">
         <button id="close-sidebar" style="position: absolute; top: 8px; right: 8px; padding: 4px 8px; font-size: 12px; background-color: #eee; border: none; border-radius: 4px; cursor: pointer;">✖</button>
         <h3 style="margin-top: 24px; font-size: 16px;">條文風險分析</h3>
+        <!-- 分析模式選擇 -->
+        <div style="margin: 12px 0; padding: 8px; background: #fff; border-radius: 4px; border: 1px solid #ddd;">
+          <label style="font-weight: bold; display: block; margin-bottom: 8px;">分析模式 / Analysis Mode:</label>
+          <div style="display: flex; flex-direction: column; gap: 6px;">
+            <label style="display: flex; align-items: center; cursor: pointer;">
+              <input type="radio" name="analysis-mode" value="fast" checked style="margin-right: 6px;">
+              <span style="font-size: 13px;">🚀 快速分析 (Fast) - 較快完成</span>
+            </label>
+            <label style="display: flex; align-items: center; cursor: pointer;">
+              <input type="radio" name="analysis-mode" value="accurate" style="margin-right: 6px;">
+              <span style="font-size: 13px;">🎯 精準分析 (Accurate) - 較慢但更準確</span>
+            </label>
+          </div>
+        </div>
+        <div id="analyze-btn-container" style="text-align:center; margin-bottom:10px;">
+          <button id="analyze-btn" style="padding:8px 16px; font-size:14px; background:${clauseBlueBg}; color:#0056d2; border:none; border-radius:4px; cursor:pointer;">開始分析</button>
+        </div>
         <div id="timer-display" style="font-size: 13px; margin: 6px 0 4px 0; color: #666;">
           ⏱️ 執行中：00:00
         </div>
         <div id="progress-info" style="margin-bottom: 10px; font-size: 13px;">📊 條文分析進度 / Progress：0 / 0</div>
+        <div id="completion-notice" style="margin: 8px 0; padding: 8px; background: #e8f5e8; border-radius: 4px; border: 1px solid #4caf50; display: none;">
+          ✅ 分析完成！已識別 <span id="risk-count">0</span> 個須注意條款
+        </div>
         <ul id="clause-risk-list" style="list-style: none; padding-left: 0; font-size: 13px;"></ul>
       </div>
     `;
     document.body.appendChild(sidebar);
 
-    document.getElementById("close-sidebar").addEventListener("click", () => {
-      document.getElementById("clause-sidebar")?.remove();
-      // 關閉側欄時移除所有條款著色
-      document.querySelectorAll('.clause-processing').forEach(node => {
-        node.classList.remove('clause-processing');
-      });
-      insertFabIcon(); // 關閉側欄時重新插入icon
-    });
-
-    let secondsElapsed = 0;
-    const timerInterval = setInterval(() => {
-      secondsElapsed++;
-      const min = String(Math.floor(secondsElapsed / 60)).padStart(2, '0');
-      const sec = String(secondsElapsed % 60).padStart(2, '0');
-      const timerEl = sidebar.querySelector("#timer-display");
-      if (timerEl) {
-        timerEl.textContent = `⏱️ 執行中 / Running：${min}:${sec}`;
-      }
-    }, 1000);
-
     // 條款內容陣列
+    const clauseNodes = document.querySelectorAll(
+      "p, li, div, section, article, blockquote, span, h2, h3, h4, h5, h6"
+    );
+    const filteredNodes = Array.from(clauseNodes).filter(node => {
+      const text = node.innerText?.trim() || "";
+      if (node.hasAttribute("data-clause-id")) return false;
+      return text.length > 0;
+    });
     const clauseTexts = filteredNodes.map(node => node.innerText?.trim() || "");
     totalCount = filteredNodes.length;
     updateProgress();
 
-    // 呼叫後端 API 進行分析
-    analyzeClausesWithAPI(clauseTexts, 'auto').then(results => {
-      completedCount = 0;
-      riskItems = [];
-      analyzedResults = [];
-      results.forEach((result, idx) => {
-        const node = filteredNodes[idx];
-        const clauseId = idCounter++;
-        node.setAttribute("data-clause-id", clauseId);
-        node.classList.add("clause-processing");
-        clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
-        completedCount++;
-        updateProgress();
-        const preview = result.text.slice(0, 15).replace(/\n+/g, ' ');
-        // 只有 risk_type 為「須注意」才標記為須注意，其餘一律為「一般資訊」
-        const risk = result.risk_type === "須注意" ? "須注意" : "一般資訊";
-        analyzedResults.push({ preview, risk });
-        if (risk === "須注意") {
-          riskItems.push({ id: clauseId, label: `⚠️ 須注意 / Risky：${preview}...` });
-          renderSortedRisks();
-        }
-        chrome.runtime.sendMessage({
-          type: "update_clauses",
-          data: analyzedResults
-        });
+    // 監聽模式選擇變更
+    const modeInputs = sidebar.querySelectorAll('input[name="analysis-mode"]');
+    modeInputs.forEach(input => {
+      input.addEventListener('change', (e) => {
+        selectedMode = e.target.value;
       });
-      clearInterval(timerInterval);
+    });
+
+    const analyzeBtn = sidebar.querySelector('#analyze-btn');
+    const analyzeBtnContainer = sidebar.querySelector('#analyze-btn-container');
+    const completionNotice = sidebar.querySelector('#completion-notice');
+    const riskCount = sidebar.querySelector('#risk-count');
+    const timerEl = sidebar.querySelector('#timer-display');
+
+    function resetClauseHighlight() {
+      document.querySelectorAll('.clause-processing').forEach(node => {
+        node.classList.remove('clause-processing');
+        node.style.background = '';
+      });
+    }
+
+    function startAnalysis() {
+      isAnalysisComplete = false;
+      completedCount = 0;
       updateProgress();
+      resetClauseHighlight();
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      let secondsElapsed = 0;
+      timerEl.textContent = `⏱️ 執行中 / Running：00:00`;
+      completionNotice.style.display = 'none';
+      analyzeBtn.disabled = true;
+      timerInterval = setInterval(() => {
+        if (!isAnalysisComplete) {
+          secondsElapsed++;
+          const min = String(Math.floor(secondsElapsed / 60)).padStart(2, '0');
+          const sec = String(secondsElapsed % 60).padStart(2, '0');
+          timerEl.textContent = `⏱️ 執行中 / Running：${min}:${sec}`;
+        }
+      }, 1000);
+      analyzeClausesWithAPI(clauseTexts, 'auto', selectedMode).then(results => {
+        riskItems = [];
+        analyzedResults = [];
+        results.forEach((result, idx) => {
+          const node = filteredNodes[idx];
+          const clauseId = idCounter++;
+          node.setAttribute("data-clause-id", clauseId);
+          node.classList.add("clause-processing");
+          node.style.background = clauseBlueBg;
+          clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
+          completedCount++;
+          updateProgress();
+          const preview = result.text.slice(0, 15).replace(/\n+/g, ' ');
+          const risk = result.risk_type === "須注意" ? "須注意" : "一般資訊";
+          analyzedResults.push({ preview, risk });
+          if (risk === "須注意") {
+            riskItems.push({ id: clauseId, label: `⚠️ 須注意 / Risky：${preview}...` });
+            renderSortedRisks();
+          }
+          chrome.runtime.sendMessage({
+            type: "update_clauses",
+            data: analyzedResults
+          });
+        });
+        isAnalysisComplete = true;
+        updateProgress();
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        // 分析完成訊息固定顯示
+        riskCount.textContent = riskItems.length;
+        completionNotice.style.display = 'block';
+        timerEl.textContent += " ✅ 完成";
+        analyzeBtn.disabled = false;
+      });
+    }
+
+    analyzeBtn.addEventListener('click', startAnalysis);
+
+    document.getElementById("close-sidebar").addEventListener("click", () => {
+      document.getElementById("clause-sidebar")?.remove();
+      resetClauseHighlight();
+      if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+      }
+      isAnalysisComplete = false;
+      completedCount = 0;
+      totalCount = 0;
+      updateProgress();
+      insertFabIcon();
     });
   }
 
@@ -173,12 +241,8 @@
 
   function updateProgress() {
     const progressEl = document.querySelector("#progress-info");
-    const timerEl = document.querySelector("#timer-display");
     if (progressEl) {
       progressEl.textContent = `📊 條文分析進度 / Progress：${completedCount} / ${totalCount}`;
-    }
-    if (completedCount === totalCount && timerEl) {
-      timerEl.textContent += " ✅ 完成 / Done";
     }
   }
 
