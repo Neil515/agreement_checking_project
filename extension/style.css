@@ -1,9 +1,13 @@
 /* 條文標記樣式 */
 .clause-processing {
-  background-color: #e6f0fa;
-  border-left: 4px solid #ffcc00;
+  background-color: transparent;
+  border-left: none;
   padding-left: 8px;
   margin-bottom: 4px;
+}
+
+.clause-processing:hover {
+background-color: #f0f6ff;
 }
 
 /* 動態側欄樣式 */
@@ -111,4 +115,29 @@
 @keyframes fadeInBtn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+#analyze-btn {
+  padding: 10px 24px;
+  font-size: 16px;
+  background: transparent;
+  color: #0056d2;
+  border: 2px solid #0056d2;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 1px 4px rgba(0,86,210,0.10);
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+}
+#analyze-btn:hover {
+  background: #0056d2;
+  color: #fff;
+  border: 2px solid #003a8c;
+  box-shadow: 0 2px 8px rgba(0,86,210,0.18);
+  transform: scale(1.04);
+}
+#analyze-btn:active {
+  transform: scale(0.98);
 }
