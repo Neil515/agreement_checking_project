@@ -1,4 +1,7 @@
 (function() {
+  // 條款淺藍色背景色
+  const clauseBlueBg = '#e3f0ff';
+  
   // 只在特定頁面顯示放大鏡icon
   const url = window.location.href;
   const showIconKeywords = [
@@ -20,13 +23,9 @@
   let completedCount = 0;
   let riskItems = [];
   let analyzedResults = [];
-  let selectedMode = 'fast'; // 預設使用快速模式
-  let timerInterval = null; // 計時器變數
-  let isAnalysisComplete = false; // 分析完成狀態
-  let lastClauseTexts = [];
-
-  // 條款淺藍色背景色
-  const clauseBlueBg = '#e3f0ff';
+  let isAnalysisComplete = false;
+  let selectedMode = 'fast';
+  let timerInterval = null;
 
   console.log("✅ content.js 已載入，等待使用者啟動分析。");
 
@@ -64,21 +63,23 @@
   // 頁面載入時插入icon
   insertFabIcon();
 
-  async function analyzeClausesWithAPI(clauses, lang = 'auto', mode = 'fast') {
-    try {
-      const response = await fetch('http://localhost:5000/analyze', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: clauses.join('\n'), lang, mode })
-      });
-      if (!response.ok) throw new Error('API error');
-      const data = await response.json();
-      return data.clauses || [];
-    } catch (e) {
-      console.error('API 分析失敗', e);
-      return [];
-    }
-  }
+	// 將 analyzeClausesWithAPI 改為逐條送出
+	async function analyzeClausesWithAPI(clauses, lang = 'auto', mode = 'fast') {
+	  // 並行分析所有條文
+	  const results = await Promise.all(
+		clauses.map(clause =>
+		  fetch('http://localhost:5000/analyze', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify({ text: clause, lang, mode })
+		  })
+		  .then(res => res.ok ? res.json() : {})
+		  .then(data => data || {})
+		  .catch(() => ({}))
+		)
+	  );
+	  return results;
+	}
 
   function showSidebarAndAnalyze() {
     console.log("🔧 建立側欄與開始分析");
@@ -103,14 +104,14 @@
           </div>
         </div>
         <div id="analyze-btn-container" style="text-align:center; margin-bottom:10px;">
-          <button id="analyze-btn" style="padding:8px 16px; font-size:14px; background:${clauseBlueBg}; color:#0056d2; border:none; border-radius:4px; cursor:pointer;">開始分析</button>
+          <button id="analyze-btn" style="padding:8px 16px; font-size:14px; background:${clauseBlueBg}; color:#0056d2; border:none; border-radius:4px; cursor:pointer;">開始分析 <span style="margin-left:8px;">👈</span></button>
         </div>
         <div id="timer-display" style="font-size: 13px; margin: 6px 0 4px 0; color: #666;">
           ⏱️ 執行中：00:00
         </div>
         <div id="progress-info" style="margin-bottom: 10px; font-size: 13px;">📊 條文分析進度 / Progress：0 / 0</div>
         <div id="completion-notice" style="margin: 8px 0; padding: 8px; background: #e8f5e8; border-radius: 4px; border: 1px solid #4caf50; display: none;">
-          ✅ 分析完成！已識別 <span id="risk-count">0</span> 個須注意條款
+          ✅ 分析完成！你有 <span id="risk-count">0</span> 個須注意條款
         </div>
         <ul id="clause-risk-list" style="list-style: none; padding-left: 0; font-size: 13px;"></ul>
       </div>
@@ -128,6 +129,8 @@
     });
     const clauseTexts = filteredNodes.map(node => node.innerText?.trim() || "");
     totalCount = filteredNodes.length;
+    completedCount = 0;
+    isAnalysisComplete = false;
     updateProgress();
 
     // 監聽模式選擇變更
@@ -135,6 +138,15 @@
     modeInputs.forEach(input => {
       input.addEventListener('change', (e) => {
         selectedMode = e.target.value;
+        // 切換模式時重置所有狀態
+        resetAllStates();
+        updateProgress();
+        sidebar.querySelector('#timer-display').textContent = `⏱️ 執行中 / Running：00:00`;
+        sidebar.querySelector('#completion-notice').style.display = 'none';
+        renderSortedRisks();
+        // 明確提示需點擊按鈕開始分析
+        sidebar.querySelector('#analyze-btn').disabled = false;
+        sidebar.querySelector('#analyze-btn').textContent = '開始分析';
       });
     });
 
@@ -148,17 +160,34 @@
       document.querySelectorAll('.clause-processing').forEach(node => {
         node.classList.remove('clause-processing');
         node.style.background = '';
+        node.removeAttribute('data-clause-id');
       });
     }
 
-    function startAnalysis() {
-      isAnalysisComplete = false;
-      completedCount = 0;
-      updateProgress();
+    function resetAllStates() {
       resetClauseHighlight();
       if (timerInterval) {
         clearInterval(timerInterval);
         timerInterval = null;
+      }
+      isAnalysisComplete = false;
+      completedCount = 0;
+      totalCount = filteredNodes.length;
+      riskItems = [];
+      analyzedResults = [];
+      clauseStatusMap = {};
+      sidebar.querySelector('#completion-notice').style.display = 'none';
+      sidebar.querySelector('#risk-count').textContent = '0';
+      sidebar.querySelector('#timer-display').textContent = `⏱️ 執行中 / Running：00:00`;
+      renderSortedRisks();
+    }
+
+    function startAnalysis() {
+      resetAllStates();
+      if (totalCount === 0) {
+        sidebar.querySelector('#completion-notice').style.display = 'none';
+        sidebar.querySelector('#timer-display').textContent = `⏱️ 無可分析條款 / No clauses`;
+        return;
       }
       let secondsElapsed = 0;
       timerEl.textContent = `⏱️ 執行中 / Running：00:00`;
@@ -173,39 +202,41 @@
         }
       }, 1000);
       analyzeClausesWithAPI(clauseTexts, 'auto', selectedMode).then(results => {
+	  console.log('clauseTexts.length:', clauseTexts.length, 'results.length:', results.length);
         riskItems = [];
         analyzedResults = [];
-        results.forEach((result, idx) => {
-          const node = filteredNodes[idx];
-          const clauseId = idCounter++;
-          node.setAttribute("data-clause-id", clauseId);
-          node.classList.add("clause-processing");
-          node.style.background = clauseBlueBg;
-          clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
-          completedCount++;
-          updateProgress();
-          const preview = result.text.slice(0, 15).replace(/\n+/g, ' ');
-          const risk = result.risk_type === "須注意" ? "須注意" : "一般資訊";
-          analyzedResults.push({ preview, risk });
-          if (risk === "須注意") {
-            riskItems.push({ id: clauseId, label: `⚠️ 須注意 / Risky：${preview}...` });
-            renderSortedRisks();
-          }
-          chrome.runtime.sendMessage({
-            type: "update_clauses",
-            data: analyzedResults
-          });
-        });
+		results.forEach((result, idx) => {
+		  const node = filteredNodes[idx];
+		  if (!node) return; // 防呆，避免 undefined
+		  const clauseId = idCounter++;
+		  node.setAttribute("data-clause-id", clauseId);
+		  node.classList.add("clause-processing");
+		// 不要再加 node.style.background = clauseBlueBg;
+		  clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
+		  completedCount++;
+		  updateProgress();
+		  const preview = result.text ? result.text.slice(0, 15).replace(/\n+/g, ' ') : '';
+		  const risk = result.risk_type === "須注意" ? "須注意" : "一般資訊";
+		  analyzedResults.push({ preview, risk });
+		  if (risk === "須注意") {
+			riskItems.push({ id: clauseId, label: `⚠️ 須注意 / Risky：${preview}...` });
+			renderSortedRisks();
+		  }
+		  // chrome.runtime.sendMessage({ ... }); // 可註解掉，除非你有 background script
+		});
         isAnalysisComplete = true;
         updateProgress();
         if (timerInterval) {
           clearInterval(timerInterval);
           timerInterval = null;
         }
-        // 分析完成訊息固定顯示
-        riskCount.textContent = riskItems.length;
-        completionNotice.style.display = 'block';
-        timerEl.textContent += " ✅ 完成";
+        // 僅在條款數>0且進度100%時顯示分析完成訊息
+        if (totalCount > 0 && completedCount === totalCount) {
+          riskCount.textContent = riskItems.length;
+          completionNotice.style.display = 'block';
+        } else {
+          completionNotice.style.display = 'none';
+        }
         analyzeBtn.disabled = false;
       });
     }
@@ -222,7 +253,9 @@
       isAnalysisComplete = false;
       completedCount = 0;
       totalCount = 0;
-      updateProgress();
+      riskItems = [];
+      analyzedResults = [];
+      clauseStatusMap = {};
       insertFabIcon();
     });
   }
@@ -239,11 +272,18 @@
     }
   }
 
-  function updateProgress() {
-    const progressEl = document.querySelector("#progress-info");
-    if (progressEl) {
-      progressEl.textContent = `📊 條文分析進度 / Progress：${completedCount} / ${totalCount}`;
-    }
-  }
+	function updateProgress() {
+	  const progressEl = document.querySelector("#progress-info");
+	  const timerEl = document.querySelector("#timer-display");
+	  if (progressEl) {
+		progressEl.textContent = `📊 條文分析進度 / Progress：${completedCount} / ${totalCount}`;
+	  }
+	  if (completedCount === totalCount && timerEl) {
+		// 只顯示一次「完成 / Done」
+		if (!timerEl.textContent.includes("✅ 完成 / Done")) {
+		  timerEl.textContent += " ✅ 完成 / Done";
+		}
+	  }
+	} // <--- 這裡要有 function 的結尾大括號
 
-})(); 
+	})(); // <--- 這才是 IIFE 的結尾 
