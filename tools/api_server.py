@@ -18,18 +18,28 @@ def analyze():
     lang = data.get('lang', 'auto')
     mode = data.get('mode', 'fast')  # 新增 mode 參數，預設為快速模式
 
-    if not text.strip():
+    if not text:
         return jsonify({"error": "No text provided."}), 400
 
     # 語言自動判斷
     if lang == 'auto':
-        lang = detect_language(text)
+        # 如果是陣列，用第一條文判斷語言；如果是字串，直接判斷
+        sample_text = text[0] if isinstance(text, list) else text
+        lang = detect_language(sample_text)
 
-    # 條文切分
-    clauses = split_sentences(text, lang)
+    # 處理輸入格式：支援字串（向下相容）和陣列（批次分析）
+    if isinstance(text, str):
+        # 向下相容：字串輸入，進行條文切分
+        clauses = split_sentences(text, lang)
+        print(f"🎯 開始分析（字串模式），模式：{mode}，語言：{lang}，條款數量：{len(clauses)}")
+    elif isinstance(text, list):
+        # 批次分析：直接使用傳入的條文陣列
+        clauses = text
+        print(f"🎯 開始批次分析，模式：{mode}，語言：{lang}，條款數量：{len(clauses)}")
+    else:
+        return jsonify({"error": "Invalid text format. Expected string or array."}), 400
+
     results = []
-
-    print(f"🎯 開始分析，模式：{mode}，語言：{lang}，條款數量：{len(clauses)}")
 
     for clause in clauses:
         # 傳遞 mode 參數給 analyze_clause 函式
@@ -51,4 +61,4 @@ def analyze():
     return jsonify(response_data)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5000) 
