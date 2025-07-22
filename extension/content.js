@@ -1,14 +1,21 @@
 (function() {
-  // 條款淺藍色背景色
-  const clauseBlueBg = '#e3f0ff';
-  
   // 只在特定頁面顯示放大鏡icon
   const url = window.location.href;
   const showIconKeywords = [
-    // 英文
-    'terms', 'term', 'agreement', 'agreements', 'contract', 'contracts', 'policy', 'policies', 'service', 'services', 'tos', 'privacy', 'disclaimer', 'legal', 'user', 'rules', 'notice',
-    // 中文
-    '條款', '合約', '協議', '政策', '使用條款', '隱私', '免責', '聲明', '規則', '公告'
+    // 英文關鍵字 (20個，包含單複數)
+    'terms', 'term', 'agreement', 'agreements', 'contract', 'contracts', 'policy', 'policies', 
+    'service', 'services', 'tos', 'privacy', 'disclaimer', 'legal', 'user', 'users', 
+    'rules', 'rule', 'notice', 'notices', 'condition', 'conditions', 'clause', 'clauses',
+    'provision', 'provisions', 'license', 'licenses', 'eula', 'terms-of-service', 'terms-of-use',
+    'user-agreement', 'user-agreements', 'service-agreement', 'service-agreements',
+    'privacy-policy', 'privacy-policies', 'legal-notice', 'legal-notices',
+    'disclaimer', 'disclaimers', 'liability', 'liabilities',
+    
+    // 中文關鍵字 (20個)
+    '條款', '合約', '協議', '政策', '使用條款', '隱私', '免責', '聲明', '規則', '公告',
+    '服務條款', '服務協議', '用戶協議', '用戶條款', '隱私政策', '隱私條款', '免責聲明',
+    '法律聲明', '法律條款', '責任聲明', '責任條款', '授權條款', '授權協議', '使用協議',
+    '服務條件', '用戶條件', '隱私條件', '法律條件', '責任條件', '授權條件'
   ];
   const shouldShowIcon = showIconKeywords.some(keyword => url.toLowerCase().includes(keyword));
   if (!shouldShowIcon) {
@@ -16,6 +23,9 @@
     return;
   }
 
+  // 定義顏色變數
+  const clauseBlueBg = '#e6f3ff';
+  
   let idCounter = 1;
   let missedCount = 0;
   let clauseStatusMap = {};
@@ -63,23 +73,30 @@
   // 頁面載入時插入icon
   insertFabIcon();
 
-	// 將 analyzeClausesWithAPI 改為逐條送出
-	async function analyzeClausesWithAPI(clauses, lang = 'auto', mode = 'fast') {
-	  // 並行分析所有條文
-	  const results = await Promise.all(
-		clauses.map(clause =>
-		  fetch('http://localhost:5000/analyze', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({ text: clause, lang, mode })
-		  })
-		  .then(res => res.ok ? res.json() : {})
-		  .then(data => data || {})
-		  .catch(() => ({}))
-		)
-	  );
-	  return results;
-	}
+  async function analyzeClausesWithAPI(clauses, lang = 'auto', mode = 'fast') {
+    try {
+      console.log(`🚀 開始批次分析，模式：${mode}，條款數量：${clauses.length}`);
+      
+      const response = await fetch('http://localhost:5000/analyze', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          text: clauses,  // 直接傳送條文陣列，不再用 join('\n')
+          lang,
+          mode 
+        })
+      });
+      
+      if (!response.ok) throw new Error('API error');
+      const data = await response.json();
+      
+      console.log(`✅ 批次分析完成，回傳結果數量：${data.clauses?.length || 0}`);
+      return data.clauses || [];
+    } catch (e) {
+      console.error('API 分析失敗', e);
+      return [];
+    }
+  }
 
   function showSidebarAndAnalyze() {
     console.log("🔧 建立側欄與開始分析");
@@ -88,30 +105,30 @@
     sidebar.innerHTML = `
       <div style="font-family: sans-serif; font-size: 14px; padding: 24px 12px 12px 12px; background: #f8f8f8; border-left: 3px solid #ccc; height: 100vh; overflow-y: auto; position: fixed; top: 0; right: 0; width: 320px; z-index: 2147483646; box-shadow: -2px 0 4px rgba(0,0,0,0.05);">
         <button id="close-sidebar" style="position: absolute; top: 8px; right: 8px; padding: 4px 8px; font-size: 12px; background-color: #eee; border: none; border-radius: 4px; cursor: pointer;">✖</button>
-        <h3 style="margin-top: 24px; font-size: 16px;">條文風險分析</h3>
+        <h3 style="margin-top: 24px; font-size: 16px;">條文風險分析 / Clause Risk Analysis</h3>
         <!-- 分析模式選擇 -->
         <div style="margin: 12px 0; padding: 8px; background: #fff; border-radius: 4px; border: 1px solid #ddd;">
           <label style="font-weight: bold; display: block; margin-bottom: 8px;">分析模式 / Analysis Mode:</label>
           <div style="display: flex; flex-direction: column; gap: 6px;">
             <label style="display: flex; align-items: center; cursor: pointer;">
               <input type="radio" name="analysis-mode" value="fast" checked style="margin-right: 6px;">
-              <span style="font-size: 13px;">🚀 快速分析 (Fast) - 較快完成</span>
+              <span style="font-size: 13px;">🚀 快速分析 (Fast) - 較快完成 / Faster Completion</span>
             </label>
             <label style="display: flex; align-items: center; cursor: pointer;">
               <input type="radio" name="analysis-mode" value="accurate" style="margin-right: 6px;">
-              <span style="font-size: 13px;">🎯 精準分析 (Accurate) - 較慢但更準確</span>
+              <span style="font-size: 13px;">🎯 精準分析 (Accurate) - 較慢但更準確 / Slower but More Accurate</span>
             </label>
           </div>
         </div>
         <div id="analyze-btn-container" style="text-align:center; margin-bottom:10px;">
-          <button id="analyze-btn" style="padding:8px 16px; font-size:14px; background:${clauseBlueBg}; color:#0056d2; border:none; border-radius:4px; cursor:pointer;">開始分析 <span style="margin-left:8px;">👈</span></button>
+          <button id="analyze-btn" style="padding:8px 16px; font-size:14px; background:transparent; color:#0056d2; border:2px solid #0056d2; border-radius:4px; cursor:pointer; font-weight:bold;">開始分析 / Start Analysis 👈</button>
         </div>
         <div id="timer-display" style="font-size: 13px; margin: 6px 0 4px 0; color: #666;">
-          ⏱️ 執行中：00:00
+          ⏱️ 執行中 / Running：00:00
         </div>
         <div id="progress-info" style="margin-bottom: 10px; font-size: 13px;">📊 條文分析進度 / Progress：0 / 0</div>
         <div id="completion-notice" style="margin: 8px 0; padding: 8px; background: #e8f5e8; border-radius: 4px; border: 1px solid #4caf50; display: none;">
-          ✅ 分析完成！你有 <span id="risk-count">0</span> 個須注意條款
+          ✅ 分析完成！您有 <span id="risk-count">0</span> 個須注意條款 / Analysis Complete! You have <span id="risk-count-en">0</span> clauses requiring attention
         </div>
         <ul id="clause-risk-list" style="list-style: none; padding-left: 0; font-size: 13px;"></ul>
       </div>
@@ -186,7 +203,7 @@
       resetAllStates();
       if (totalCount === 0) {
         sidebar.querySelector('#completion-notice').style.display = 'none';
-        sidebar.querySelector('#timer-display').textContent = `⏱️ 無可分析條款 / No clauses`;
+        sidebar.querySelector('#timer-display').textContent = `⏱️ 無可分析條款 / No clauses to analyze`;
         return;
       }
       let secondsElapsed = 0;
@@ -202,28 +219,28 @@
         }
       }, 1000);
       analyzeClausesWithAPI(clauseTexts, 'auto', selectedMode).then(results => {
-	  console.log('clauseTexts.length:', clauseTexts.length, 'results.length:', results.length);
         riskItems = [];
         analyzedResults = [];
-		results.forEach((result, idx) => {
-		  const node = filteredNodes[idx];
-		  if (!node) return; // 防呆，避免 undefined
-		  const clauseId = idCounter++;
-		  node.setAttribute("data-clause-id", clauseId);
-		  node.classList.add("clause-processing");
-		// 不要再加 node.style.background = clauseBlueBg;
-		  clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
-		  completedCount++;
-		  updateProgress();
-		  const preview = result.text ? result.text.slice(0, 15).replace(/\n+/g, ' ') : '';
-		  const risk = result.risk_type === "須注意" ? "須注意" : "一般資訊";
-		  analyzedResults.push({ preview, risk });
-		  if (risk === "須注意") {
-			riskItems.push({ id: clauseId, label: `⚠️ 須注意 / Risky：${preview}...` });
-			renderSortedRisks();
-		  }
-		  // chrome.runtime.sendMessage({ ... }); // 可註解掉，除非你有 background script
-		});
+        results.forEach((result, idx) => {
+          const node = filteredNodes[idx];
+          const clauseId = idCounter++;
+          node.setAttribute("data-clause-id", clauseId);
+          node.classList.add("clause-processing");
+          // 移除主畫面的背景色設定，只保留側欄顯示
+          clauseStatusMap[clauseId] = "⏳ 分析中 / Analyzing";
+          completedCount++;
+          updateProgress();
+          const preview = result.text.slice(0, 15).replace(/\n+/g, ' ');
+          const risk = result.risk_type === "須注意" ? "須注意" : "一般資訊";
+          analyzedResults.push({ preview, risk });
+          if (risk === "須注意") {
+            riskItems.push({ id: clauseId, label: `⚠️ 須注意 / Risky：${preview}...` });
+            renderSortedRisks();
+          }
+          // 移除 chrome.runtime.sendMessage，因為在 content script 中可能不可用
+          // 改用 console.log 記錄結果
+          console.log(`📊 分析結果 ${clauseId}: ${risk} - ${preview}`);
+        });
         isAnalysisComplete = true;
         updateProgress();
         if (timerInterval) {
@@ -233,7 +250,13 @@
         // 僅在條款數>0且進度100%時顯示分析完成訊息
         if (totalCount > 0 && completedCount === totalCount) {
           riskCount.textContent = riskItems.length;
+          // 更新英文版本的風險數量
+          const riskCountEn = document.querySelector('#risk-count-en');
+          if (riskCountEn) {
+            riskCountEn.textContent = riskItems.length;
+          }
           completionNotice.style.display = 'block';
+          // 移除這裡的 "✅ 完成"，讓 updateProgress 統一處理
         } else {
           completionNotice.style.display = 'none';
         }
@@ -272,18 +295,19 @@
     }
   }
 
-	function updateProgress() {
-	  const progressEl = document.querySelector("#progress-info");
-	  const timerEl = document.querySelector("#timer-display");
-	  if (progressEl) {
-		progressEl.textContent = `📊 條文分析進度 / Progress：${completedCount} / ${totalCount}`;
-	  }
-	  if (completedCount === totalCount && timerEl) {
-		// 只顯示一次「完成 / Done」
-		if (!timerEl.textContent.includes("✅ 完成 / Done")) {
-		  timerEl.textContent += " ✅ 完成 / Done";
-		}
-	  }
-	} // <--- 這裡要有 function 的結尾大括號
+  function updateProgress() {
+    const progressEl = document.querySelector("#progress-info");
+    const timerEl = document.querySelector("#timer-display");
+    if (progressEl) {
+      progressEl.textContent = `📊 條文分析進度 / Progress：${completedCount} / ${totalCount}`;
+    }
+    // 只在分析完成且計時器存在時，顯示一次完成訊息
+    if (completedCount === totalCount && timerEl && isAnalysisComplete) {
+      // 檢查是否已經有完成訊息，避免重複添加
+      if (!timerEl.textContent.includes("✅ 完成")) {
+        timerEl.textContent += " ✅ 完成 / Done";
+      }
+    }
+  }
 
-	})(); // <--- 這才是 IIFE 的結尾 
+})(); 
